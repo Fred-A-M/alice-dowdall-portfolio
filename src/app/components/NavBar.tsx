@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 export default function NavBar() {
   return (
-    <div className="flex h-24 px-20 relative items-center">
+    <div className="flex h-24 px-20 relative items-center z-50">
       {/* Left div - positioned at the start */}
       <div className="flex items-center quicksand-bold text-5xl absolute left-20">
         <Link href="/">Alice Dowdall</Link>

@@ -46,7 +46,7 @@ export default function Eyes() {
   }, []);
 
   return (
-    <div className="flex gap-8 justify-center items-baseline">
+    <div className="flex gap-6 justify-center items-baseline">
       <div
         ref={leftEyeRef}
         className="eye w-24 h-24 bg-white rounded-full border-4 border-black relative"
