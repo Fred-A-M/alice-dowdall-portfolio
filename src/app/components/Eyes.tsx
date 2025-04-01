@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
 export default function Eyes() {
@@ -23,6 +24,8 @@ export default function Eyes() {
       [leftEyeRef.current, rightEyeRef.current].forEach((eye) => {
         if (!eye) return;
         const pupil = (eye as HTMLElement).querySelector('.pupil');
+        if (!pupil) return;
+        
         const rect = (eye as HTMLElement).getBoundingClientRect();
         const eyeCenterX = rect.left + rect.width / 2;
         const eyeCenterY = rect.top + rect.height / 2;
@@ -30,7 +33,7 @@ export default function Eyes() {
         const dx = current.current.x - eyeCenterX;
         const dy = current.current.y - eyeCenterY;
         const angle = Math.atan2(dy, dx);
-        const radius = 18;
+        const radius = 15;
         const pupilX = Math.cos(angle) * radius;
         const pupilY = Math.sin(angle) * radius;
 
@@ -47,17 +50,32 @@ export default function Eyes() {
 
   return (
     <div className="flex gap-6 justify-center items-baseline">
+      
       <div
         ref={leftEyeRef}
-        className="eye w-24 h-24 bg-white rounded-full border-4 border-black relative"
+        className="eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden"
       >
-        <div className="pupil w-12 h-12 bg-black rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <div className="pupil absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-18 h-18">
+          <Image 
+            src="/Pupils.png" 
+            alt="Eye" 
+            fill
+            className="object-contain"
+          />
+        </div>
       </div>
       <div
         ref={rightEyeRef}
-        className="eye w-24 h-24 bg-white rounded-full border-4 border-black relative"
+        className="eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden"
       >
-        <div className="pupil w-12 h-12 bg-black rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <div className="pupil absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-18 h-18">
+          <Image 
+            src="/Pupils.png" 
+            alt="Eye" 
+            fill
+            className="object-contain"
+          />
+        </div>
       </div>
     </div>
   );

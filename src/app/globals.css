@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+
 @import "tailwindcss";
 
 /* Import slick carousel styles */
@@ -6,10 +8,31 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 :root {
-  --background: #F3FF90;
-  --foreground: #171717;
+  --background: #9AF8A9;
+  --foreground: #205012;
 }
 
+@font-face {
+  font-family: 'Antique Olive';
+  src: url('/fonts/Antique_Olive_Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.antique-olive {
+  font-family: "Antique Olive", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.radio-canada-big {
+  font-family: "Radio Canada Big", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .quicksand-bold {
   font-family: "Quicksand", sans-serif;

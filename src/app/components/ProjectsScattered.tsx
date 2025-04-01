@@ -163,7 +163,7 @@ export default function ProjectsScattered() {
                       maxHeight: '250px',
                       width: 'auto',
                       maxWidth: '300px',
-                      filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.9))'
+                      filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3))'
                     }}
                     quality={95}
                     className="object-contain transition-all duration-300 group-hover:opacity-40 p-7 group-hover:p-0"

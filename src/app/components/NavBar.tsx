@@ -4,12 +4,12 @@ export default function NavBar() {
   return (
     <div className="flex h-24 px-20 relative items-center z-50">
       {/* Left div - positioned at the start */}
-      <div className="flex items-center quicksand-bold text-5xl absolute left-20">
-        <Link href="/">Alice Dowdall</Link>
+      <div className="flex items-center antique-olive text-4xl text-background bg-foreground px-4 py-2 absolute left-20">
+        <Link href="/">ALICE DOWDALL</Link>
       </div>
       
       {/* Middle div - centered */}
-      <div className="flex items-center quicksand text-2xl gap-8 mx-auto h-full">
+      <div className="flex items-center radio-canada-big text-2xl gap-8 mx-auto h-full">
         <Link href="/">Client Work</Link>
         <Link href="/projects">More Stuff</Link>
         <Link href="/about">Contact</Link>
