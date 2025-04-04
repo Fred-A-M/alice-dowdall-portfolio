@@ -19,7 +19,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
   return (
     <div className="relative w-full h-full my-10 px-20">
       <div className="grid grid-cols-2 gap-10">
-        {/* Description in the first cell */}
+
         <div className="flex flex-col justify-center gap-4">
           <div className="flex flex-col gap-2 text-4xl">
             <p className="radio-canada-big-bold">{project.client}</p>
@@ -39,7 +39,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           const floatDuration = 3 + (index % 2);
           const floatDelay = index * 0.05;
           const floatAmount = 3;
-          const rotateAmount = 5;
+          const rotateAmount = 7;
 
           return (
             <div key={index} className={`flex items-center justify-center`}>
@@ -57,9 +57,10 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                   isHovered 
                     ? {
                         rotate: rotation,
-                        scale: 1.6,
+                        scale: 1.4,
                         x: index % 2 === 0 ? -50 : 50,
                         y: index % 2 === 0 ? 50 : -50,
+                        zIndex: 100,
                       }
                     : {
                         rotate: [
@@ -84,6 +85,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                           index % 2 === 0 ? 10 : -10
                         ],
                         scale: 1,
+                        zIndex: 50,
                       }
                 }
                 transition={
@@ -97,8 +99,9 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                         ease: "easeInOut",
                         times: [0, 0.25, 0.5, 0.75, 1],
                         repeat: Infinity,
+                        repeatType: "loop",
                         delay: floatDelay,
-                        scale: { duration: 0 }
+                        scale: { duration: 0.3 }
                       }
                 }
                 onHoverStart={() => setHoveredIndex(index)}

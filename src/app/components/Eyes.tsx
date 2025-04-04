@@ -53,7 +53,7 @@ export default function Eyes() {
       
       <div
         ref={leftEyeRef}
-        className="eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden"
+        className="eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden shadow-2xl shadow-black"
       >
         <div className="pupil absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-18 h-18">
           <Image 
@@ -66,7 +66,7 @@ export default function Eyes() {
       </div>
       <div
         ref={rightEyeRef}
-        className="eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden"
+        className="eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden shadow-2xl shadow-black"
       >
         <div className="pupil absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-18 h-18">
           <Image 

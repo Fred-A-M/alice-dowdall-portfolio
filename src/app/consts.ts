@@ -13,9 +13,9 @@ export const projects = [
     gallery: [
       "/projects/Oi/1.jpg",
       "/projects/Oi/3.jpg",
+      "/projects/Oi/5.gif",
       "/projects/Oi/2.gif",
       "/projects/Oi/4.jpg",
-      "/projects/Oi/5.gif",
     ],
     link: "/work/how-to-oi",
   },
@@ -32,6 +32,11 @@ export const projects = [
     image: "/projects/WaterAid.jpg",
     image2: "/projects2/WaterAid.png",
     gallery: [
+      "/projects/WaterAid/1.jpg",
+      "/projects/WaterAid/2.png",
+      "/projects/WaterAid/3.jpg",
+      "/projects/WaterAid/4.jpg",
+      
     ],
     link: "/work/water-aid",
   },
@@ -46,6 +51,9 @@ export const projects = [
     image: "/projects/SmallTalk.jpg",
     image2: "/projects2/SmallTalk.jpg",
     gallery: [
+      "/projects/SmallTalk/1.jpg",
+      "/projects/SmallTalk/2.jpg",
+      "/projects/SmallTalk/3.jpg",
     ],
     link: "/work/turned-small-talk-into-real-talk",
   },
@@ -81,6 +89,10 @@ export const projects = [
     image: "/projects/BiteBack2030.jpg",
     image2: "/projects2/BiteBack2030.png",
     gallery: [
+      "/projects/BiteBack2030/1.jpg",
+      "/projects/BiteBack2030/3.png",
+      "/projects/BiteBack2030/2.jpg",
+      "/projects/BiteBack2030/4.jpg",
     ],
     link: "/work/bite-back-2030",
   },
@@ -118,6 +130,9 @@ export const projects = [
     image: "/projects/WindInTheWillows.jpg",
     image2: "/projects2/WindInTheWillows.jpeg",
     gallery: [
+      "/projects/WindInTheWillows/1.png",
+      "/projects/WindInTheWillows/2.png",
+      "/projects/WindInTheWillows/3.png",
     ],
     link: "/work/wind-in-the-willows",
   },
@@ -132,6 +147,9 @@ export const projects = [
     image: "/projects/Callaly.jpg",
     image2: "/projects2/Callaly.png",
     gallery: [
+      "/projects/Callaly/1.jpg",
+      "/projects/Callaly/2.jpg",
+      "/projects/Callaly/3.jpg",
     ],
     link: "/work/callaly",
   },
@@ -147,6 +165,11 @@ export const projects = [
     image: "/projects/GiffGaff.png",
     image2: "/projects2/GiffGaff.png",
     gallery: [
+      "/projects/GiffGaff/3.png",
+      "/projects/GiffGaff/1.png",
+      "/projects/GiffGaff/2.jpg",
+      "/projects/GiffGaff/4.png",
+      "/projects/GiffGaff/5.png",
     ],
     link: "/work/giffgaff",
   },
@@ -161,7 +184,8 @@ export const projects = [
     image: "/projects/MadeAFartingBillboard.png",
     image2: "/projects2/MadeAFartingBillboard.png",
     gallery: [
- 
+      "/projects/FartingBillboard/1.png",
+      "/projects/FartingBillboard/2.png",
     ],
     link: "/work/made-a-farting-billboard",
   },
@@ -176,4 +200,26 @@ export interface Project {
   image2: string;
   gallery: string[];
   link: string;
+}
+
+export const profile = {
+  image: "/Alice.jpg",
+  background: [
+    "I’m Alice, a senior solo creative with 8 years experience in advertising. Based in London but forever Manc.",
+    "Currently doing purpose properly at activist agency Revolt.",
+  ],
+  contact: [
+    "alice@revolt.agency",
+    "https://www.instagram.com/alice.revolt/",
+    "https://www.linkedin.com/in/alice-revolt/",
+  ],
+  worked: [
+    {name: "Don’t Panic London", dates: "2017-2021"},
+    {name: "Saatchi & Saatchi London", dates: "2021-2022"},
+    {name: "Revolt London", dates: "2022-Present"},
+  ],
+  workedWith: [
+    {brands: "Amazon Prime Video, ABinBev, Budweiser, EE, giffgaff, Google, Heinz, MARS Inc, Robinsons, Spotify, Visa."},
+    {charities: "Alzheimer’s Society, Childline, Oxfam, RSBP, Wateraid, The Wildlife Trust, St John Ambulance, UN Women UK."}
+  ]
 }

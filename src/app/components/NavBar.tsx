@@ -12,7 +12,7 @@ export default function NavBar() {
       <div className="flex items-center radio-canada-big text-2xl gap-8 mx-auto h-full">
         <Link href="/">Client Work</Link>
         <Link href="/projects">More Stuff</Link>
-        <Link href="/about">Contact</Link>
+        <Link href="/contact">Contact</Link>
       </div>
       
       {/* Right div - positioned at the end */}
