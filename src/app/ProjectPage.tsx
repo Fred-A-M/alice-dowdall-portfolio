@@ -1,39 +1,128 @@
 "use client";
-import Image from "next/image";
+
 import { Project } from "@/app/consts";
-// import ImageCarousel from './components/ImageCarousel';
+import { motion } from 'framer-motion';
+import Image from "next/image";
+import { useState } from 'react';
 
 interface ProjectPageProps {
   project: Project | undefined;
 }
 
 export default function ProjectPage({ project }: ProjectPageProps) {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   if (!project) {
     return <div>Project not found</div>;
   }
 
   return (
-    <div className="flex flex-col items-center radio-canada-big justify-center w-full h-full my-10 gap-10">
-      <Image 
-        src={project.image} 
-        alt={project.name} 
-        width={800} 
-        height={800} 
-        className="rounded-lg"
-      />
-      <div className="flex flex-col gap-4 w-[900px]">
-        <div className="flex flex-col gap-2 text-4xl justify-center items-center">
-          <p className="radio-canada-big-bold">{project.client}</p>
-          <p>{project.name}</p>
+    <div className="relative w-full h-full my-10 px-20">
+      <div className="grid grid-cols-2 gap-10">
+        {/* Description in the first cell */}
+        <div className="flex flex-col justify-center gap-4">
+          <div className="flex flex-col gap-2 text-4xl">
+            <p className="radio-canada-big-bold">{project.client}</p>
+            <p>{project.name}</p>
+          </div>
+          <div className="flex flex-col gap-2">
+            {project.description.map((description, index) => (
+              <p key={index} className="text-lg">{description}</p>
+            ))}
+          </div>
         </div>
-        <div className="flex flex-col gap-2">
-          {project.description.map((description, index) => (
-            <p key={index} className="text-center text-lg">{description}</p>
-          ))}
-        </div>
-        {/* <div className="flex flex-col gap-4">
-          <ImageCarousel images={project.gallery} />
-        </div> */}
+        
+        {/* Gallery images fill the rest of the grid */}
+        {project.gallery.map((image, index) => {
+          const rotation = index % 2 === 0 ? -5 : 5;
+          const isHovered = hoveredIndex === index;
+          const floatDuration = 3 + (index % 2);
+          const floatDelay = index * 0.05;
+          const floatAmount = 3;
+          const rotateAmount = 5;
+
+          return (
+            <div key={index} className={`flex items-center justify-center`}>
+              <motion.div 
+                className=""
+                style={{
+                  transformOrigin: 'center center',
+                }}
+                initial={{
+                  rotate: rotation,
+                  x: index % 2 === 0 ? -50 : 50,
+                  y: index % 2 === 0 ? 50 : -50,
+                }}
+                animate={
+                  isHovered 
+                    ? {
+                        rotate: rotation,
+                        scale: 1.6,
+                        x: index % 2 === 0 ? -50 : 50,
+                        y: index % 2 === 0 ? 50 : -50,
+                      }
+                    : {
+                        rotate: [
+                          rotation, 
+                          rotation + rotateAmount, 
+                          rotation, 
+                          rotation - rotateAmount, 
+                          rotation
+                        ],
+                        x: [
+                          index % 2 === 0 ? -10 : 10,
+                          index % 2 === 0 ? -10 + floatAmount : 10 + floatAmount,
+                          index % 2 === 0 ? -10 : 10,
+                          index % 2 === 0 ? -10 - floatAmount : 10 - floatAmount,
+                          index % 2 === 0 ? -10 : 10
+                        ],
+                        y: [
+                          index % 2 === 0 ? 10 : -10,
+                          index % 2 === 0 ? 10 - floatAmount : -10 - floatAmount,
+                          index % 2 === 0 ? 10 : -10,
+                          index % 2 === 0 ? 10 + floatAmount : -10 + floatAmount,
+                          index % 2 === 0 ? 10 : -10
+                        ],
+                        scale: 1,
+                      }
+                }
+                transition={
+                  isHovered
+                    ? {
+                        duration: 0.3,
+                        ease: "easeOut",
+                      }
+                    : {
+                        duration: floatDuration,
+                        ease: "easeInOut",
+                        times: [0, 0.25, 0.5, 0.75, 1],
+                        repeat: Infinity,
+                        delay: floatDelay,
+                        scale: { duration: 0 }
+                      }
+                }
+                onHoverStart={() => setHoveredIndex(index)}
+                onHoverEnd={() => setHoveredIndex(null)}
+              >
+                <Image 
+                  src={image} 
+                  alt={project.name} 
+                  width={800}
+                  height={800}
+                  style={{
+                    maxWidth: "450px",
+                    maxHeight: "600px",
+                    width: "auto",
+                    height: "auto",
+                    objectFit: "contain",
+                    filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3))'
+                  }}
+                  
+                />
+              </motion.div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

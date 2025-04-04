@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
-
 @import "tailwindcss";
 
 /* Import slick carousel styles */
@@ -51,8 +50,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #F3FF90;
-  --foreground: #171717;
+    --background: #9AF8A9;
+    --foreground: #205012;
   }
 }
 

@@ -99,7 +99,7 @@ export default function ProjectsScattered() {
         return (
           <motion.div 
             key={`${currentPage}-${index}`} 
-            className="absolute hover:shadow-2xl shadow-black cursor-pointer transition-shadow duration-300"
+            className="absolute"
             style={{
               left: `${x + 50}%`,
               top: `${y + 50}%`,
