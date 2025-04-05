@@ -76,6 +76,7 @@ export default function Contact() {
               objectFit: "cover",
               borderRadius: "50%",
             }}
+            className="shadow-lg shadow-black"
           />
         </div>
       </div>

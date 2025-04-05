@@ -223,3 +223,24 @@ export const profile = {
     {charities: "Alzheimer’s Society, Childline, Oxfam, RSBP, Wateraid, The Wildlife Trust, St John Ambulance, UN Women UK."}
   ]
 }
+
+export const moreStuff = [
+  {
+    name: "PANIC!",
+    description: "I renamed our company during the climate strikes",
+    image: "/projects/Panic.jpg",
+    image2: "/projects/Panic2.gif",
+  },
+  {
+    name: "URGENT ACTION",
+    description: "I turned one of Revolt’s company values into something for the office",
+    image: "/projects/Urgent.jpg",
+  }
+]
+
+export interface MoreStuff {
+  name: string;
+  description: string;
+  image: string;
+  image2?: string;
+}

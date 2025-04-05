@@ -1,6 +1,11 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+
 export default function NavBar() {
+  const pathname = usePathname();
+
   return (
     <div className="flex h-24 px-20 relative items-center z-50">
       {/* Left div - positioned at the start */}
@@ -10,9 +15,24 @@ export default function NavBar() {
       
       {/* Middle div - centered */}
       <div className="flex items-center radio-canada-big text-2xl gap-8 mx-auto h-full">
-        <Link href="/">Client Work</Link>
-        <Link href="/projects">More Stuff</Link>
-        <Link href="/contact">Contact</Link>
+        <Link 
+        href="/"
+        className={`${pathname === '/' ? 'font-bold' : 'hover:underline'}`}
+        >
+          Client Work
+        </Link>
+        <Link 
+        href="/more-stuff"
+        className={`${pathname === '/more-stuff' ? 'font-bold' : 'hover:underline'}`}
+        >
+          More Stuff
+        </Link>
+        <Link 
+        href="/contact"
+        className={`${pathname === '/contact' ? 'font-bold' : 'hover:underline'}`}
+        >
+          Contact
+        </Link>
       </div>
       
       {/* Right div - positioned at the end */}
