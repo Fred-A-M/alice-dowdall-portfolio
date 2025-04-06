@@ -183,7 +183,7 @@ export default function ProjectsScattered() {
         );
       })}
       </div>
-      <div className=" md:hidden flex flex-col items-center ">
+      <div className=" md:hidden grid grid-cols-2 items-center ">
         {currentProjects.map((project, index) => {
           // Alternate rotation for visual interest
           const rotation = index % 2 === 0 ? -5 : 5;

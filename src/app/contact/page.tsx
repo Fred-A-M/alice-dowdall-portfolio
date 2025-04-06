@@ -37,13 +37,13 @@ export default function Contact() {
   }, [isClient]);
 
   return (
-    <div className="relative w-full h-full my-10 px-20">
+    <div className="relative w-full h-full my-10 md:px-20 px-10">
       <div className="grid md:grid-cols-6 grid-cols-1 md:gap-4 gap-8">
 
         <div className="flex gap-6 col-span-4">
           <div className="gap-2 flex-1">
             <div className="font-bold text-2xl">Bit about me</div>
-            <div className="flex flex-col gap-2 text-4xl">
+            <div className="flex flex-col gap-2 md:text-4xl sm:text-3xl text-2xl ">
               {isClient && profile.background.map((line, index) => {
                 // Calculate delay based on all previous paragraphs
                 let totalDelay = 0;

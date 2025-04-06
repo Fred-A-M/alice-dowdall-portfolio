@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function MoreStuff() {
   return (
-    <div className="relative w-full h-full my-10 px-20">
+    <div className="relative w-full h-full my-10 md:px-20 px-10">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
         <div className="col-span-1 flex lg:justify-start justify-center items-center">
           <div className="relative group">
