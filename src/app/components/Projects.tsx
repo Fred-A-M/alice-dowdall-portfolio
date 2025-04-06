@@ -11,7 +11,7 @@ export default function Projects() {
       <div className="relative w-[80%] h-[600px] flex items-center justify-center">
         {/* <ProjectsMap /> */}
         <ProjectsScattered />
-        <div className="absolute left-1/2" 
+        <div className="absolute left-1/2 hidden md:block" 
           style={{
             transform: 'translateX(-50%)',
           }}

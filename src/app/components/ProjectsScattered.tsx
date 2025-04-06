@@ -70,6 +70,7 @@ export default function ProjectsScattered() {
       )}
       
       {/* Projects in a fixed circular arrangement */}
+      <div className="hidden md:block">
       {currentProjects.map((project, index) => {
         // Calculate position in a circle
         const numberOfItems = currentProjects.length;
@@ -181,6 +182,94 @@ export default function ProjectsScattered() {
           </motion.div>
         );
       })}
+      </div>
+      <div className=" md:hidden flex flex-col items-center ">
+        {currentProjects.map((project, index) => {
+          // Alternate rotation for visual interest
+          const rotation = index % 2 === 0 ? -5 : 5;
+          
+          // Define animation parameters
+          const floatDuration = 3 + (index % 2);
+          const floatDelay = index * 0.05;
+          const floatAmount = 3;
+          const rotateAmount = 10;
+          
+          const isHovered = hoveredIndex === index;
+          
+          return (
+            <motion.div 
+              key={`${currentPage}-${index}`} 
+              className="relative w-full flex justify-center my-4"
+              style={{
+                zIndex: isHovered ? 30 : 10,
+                transformOrigin: 'center center',
+              }}
+              initial={{
+                rotate: rotation,
+              }}
+              animate={
+                isHovered 
+                  ? {
+                      rotate: rotation,
+                      scale: 1.1,
+                    }
+                  : {
+                      rotate: [
+                        rotation, 
+                        rotation + rotateAmount, 
+                        rotation, 
+                        rotation - rotateAmount, 
+                        rotation
+                      ],
+                      y: [0, -floatAmount, 0, floatAmount, 0],
+                      x: [0, floatAmount, 0, -floatAmount, 0],
+                      scale: 1,
+                    }
+              }
+              transition={
+                isHovered
+                  ? {
+                      duration: 0.3,
+                      ease: "easeOut",
+                    }
+                  : {
+                      duration: floatDuration,
+                      ease: "easeInOut",
+                      times: [0, 0.25, 0.5, 0.75, 1],
+                      repeat: Infinity,
+                      delay: floatDelay,
+                      scale: { duration: 0 }
+                    }
+              }
+              onHoverStart={() => setHoveredIndex(index)}
+              onHoverEnd={() => setHoveredIndex(null)}
+            >
+              <Link href={project.link || ""}>
+                <div className="relative overflow-hidden group">
+                  <div className="relative">
+                    <Image 
+                      src={project.image2} 
+                      alt={project.name} 
+                      width={300}
+                      height={0}
+                      style={{ 
+                        height: 'auto',
+                        maxHeight: '250px',
+                        width: 'auto',
+                        maxWidth: '300px',
+                        filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3))'
+                      }}
+                      quality={95}
+                      className="object-contain transition-all duration-300 group-hover:opacity-40 p-7 group-hover:p-0"
+                    />
+                  </div>
+                  
+                </div>
+              </Link>
+            </motion.div>
+          );
+        })}
+      </div>
     </div>
   );
 }

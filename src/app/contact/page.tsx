@@ -38,7 +38,7 @@ export default function Contact() {
 
   return (
     <div className="relative w-full h-full my-10 px-20">
-      <div className="grid grid-cols-6 gap-4">
+      <div className="grid md:grid-cols-6 grid-cols-1 md:gap-4 gap-8">
 
         <div className="flex gap-6 col-span-4">
           <div className="gap-2 flex-1">
@@ -82,36 +82,38 @@ export default function Contact() {
       </div>
 
       <motion.div 
-        className="grid grid-cols-6 gap-4 mt-20"
+        className="grid md:grid-cols-6 grid-cols-2 gap-4 mt-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: isTypingComplete ? 1 : 0 }}
         transition={{ duration: 0.7 }}
       >
-        <div className="sm:col-span-2 col-span-3">
+        <div className="md:col-span-2 col-span-1">
           <div className="font-bold ">LinkedIn</div>
           <Link href="https://www.linkedin.com/in/alice-dowdall-342237101/">
             <p className="hover:underline cursor-pointer">Alice Dowdall</p>
           </Link>
         </div>
 
-        <div className="sm:col-span-4 col-span-3">
+        <div className="md:col-span-4 col-span-1">
           <div className="font-bold ">Email</div>
             <p className="">alicedowdall@gmail.com</p>
         </div>
 
-        <div className="sm:col-span-2 col-span-3 flex flex-col gap-2">
+        <div className="md:col-span-2 col-span-1 flex flex-col gap-2">
           <div className="font-bold text-2xl">{"I've worked:"}</div>
           <div className="flex flex-col gap-2">
             {profile.worked.map((work, index) => (
               <div key={index}>
-                <span className="font-bold">{work.name}: </span>
-                <span className="">{work.dates}</span>
+                <Link href={work.link} className="hover:underline" target="_blank">
+                  <span className="font-bold">{work.name}: </span>
+                  <span className="">{work.dates}</span>
+                </Link>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="sm:col-span-2 col-span-3 flex flex-col gap-2">
+        <div className="md:col-span-2 col-span-1 flex flex-col gap-2">
           <div className="font-bold text-2xl">{"I've worked with:"}</div>
           <div>
             <p>

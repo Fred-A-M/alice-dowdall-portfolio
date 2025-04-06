@@ -214,9 +214,9 @@ export const profile = {
     "https://www.linkedin.com/in/alice-revolt/",
   ],
   worked: [
-    {name: "Don’t Panic London", dates: "2017-2021"},
-    {name: "Saatchi & Saatchi London", dates: "2021-2022"},
-    {name: "Revolt London", dates: "2022-Present"},
+    {name: "Don’t Panic London", dates: "2017-2021", link: "https://www.dontpaniclondon.com/"},
+    {name: "Saatchi & Saatchi London", dates: "2021-2022", link: "https://saatchi.co.uk/"},
+    {name: "Revolt London", dates: "2022-Present", link: "https://revoltlondon.com/"},
   ],
   workedWith: [
     {brands: "Amazon Prime Video, ABinBev, Budweiser, EE, giffgaff, Google, Heinz, MARS Inc, Robinsons, Spotify, Visa."},

@@ -1,9 +1,11 @@
 "use client";
 
-import { Project } from "@/app/consts";
+import { Project, projects } from "@/app/consts";
 import { motion } from 'framer-motion';
 import Image from "next/image";
+import Link from 'next/link';
 import { useState } from 'react';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 interface ProjectPageProps {
   project: Project | undefined;
@@ -15,6 +17,10 @@ export default function ProjectPage({ project }: ProjectPageProps) {
   if (!project) {
     return <div>Project not found</div>;
   }
+
+  const projectIndex = projects.findIndex(p => p.name === project.name);
+  const nextProject = projects[projectIndex + 1];
+  const previousProject = projects[projectIndex - 1];
 
   return (
     <div className="relative w-full h-full my-10 px-20">
@@ -126,6 +132,29 @@ export default function ProjectPage({ project }: ProjectPageProps) {
             </div>
           );
         })}
+      </div>
+      <div className="grid grid-cols-2 mt-20 text-3xl">
+        <div className="flex justify-start">
+          {previousProject && (
+            <Link href={`${previousProject.link}`} scroll={false}>
+              <div className="flex items-center gap-2 hover:underline">
+                <ChevronLeftIcon className="w-8 h-8 stroke-2 transition-all duration-200" />
+                <span className="radio-canada-big-bold">{previousProject.tagline}</span>
+              </div>
+            </Link>
+          )}
+        </div>
+        <div className="flex justify-end hover:underline">
+          {nextProject && (
+            <Link href={`${nextProject.link}`} scroll={false}>
+              <div className="flex items-center gap-2 hover:underline">
+                <span className="radio-canada-big-bold">{nextProject?.tagline}</span>
+                <ChevronRightIcon className="w-8 h-8 stroke-2 transition-all duration-200" />
+              </div>
+            </Link>
+          )}
+        </div>
+        
       </div>
     </div>
   );
