@@ -41,7 +41,7 @@ export default function NavBar() {
         </div>
         
         {/* Right div - positioned at the end */}
-        <div className="hidden md:flex items-center quicksand-light text-2xl lg:gap-8 gap-4 absolute right-0">
+        <div className="hidden md:flex items-center lg:gap-8 gap-4 absolute right-0">
           <Link href="https://www.instagram.com/alice_dowdall/">
             <Image src="/IG.png" alt="Instagram" width={20} height={20} />
           </Link>
