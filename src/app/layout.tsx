@@ -27,7 +27,11 @@ export default function RootLayout({
     <html lang="en">
       <Scroll />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen px-5 sm:px-10`}
+        style={{ 
+          background: 'var(--gradient)',
+          backgroundAttachment: 'fixed'
+        }}
       >
         <Navbar />
         {children}

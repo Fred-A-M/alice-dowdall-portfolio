@@ -1,8 +1,8 @@
-import Main from "./main";
+import Main from "./Main";
 
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{ background: 'var(--gradient)' }}>
+    <div className="">
       <Main />
     </div>
   );

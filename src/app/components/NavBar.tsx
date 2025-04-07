@@ -12,9 +12,9 @@ export default function NavBar() {
 
   return (
     <>
-      <div className="flex h-24 md:px-20 px-10 relative items-center z-50">
+      <div className="flex h-24 relative items-center z-50">
         {/* Left div - positioned at the start */}
-        <div className="flex items-center antique-olive lg:text-4xl md:text-3xl text-2xl text-background bg-foreground px-4 py-2 absolute md:left-20 left-10">
+        <div className="flex items-center antique-olive lg:text-4xl md:text-3xl text-2xl text-background bg-foreground px-4 py-2 absolute ">
           <Link href="/">ALICE DOWDALL</Link>
         </div>
         
@@ -24,7 +24,7 @@ export default function NavBar() {
           href="/"
           className={`${pathname === '/' ? 'font-bold' : 'hover:underline'}`}
           >
-            <span className="hidden lg:inline">Client </span>Work
+            Client Work
           </Link>
           <Link 
           href="/more-stuff"
@@ -41,7 +41,7 @@ export default function NavBar() {
         </div>
         
         {/* Right div - positioned at the end */}
-        <div className="hidden md:flex items-center quicksand-light text-2xl lg:gap-8 gap-4 absolute md:right-20 right-10">
+        <div className="hidden md:flex items-center quicksand-light text-2xl lg:gap-8 gap-4 absolute right-0">
           <Link href="https://www.instagram.com/alice_dowdall/">
             <Image src="/IG.png" alt="Instagram" width={20} height={20} />
           </Link>
@@ -50,7 +50,7 @@ export default function NavBar() {
           </Link>
         </div>
 
-        <div className="flex absolute right-10 md:right-20 md:hidden">
+        <div className="flex absolute right-0 md:hidden">
           <Bars3Icon className="w-10 h-10" onClick={() => setIsOpen(!isOpen)} />
         </div>
       </div>
@@ -58,14 +58,14 @@ export default function NavBar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 1, y: 400 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
+            exit={{ opacity: 0.2, y: 300 }}
+            transition={{ duration: 0.3 }}
             className="fixed inset-0 bg-background z-50 flex flex-col"
           >
-            <div className="flex justify-between items-center px-10 sm:px-20 h-24">
-              <div className="flex items-center antique-olive text-4xl text-background bg-foreground px-4 py-2">
+            <div className="flex justify-between items-center h-24 px-5 sm:px-10">
+              <div className="flex items-center antique-olive text-2xl text-background bg-foreground px-4 py-2">
                 <Link href="/" onClick={() => setIsOpen(false)}>ALICE DOWDALL</Link>
               </div>
               <button onClick={() => setIsOpen(false)}>
