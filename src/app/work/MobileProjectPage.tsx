@@ -135,7 +135,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                                 item.index % 2 === 0 ? 10 : -10
                               ],
                               scale: [1, 1, 1, 1, 1], // Prevent scaling issues
-                              zIndex: 50,
+                              zIndex: 40,
                             }
                       }
                       transition={
@@ -167,7 +167,6 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                           maxHeight: "300px",
                           width: "auto",
                           height: "auto",
-                          objectFit: "contain",
                           filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3))'
                         }}
                       />
