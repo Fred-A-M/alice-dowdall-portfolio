@@ -78,10 +78,10 @@ export default function NavBar() {
           {/* Right div - positioned at the end */}
           <div className="hidden sm:flex items-center gap-8 absolute right-0">
             <Link href="https://www.instagram.com/alice_dowdall/">
-              <Image src="/IG.png" alt="Instagram" width={20} height={20} />
+              <Image src="/IG.svg" alt="Instagram" width={20} height={20} />
             </Link>
             <Link href="https://www.linkedin.com/in/alice-dowdall-342237101/">
-              <Image src="/linkedin.png" alt="LinkedIn" width={20} height={20} />
+              <Image src="/linkedin.svg" alt="LinkedIn" width={20} height={20} />
             </Link>
           </div>
 

@@ -67,8 +67,8 @@ export default function Contact() {
         <motion.div 
           className="col-span-1 md:col-span-2 flex justify-center items-center"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 12 }}
+          animate={{ opacity: isTypingComplete ? 1 : 0 }}
+          transition={{ duration: 0.7 }}
         >
           <Image 
             src={profile.image} 
