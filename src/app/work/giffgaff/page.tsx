@@ -1,14 +1,14 @@
 "use client";
 import ProjectPage from "@/app/work/ProjectPage";
-import { Project, projectsMobile } from "@/app/consts";
-import { useEffect } from 'react';
-import { useState } from 'react';
-import MobileProjectPage from '../MobileProjectPage';
+import MobileProjectPage from "@/app/work/MobileProjectPage";
+import { MobileProject, Project, projects, projectsMobile } from "@/app/consts";
+import { useEffect, useState } from 'react';
 
-export default function BiteBack2030() {
+export default function MadeACprBra() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const project = projectsMobile.find(project => project.name === "Have a Proper Chat");
+  const mobileProject = projectsMobile.find(project => project.name === "Have a Proper Chat");
+  const project = projects.find(project => project.name === "Have a Proper Chat");
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -30,7 +30,7 @@ export default function BiteBack2030() {
   return (
     <>
       {isMobile ? (
-        <MobileProjectPage project={project as Project} />
+        <MobileProjectPage project={mobileProject as MobileProject} />
       ) : (
         <ProjectPage project={project as Project} />
       )}

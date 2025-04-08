@@ -59,4 +59,15 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Radio Canada Big", sans-serif;
+  cursor: url('/rocketLolly.png') 0 0, auto;
 }
+
+/* a, button, [role="button"], input[type="submit"], 
+.cursor-pointer, [onclick], select, details, summary,
+input[type="checkbox"], input[type="radio"] {
+  cursor: url('/monsterMunch.png') 0 0, pointer !important;
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: url('/monsterMunch.png') 0 0, pointer !important;
+} */

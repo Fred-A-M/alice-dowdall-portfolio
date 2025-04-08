@@ -1,10 +1,10 @@
 'use client';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import BurgerIcon from './BurgerIcon';
 
 export default function NavBar() {
@@ -76,12 +76,12 @@ export default function NavBar() {
           </div>
           
           {/* Right div - positioned at the end */}
-          <div className="hidden sm:flex items-center gap-8 absolute right-0">
+          <div className="hidden sm:flex items-center gap-4 md:gap-8 absolute right-0">
             <Link href="https://www.instagram.com/alice_dowdall/">
-              <Image src="/IG.svg" alt="Instagram" width={20} height={20} />
+              <FaInstagram size={20} />
             </Link>
             <Link href="https://www.linkedin.com/in/alice-dowdall-342237101/">
-              <Image src="/linkedin.svg" alt="LinkedIn" width={20} height={20} />
+              <FaLinkedinIn size={20} />
             </Link>
           </div>
 
@@ -135,10 +135,10 @@ export default function NavBar() {
               {/* Social links in mobile menu */}
               <div className="flex gap-8 mt-8">
                 <Link href="https://www.instagram.com/alice_dowdall/" onClick={() => setIsOpen(false)}>
-                  <Image src="/IG.png" alt="Instagram" width={30} height={30} />
+                  <FaInstagram size={30} />
                 </Link>
                 <Link href="https://www.linkedin.com/in/alice-dowdall-342237101/" onClick={() => setIsOpen(false)}>
-                  <Image src="/linkedin.png" alt="LinkedIn" width={30} height={30} />
+                  <FaLinkedinIn size={30} />
                 </Link>
               </div>
             </div>

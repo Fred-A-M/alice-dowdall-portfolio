@@ -1,6 +1,6 @@
 "use client";
 
-import { profile } from "../consts";
+import { profile, features } from "../consts";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -68,7 +68,7 @@ export default function Contact() {
           className="col-span-1 md:col-span-2 flex justify-center items-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: isTypingComplete ? 1 : 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.9 }}
         >
           <Image 
             src={profile.image} 
@@ -87,53 +87,91 @@ export default function Contact() {
       </div>
 
       <motion.div 
-        className="grid md:grid-cols-6 grid-cols-2 gap-4 mt-10 "
+        className="flex flex-col gap-4 mt-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: isTypingComplete ? 1 : 0 }}
         transition={{ duration: 0.7 }}
       >
-        <div className="md:col-span-2 col-span-1 text-md">
-          <div className="font-bold ">LinkedIn</div>
-          <Link href="https://www.linkedin.com/in/alice-dowdall-342237101/">
-            <p className="hover:underline cursor-pointer">Alice Dowdall</p>
-          </Link>
-        </div>
+        <div className="grid md:grid-cols-6 grid-cols-2 gap-4 mt-10">
+          <div className="md:col-span-2 col-span-1 text-md">
+            <div className="font-bold ">LinkedIn</div>
+            <Link href="https://www.linkedin.com/in/alice-dowdall-342237101/">
+              <p className="cursor-pointer underline sm:no-underline sm:hover:underline">Alice Dowdall</p>
+            </Link>
+          </div>
 
-        <div className="md:col-span-4 col-span-1">
-          <div className="font-bold ">Email</div>
-            <p className="">alicedowdall@gmail.com</p>
-        </div>
+          <div className="md:col-span-4 col-span-1">
+            <div className="font-bold ">Email</div>
+              <p className="">alicedowdall@gmail.com</p>
+          </div>
 
-        <div className="md:col-span-2 col-span-1 flex flex-col gap-2">
-          <div className="font-bold sm:text-2xl text-lg">{"I've worked:"}</div>
-          <div className="flex flex-col gap-2">
-            {profile.worked.map((work, index) => (
-              <div key={index}>
-                <Link href={work.link} className="hover:underline" target="_blank">
-                  <span className="font-bold">{work.name}: </span>
-                  <span className="">{work.dates}</span>
-                </Link>
+          <div className="md:col-span-2 col-span-1 flex flex-col gap-2">
+            <div className="font-bold sm:text-2xl text-lg">{"I've worked:"}</div>
+            <div className="flex flex-col gap-2">
+              {profile.worked.map((work, index) => (
+                <div key={index}>
+                  <Link href={work.link} className="hover:underline" target="_blank">
+                    <span className="font-bold underline sm:no-underline">{work.name}: </span>
+                    <span className="">{work.dates}</span>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="md:col-span-2 col-span-1 flex flex-col gap-2">
+            <div className="font-bold sm:text-2xl text-lg">{"I've worked with:"}</div>
+            <div>
+              <p>
+                <span className="font-bold">Brands: </span> 
+                {profile.workedWith[0].brands}
+              </p>
+            </div>
+            <div>
+              <p>
+                <span className="font-bold">Charities: </span> 
+                {profile.workedWith[1].charities}
+              </p>
+            </div>
+          </div>
+        </div>
+        
+
+        <div className="overflow-hidden w-full h-30 relative">
+          <div className="flex items-center absolute font-bold sm:text-2xl text-lg">
+            Work featured in...
+          </div>
+          <motion.div
+            className="flex items-center absolute mt-8"
+            initial={{ x: "0%" }}
+            animate={{ x: `calc(-${100 / 3}%)` }}  // Only animate to 1/3 of the total width
+            transition={{
+              duration: 120,  // 2 minutes for a slow animation
+              ease: "linear",
+              repeat: Infinity,
+              repeatType: "loop"
+            }}
+          >
+            {[...features, ...features, ...features].map((src, index) => (
+              <div key={index} className="flex-shrink-0 mx-2">
+                <Image
+                  src={src}
+                  alt={`slider-img-${index}`}
+                  width={200}
+                  height={150}
+                  style={{
+                    width: 'auto',
+                    maxWidth: '200px',
+                    maxHeight: '100px',
+                    objectFit: 'contain'
+                  }}
+                />
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="md:col-span-2 col-span-1 flex flex-col gap-2">
-          <div className="font-bold sm:text-2xl text-lg">{"I've worked with:"}</div>
-          <div>
-            <p>
-              <span className="font-bold">Brands: </span> 
-              {profile.workedWith[0].brands}
-            </p>
-          </div>
-          <div>
-            <p>
-              <span className="font-bold">Charities: </span> 
-              {profile.workedWith[1].charities}
-            </p>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
+
     </div>
   );
 }

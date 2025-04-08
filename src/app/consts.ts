@@ -11,11 +11,11 @@ export const projects = [
     image: "/projects/HowToOi.jpg",
     image2: "/projects2/HowToOi.gif",
     gallery: [
-      "/projects/Oi/1.jpg",
-      "/projects/Oi/3.jpg",
-      "/projects/Oi/5.gif",
-      "/projects/Oi/2.gif",
-      "/projects/Oi/4.jpg",
+      {image: "/projects/Oi/1.jpg", scale: 1},
+      {image: "/projects/Oi/3.jpg", scale: 1},
+      {image: "/projects/Oi/5.gif", scale: 1},
+      {image: "/projects/Oi/2.gif", scale: 1},
+      {image: "/projects/Oi/4.jpg", scale: 1},
     ],
     link: "/work/how-to-oi",
   },
@@ -32,10 +32,10 @@ export const projects = [
     image: "/projects/WaterAid.jpg",
     image2: "/projects2/WaterAid.png",
     gallery: [
-      "/projects/WaterAid/1.jpg",
-      "/projects/WaterAid/2.png",
-      "/projects/WaterAid/3.jpg",
-      "/projects/WaterAid/4.jpg",
+      {image: "/projects/WaterAid/1.jpg", scale: 1},
+      {image: "/projects/WaterAid/2.png", scale: 1},
+      {image: "/projects/WaterAid/3.jpg", scale: 1},
+      {image: "/projects/WaterAid/4.jpg", scale: 1},
       
     ],
     link: "/work/water-aid",
@@ -51,9 +51,9 @@ export const projects = [
     image: "/projects/SmallTalk.jpg",
     image2: "/projects2/SmallTalk.jpg",
     gallery: [
-      "/projects/SmallTalk/1.jpg",
-      "/projects/SmallTalk/2.jpg",
-      "/projects/SmallTalk/3.jpg",
+      {image: "/projects/SmallTalk/1.jpg", scale: 1},
+      {image: "/projects/SmallTalk/2.jpg", scale: 1},
+      {image: "/projects/SmallTalk/3.jpg", scale: 1},
     ],
     link: "/work/turned-small-talk-into-real-talk",
   },
@@ -70,9 +70,9 @@ export const projects = [
     image: "/projects/WorldWithoutSoil.jpg",
     image2: "/projects2/WorldWithoutSoil.gif",
     gallery: [
-      "/projects/WorldWithoutSoil/WWS2.jpg",
-      "/projects/WorldWithoutSoil/WWS3.jpg",
-      "/projects/WorldWithoutSoil/WWS1.gif",
+      {image: "/projects/WorldWithoutSoil/WWS2.jpg", scale: 1},
+      {image: "/projects/WorldWithoutSoil/WWS3.jpg", scale: 1},
+      {image: "/projects/WorldWithoutSoil/WWS1.gif", scale: 1},
     ],
     link: "/work/world-without-soil",
   },
@@ -89,10 +89,10 @@ export const projects = [
     image: "/projects/BiteBack2030.jpg",
     image2: "/projects2/BiteBack2030.png",
     gallery: [
-      "/projects/BiteBack2030/1.jpg",
-      "/projects/BiteBack2030/3.png",
-      "/projects/BiteBack2030/2.jpg",
-      "/projects/BiteBack2030/4.jpg",
+      {image: "/projects/BiteBack2030/1.jpg", scale: 1},
+      {image: "/projects/BiteBack2030/3.png", scale: 1},
+      {image: "/projects/BiteBack2030/2.jpg", scale: 1},
+      {image: "/projects/BiteBack2030/4.jpg", scale: 1},
     ],
     link: "/work/bite-back-2030",
   },
@@ -109,13 +109,14 @@ export const projects = [
     image: "/projects/CPRBra.png",
     image2: "/projects2/CPRBra.png",
     gallery: [
-      "/projects/CPRBra/3.png",
-      "/projects/CPRBra/4.gif",
-      "/projects/CPRBra/1.gif",
-      "/projects/CPRBra/2.jpg",
-      "/projects/CPRBra/5.gif",
-      "/projects/CPRBra/6.gif",
-      
+      {image: "/projects/CPRBra/1.gif", scale: 1},
+      {image: "/projects/CPRBra/2.png", scale: 0.9},
+      {image: "/projects/CPRBra/3.gif", scale: 1.3},
+      {image: "/projects/CPRBra/4.gif", scale: 0.6},
+      {image: "/projects/CPRBra/5.jpg", scale: 1},
+      {image: "/projects/CPRBra/6.png", scale: 0.9},
+      {image: "/projects/CPRBra/7.gif", scale: 1.3},
+      {image: "/projects/CPRBra/8.gif", scale: 1.2},
     ],
     link: "/work/made-a-cpr-bra",
   },
@@ -130,9 +131,9 @@ export const projects = [
     image: "/projects/WindInTheWillows.jpg",
     image2: "/projects2/WindInTheWillows.jpeg",
     gallery: [
-      "/projects/WindInTheWillows/1.png",
-      "/projects/WindInTheWillows/2.png",
-      "/projects/WindInTheWillows/3.png",
+      {image: "/projects/WindInTheWillows/1.png", scale: 1},
+      {image: "/projects/WindInTheWillows/2.png", scale: 1},
+      {image: "/projects/WindInTheWillows/3.png", scale: 1},
     ],
     link: "/work/wind-in-the-willows",
   },
@@ -147,9 +148,9 @@ export const projects = [
     image: "/projects/Callaly.jpg",
     image2: "/projects2/Callaly.png",
     gallery: [
-      "/projects/Callaly/1.jpg",
-      "/projects/Callaly/2.jpg",
-      "/projects/Callaly/3.jpg",
+      {image: "/projects/Callaly/1.jpg", scale: 1},
+      {image: "/projects/Callaly/2.jpg", scale: 1},
+      {image: "/projects/Callaly/3.jpg", scale: 1},
     ],
     link: "/work/callaly",
   },
@@ -165,11 +166,11 @@ export const projects = [
     image: "/projects/GiffGaff.png",
     image2: "/projects2/GiffGaff.png",
     gallery: [
-      "/projects/GiffGaff/3.png",
-      "/projects/GiffGaff/1.png",
-      "/projects/GiffGaff/2.jpg",
-      "/projects/GiffGaff/4.png",
-      "/projects/GiffGaff/5.png",
+      {image: "/projects/GiffGaff/3.png", scale: 1},
+      {image: "/projects/GiffGaff/1.png", scale: 1},
+      {image: "/projects/GiffGaff/2.jpg", scale: 1},
+      {image: "/projects/GiffGaff/4.png", scale: 1},
+      {image: "/projects/GiffGaff/5.png", scale: 1},
     ],
     link: "/work/giffgaff",
   },
@@ -184,8 +185,8 @@ export const projects = [
     image: "/projects/MadeAFartingBillboard.png",
     image2: "/projects2/MadeAFartingBillboard.png",
     gallery: [
-      "/projects/FartingBillboard/1.png",
-      "/projects/FartingBillboard/2.png",
+      {image: "/projects/FartingBillboard/1.png", scale: 1},
+      {image: "/projects/FartingBillboard/2.png", scale: 1},
     ],
     link: "/work/made-a-farting-billboard",
   },
@@ -198,7 +199,7 @@ export interface Project {
   description: string[];
   image: string;
   image2: string;
-  gallery: string[];
+  gallery: {image: string, scale: number}[];
   link: string;
 }
 
@@ -260,13 +261,14 @@ export const projectsMobile = [
     image: "/projects/CPRBra.png",
     image2: "/projects2/CPRBra.png",
     gallery: [
-      "/projects/CPRBra/3.png",
-      "/projects/CPRBra/4.gif",
       "/projects/CPRBra/1.gif",
-      "/projects/CPRBra/2.jpg",
-      "/projects/CPRBra/5.gif",
-      "/projects/CPRBra/6.gif",
-      
+      "/projects/CPRBra/2.png",
+      "/projects/CPRBra/3.gif",
+      "/projects/CPRBra/4.gif",
+      "/projects/CPRBra/5.jpg",
+      "/projects/CPRBra/6.png",
+      "/projects/CPRBra/7.gif",
+      "/projects/CPRBra/8.gif",
     ],
     link: "/work/made-a-cpr-bra",
   },
@@ -438,3 +440,35 @@ export const projectsMobile = [
     link: "/work/made-a-farting-billboard",
   },
 ];
+
+export interface MobileProject {
+  name: string;
+  client: string;
+  tagline: string;
+  description: string[];
+  image: string;
+  image2: string;
+  gallery: string[];
+  link: string;
+}
+
+export const features = [
+  "/featured-logos/01.png",
+  "/featured-logos/02.png",
+  "/featured-logos/03.png",
+  "/featured-logos/04.png",
+  "/featured-logos/05.png",
+  "/featured-logos/06.png",
+  "/featured-logos/07.png",
+  "/featured-logos/08.png",
+  "/featured-logos/09.png",
+  "/featured-logos/10.png",
+  "/featured-logos/11.png",
+  "/featured-logos/12.png",
+  "/featured-logos/13.png",
+  "/featured-logos/14.png",
+  "/featured-logos/15.png",
+  "/featured-logos/16.png",
+  "/featured-logos/17.png",
+  "/featured-logos/18.png",
+]

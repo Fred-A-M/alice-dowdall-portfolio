@@ -1,6 +1,6 @@
 "use client";
 
-import { Project, projectsMobile } from "@/app/consts";
+import { MobileProject, projectsMobile } from "@/app/consts";
 import { motion } from 'framer-motion';
 import Image from "next/image";
 import Link from 'next/link';
@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 interface ProjectPageProps {
-  project: Project | undefined;
+  project: MobileProject | undefined;
 }
 
 export default function ProjectPage({ project }: ProjectPageProps) {
@@ -185,7 +185,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           {previousProject && (
             <Link href={`${previousProject.link}`} scroll={false}>
               <div className="flex items-center gap-2 hover:underline">
-                <ChevronLeftIcon className="w-8 h-8 stroke-2 transition-all duration-200" />
+                <ChevronLeftIcon className="w-8 h-8 stroke-2 transition-all duration-200 text-left" />
                 <span className="radio-canada-big-bold">Previous</span>
               </div>
             </Link>
@@ -196,7 +196,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
             <Link href={`${nextProject.link}`} scroll={false}>
               <div className="flex items-center gap-2">
                 <span className="radio-canada-big-bold">Next</span>
-                <ChevronRightIcon className="w-8 h-8 stroke-2 transition-all duration-200" />
+                <ChevronRightIcon className="w-8 h-8 stroke-2 transition-all duration-200 text-right" />
               </div>
             </Link>
           )}

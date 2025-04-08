@@ -44,11 +44,19 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           const isHovered = hoveredIndex === index;
           const floatDuration = 3 + (index % 2);
           const floatDelay = index * 0.05;
-          const floatAmount = 3;
-          const rotateAmount = 7;
+          const floatAmount = 5;
+          const rotateAmount = 3;
+          
+          // Determine if this is the last image AND if there's an even number of images
+          const isLastImage = index === project.gallery.length - 1;
+          const hasEvenImages = project.gallery.length % 2 === 0;
+          const fullWidthLastImage = isLastImage && hasEvenImages;
 
           return (
-            <div key={index} className={`flex items-center justify-center`}>
+            <div 
+              key={index} 
+              className={`flex items-center justify-center ${fullWidthLastImage ? 'col-span-2' : ''}`}
+            >
               <motion.div 
                 className=""
                 style={{
@@ -63,10 +71,10 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                   isHovered 
                     ? {
                         rotate: rotation,
-                        scale: 1.4,
+                        scale: image.scale * 1.3,
                         x: index % 2 === 0 ? -50 : 50,
                         y: index % 2 === 0 ? 50 : -50,
-                        zIndex: 100,
+                        zIndex: 30,
                       }
                     : {
                         rotate: [
@@ -90,8 +98,8 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                           index % 2 === 0 ? 10 + floatAmount : -10 + floatAmount,
                           index % 2 === 0 ? 10 : -10
                         ],
-                        scale: 1,
-                        zIndex: 50,
+                        scale: image.scale,
+                        zIndex: 30,
                       }
                 }
                 transition={
@@ -107,33 +115,33 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                         repeat: Infinity,
                         repeatType: "loop",
                         delay: floatDelay,
-                        scale: { duration: 0.3 }
+                        scale: {duration: 0.3},
                       }
                 }
                 onHoverStart={() => setHoveredIndex(index)}
                 onHoverEnd={() => setHoveredIndex(null)}
               >
                 <Image 
-                  src={image} 
+                  src={image.image} 
                   alt={project.name} 
                   width={800}
                   height={800}
                   style={{
-                    maxWidth: "450px",
+                    maxWidth: fullWidthLastImage ? "600px" : "450px", // Larger max width for full-span image
                     maxHeight: "600px",
                     width: "auto",
                     height: "auto",
                     objectFit: "contain",
                     filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3))'
                   }}
-                  
+                  className="rounded-sm"
                 />
               </motion.div>
             </div>
           );
         })}
       </div>
-      <div className="grid grid-cols-2 mt-20 text-3xl">
+      <div className="grid grid-cols-2 mt-20 items-center text-3xl">
         <div className="flex justify-start">
           {previousProject && (
             <Link href={`${previousProject.link}`} scroll={false}>
@@ -148,7 +156,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           {nextProject && (
             <Link href={`${nextProject.link}`} scroll={false}>
               <div className="flex items-center gap-2 hover:underline">
-                <span className="radio-canada-big-bold">{nextProject?.tagline}</span>
+                <span className="radio-canada-big-bold text-right">{nextProject?.tagline}</span>
                 <ChevronRightIcon className="w-8 h-8 stroke-2 transition-all duration-200" />
               </div>
             </Link>
