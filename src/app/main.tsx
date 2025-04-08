@@ -17,7 +17,7 @@ export default function Main() {
     
     // Define the function that checks window size
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 640);
     };
     
     // Run once immediately

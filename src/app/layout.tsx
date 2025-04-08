@@ -17,14 +17,17 @@ export default function RootLayout({
     <html lang="en">
       <Scroll />
       <body
-        className={`radio-canada-big antialiased h-screen px-5 sm:px-10`}
+        className={`radio-canada-big antialiased h-screen`}
         style={{ 
           background: 'var(--gradient)',
-          backgroundAttachment: 'fixed'
+          backgroundAttachment: 'fixed',
+          backgroundSize: 'cover',
         }}
       >
         <Navbar />
-        {children}
+        <main className="px-5 sm:px-10 pb-10 pt-24">
+          {children}
+        </main>
       </body>
     </html>
   );

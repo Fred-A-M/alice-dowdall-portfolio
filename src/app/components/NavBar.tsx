@@ -3,57 +3,97 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
+import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export default function NavBar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const { scrollY } = useScroll();
+  
+  // Track scroll direction and toggle navbar visibility
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    // Don't hide navbar at the top of the page
+    if (latest < 100) {
+      setIsVisible(true);
+      setLastScrollY(latest);
+      return;
+    }
+    
+    // Determine scroll direction
+    const isScrollingDown = latest > lastScrollY;
+    
+    // Hide when scrolling down, show when scrolling up
+    // Only trigger if scroll amount is significant (> 10px)
+    if (isScrollingDown && latest - lastScrollY > 10) {
+      setIsVisible(false);
+    } else if (!isScrollingDown && lastScrollY - latest > 10) {
+      setIsVisible(true);
+    }
+    
+    setLastScrollY(latest);
+  });
+  
+  // Prevent scrolling when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   return (
     <>
-      <div className="flex h-24 relative items-center z-50">
-        {/* Left div - positioned at the start */}
-        <div className="flex items-center antique-olive lg:text-4xl md:text-3xl text-2xl text-background bg-foreground px-4 py-2 absolute ">
-          <Link href="/">ALICE DOWDALL</Link>
-        </div>
-        
-        
-        <div className="hidden md:flex pl-60 lg:pl-30 xl:pl-0 items-center radio-canada-big text-xl gap-4 mx-auto h-full">
-          <Link 
-          href="/"
-          className={`${pathname === '/' ? 'font-bold' : 'hover:underline'}`}
-          >
-            Client Work
-          </Link>
-          <Link 
-          href="/more-stuff"
-          className={`${pathname === '/more-stuff' ? 'font-bold' : 'hover:underline'}`}
-          >
-            More Stuff
-          </Link>
-          <Link 
-          href="/contact"
-          className={`${pathname === '/contact' ? 'font-bold' : 'hover:underline'}`}
-          >
-            Contact
-          </Link>
-        </div>
-        
-        {/* Right div - positioned at the end */}
-        <div className="hidden md:flex items-center lg:gap-8 gap-4 absolute right-0">
-          <Link href="https://www.instagram.com/alice_dowdall/">
-            <Image src="/IG.png" alt="Instagram" width={20} height={20} />
-          </Link>
-          <Link href="https://www.linkedin.com/in/alice-dowdall-342237101/">
-            <Image src="/linkedin.png" alt="LinkedIn" width={20} height={20} />
-          </Link>
-        </div>
+      <motion.header 
+        className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md px-5 sm:px-10"
+        initial={{ y: 0 }}
+        animate={{ y: isVisible ? 0 : -100 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <div className="flex h-20 relative items-center">
+          {/* Left div - positioned at the start */}
+          <div className="flex items-center antique-olive lg:text-4xl md:text-3xl text-2xl text-background bg-foreground px-4 py-2 absolute ">
+            <Link href="/">ALICE DOWDALL</Link>
+          </div>
+          
+          
+          <div className="hidden md:flex pl-60 lg:pl-30 xl:pl-0 items-center radio-canada-big text-xl gap-4 mx-auto h-full">
+            <Link 
+            href="/"
+            className={`${pathname === '/' ? 'font-bold' : 'hover:underline'}`}
+            >
+              Work
+            </Link>
+            <Link 
+            href="/contact"
+            className={`${pathname === '/contact' ? 'font-bold' : 'hover:underline'}`}
+            >
+              Contact
+            </Link>
+          </div>
+          
+          {/* Right div - positioned at the end */}
+          <div className="hidden md:flex items-center lg:gap-8 gap-4 absolute right-0">
+            <Link href="https://www.instagram.com/alice_dowdall/">
+              <Image src="/IG.png" alt="Instagram" width={20} height={20} />
+            </Link>
+            <Link href="https://www.linkedin.com/in/alice-dowdall-342237101/">
+              <Image src="/linkedin.png" alt="LinkedIn" width={20} height={20} />
+            </Link>
+          </div>
 
-        <div className="flex absolute right-0 md:hidden">
-          <Bars3Icon className="w-10 h-10" onClick={() => setIsOpen(!isOpen)} />
+          <div className="flex absolute right-0 md:hidden">
+            <Bars3Icon className="w-10 h-10" onClick={() => setIsOpen(!isOpen)} />
+          </div>
         </div>
-      </div>
+      </motion.header>
 
       <AnimatePresence>
         {isOpen && (
@@ -109,7 +149,6 @@ export default function NavBar() {
           </motion.div>
         )}
       </AnimatePresence>
-
     </>
   );
 }

@@ -110,7 +110,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                               scale: 1.4,
                               x: item.index % 2 === 0 ? -50 : 50,
                               y: item.index % 2 === 0 ? 50 : -50,
-                              zIndex: 100,
+                              zIndex: 30,
                             }
                           : {
                               rotate: [
@@ -135,7 +135,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                                 item.index % 2 === 0 ? 10 : -10
                               ],
                               scale: [1, 1, 1, 1, 1], // Prevent scaling issues
-                              zIndex: 40,
+                              zIndex: 30,
                             }
                       }
                       transition={

@@ -8,6 +8,7 @@
 :root {
   --background: #9AF8A9;
   --foreground: #205012;
+  --foreground-dark: #15340b;
   --gradient: linear-gradient(180deg, rgba(154,248,169,1) 0%, rgba(201,255,114,1) 100%, rgba(255,255,255,1) 100%);
 }
 

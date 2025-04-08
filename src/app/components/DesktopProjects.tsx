@@ -56,7 +56,7 @@ export default function ProjectsScattered() {
             style={{
               left: `${x + 50}%`,
               top: `${y + 50}%`,
-              zIndex: isHovered ? 30 : 10,
+              zIndex: isHovered ? 50 : 10,
               transformOrigin: 'center center',
             }}
             initial={{
@@ -125,7 +125,7 @@ export default function ProjectsScattered() {
                 
                 {/* Tagline overlay - appears on hover */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-black text-2xl text-center px-4 font-extrabold">
+                  <p className="text-2xl text-[var(--foreground-dark)] text-center px-4 font-extrabold">
                     {project.tagline}
                   </p>
                 </div>
