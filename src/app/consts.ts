@@ -472,3 +472,21 @@ export const features = [
   "/featured-logos/17.png",
   "/featured-logos/18.png",
 ]
+
+export const newFeatures = [
+  "/featured-logos/new-logos/01.png",
+  "/featured-logos/new-logos/02.png",
+  "/featured-logos/new-logos/03.png",
+  "/featured-logos/new-logos/04.png",
+  "/featured-logos/new-logos/05.png",
+  "/featured-logos/new-logos/06.png",
+  "/featured-logos/new-logos/07.png",
+  "/featured-logos/new-logos/08.png",
+  "/featured-logos/new-logos/09.png",
+  "/featured-logos/new-logos/10.png",
+  "/featured-logos/new-logos/11.png",
+  "/featured-logos/new-logos/12.png",
+  "/featured-logos/new-logos/13.png",
+  "/featured-logos/new-logos/14.png",
+  "/featured-logos/new-logos/15.png",
+]

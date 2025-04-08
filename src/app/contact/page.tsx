@@ -1,6 +1,6 @@
 "use client";
 
-import { profile, features } from "../consts";
+import { profile, newFeatures } from "../consts";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -137,38 +137,48 @@ export default function Contact() {
         </div>
         
 
-        <div className="overflow-hidden w-full h-30 relative">
-          <div className="flex items-center absolute font-bold sm:text-2xl text-lg">
+        <div className="-mx-5 sm:-mx-10 w-screen relative overflow-hidden">
+          <div className="px-5 sm:px-10 font-bold sm:text-2xl text-lg">
             Work featured in...
           </div>
-          <motion.div
-            className="flex items-center absolute mt-8"
-            initial={{ x: "0%" }}
-            animate={{ x: `calc(-${100 / 3}%)` }}  // Only animate to 1/3 of the total width
-            transition={{
-              duration: 120,  // 2 minutes for a slow animation
-              ease: "linear",
-              repeat: Infinity,
-              repeatType: "loop"
-            }}
-          >
-            {[...features, ...features, ...features].map((src, index) => (
-              <div key={index} className="flex-shrink-0 mx-2">
-                <Image
-                  src={src}
-                  alt={`slider-img-${index}`}
-                  width={200}
-                  height={150}
-                  style={{
-                    width: 'auto',
-                    maxWidth: '200px',
-                    maxHeight: '100px',
-                    objectFit: 'contain'
-                  }}
-                />
-              </div>
-            ))}
-          </motion.div>
+
+          <div className="w-full overflow-hidden relative bg-transparent">
+            <div
+              className="flex animate-scroll items-center"
+              style={{
+                animation: "scroll 30s linear infinite",
+                width: `${newFeatures.length * 204}px`, // Exact width calculation: 200px per image + 4px margin
+              }}
+            >
+              {/* First set of images */}
+              {newFeatures.map((src, index) => (
+                <div key={`first-${index}`} className="w-[200px] flex-shrink-0 mr-4">
+                  <Image
+                    src={src}
+                    alt={`slider-img-${index}`}
+                    width={200}
+                    height={100}
+                    className="object-contain"
+                    style={{ maxHeight: '100px' }}
+                  />
+                </div>
+              ))}
+              
+              {/* Duplicate set for seamless looping - these will appear exactly when the first set ends */}
+              {newFeatures.map((src, index) => (
+                <div key={`second-${index}`} className="w-[200px] flex-shrink-0 mr-4">
+                  <Image
+                    src={src}
+                    alt={`slider-img-${index}`}
+                    width={200}
+                    height={100}
+                    className="object-contain"
+                    style={{ maxHeight: '100px' }}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </motion.div>
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/NavBar";
 import Scroll from './Scroll';
-import CustomCursor from './components/CustomCursor';
+// import CustomCursor from './components/CustomCursor';
 
 export const metadata: Metadata = {
   title: "Alice Dowdall",
@@ -25,7 +25,7 @@ export default function RootLayout({
           backgroundSize: 'cover',
         }}
       >
-        <CustomCursor />
+        {/* <CustomCursor /> */}
         <Navbar />
         <main className="px-5 sm:px-10 pt-24">
           {children}
