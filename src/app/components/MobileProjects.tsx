@@ -46,9 +46,9 @@ export default function ProjectsScattered() {
   }
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full pb-10">
       {/* Remove the grid structure for more freedom */}
-      <div className="relative px-4 w-full h-full">
+      <div className="relative px-4 w-full h-full pb-10">
         {projectsMobile.map((project, index) => {
           // Get position from our predefined array
           const position = POSITIONS[index % POSITIONS.length];
@@ -70,7 +70,7 @@ export default function ProjectsScattered() {
           return (
             <motion.div 
               key={index} 
-              className="absolute z-10"
+              className="absolute z-10 pb-10"
               style={{
                 transformOrigin: 'center center',
                 // Position absolutely with percentage left/top

@@ -4,36 +4,31 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function NavBar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const { scrollY } = useScroll();
+  const lastScrollY = useRef(0);
   
   // Track scroll direction and toggle navbar visibility
   useMotionValueEvent(scrollY, "change", (latest) => {
-    // Don't hide navbar at the top of the page
-    if (latest < 100) {
+    if (latest < 50) {
       setIsVisible(true);
-      setLastScrollY(latest);
+      lastScrollY.current = latest;
       return;
     }
     
-    // Determine scroll direction
-    const isScrollingDown = latest > lastScrollY;
-    
-    // Hide when scrolling down, show when scrolling up
-    // Only trigger if scroll amount is significant (> 10px)
-    if (isScrollingDown && latest - lastScrollY > 10) {
+    // Only trigger if scroll amount is significant (> 5px)
+    if (latest > lastScrollY.current) {
       setIsVisible(false);
-    } else if (!isScrollingDown && lastScrollY - latest > 10) {
+    } else if (latest < lastScrollY.current - 5) {
       setIsVisible(true);
     }
     
-    setLastScrollY(latest);
+    lastScrollY.current = latest;
   });
   
   // Prevent scrolling when mobile menu is open
@@ -102,7 +97,8 @@ export default function NavBar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0.2, y: 300 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-background z-50 flex flex-col"
+            className="fixed inset-0 z-50 flex flex-col"
+            style={{ background: 'var(--gradient)' }}
           >
             <div className="flex justify-between items-center h-24 px-5 sm:px-10">
               <div className="flex items-center antique-olive text-2xl text-background bg-foreground px-4 py-2">
@@ -121,13 +117,7 @@ export default function NavBar() {
               >
                 Work
               </Link>
-              <Link 
-                href="/more-stuff"
-                className={`${pathname === '/more-stuff' ? 'font-bold' : 'hover:underline'}`}
-                onClick={() => setIsOpen(false)}
-              >
-                More Stuff
-              </Link>
+              
               <Link 
                 href="/contact"
                 className={`${pathname === '/contact' ? 'font-bold' : 'hover:underline'}`}

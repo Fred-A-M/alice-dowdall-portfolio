@@ -37,7 +37,7 @@ export default function Contact() {
   }, [isClient]);
 
   return (
-    <div className="relative w-full mb-10 sm:mt-10">
+    <div className="relative w-full pb-10 sm:mt-10">
       <div className="grid md:grid-cols-6 grid-cols-1 md:gap-4 gap-8">
 
         <div className="flex gap-6 md:col-span-4 col-span-1">
