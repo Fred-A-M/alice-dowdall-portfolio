@@ -2,9 +2,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import BurgerIcon from './BurgerIcon';
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -54,12 +55,12 @@ export default function NavBar() {
       >
         <div className="flex h-20 relative items-center">
           {/* Left div - positioned at the start */}
-          <div className="flex items-center antique-olive lg:text-4xl md:text-3xl text-2xl text-background bg-foreground px-4 py-2 absolute ">
+          <div className="flex items-center antique-olive md:text-4xl text-2xl text-background bg-foreground px-4 py-2 absolute">
             <Link href="/">ALICE DOWDALL</Link>
           </div>
           
           
-          <div className="hidden md:flex pl-60 lg:pl-30 xl:pl-0 items-center radio-canada-big text-xl gap-4 mx-auto h-full">
+          <div className="hidden sm:flex pl-40 xl:pl-0 items-center radio-canada-big text-xl gap-4 mx-auto h-full">
             <Link 
             href="/"
             className={`${pathname === '/' ? 'font-bold' : 'hover:underline'}`}
@@ -75,7 +76,7 @@ export default function NavBar() {
           </div>
           
           {/* Right div - positioned at the end */}
-          <div className="hidden md:flex items-center lg:gap-8 gap-4 absolute right-0">
+          <div className="hidden sm:flex items-center gap-8 absolute right-0">
             <Link href="https://www.instagram.com/alice_dowdall/">
               <Image src="/IG.png" alt="Instagram" width={20} height={20} />
             </Link>
@@ -84,8 +85,13 @@ export default function NavBar() {
             </Link>
           </div>
 
-          <div className="flex absolute right-0 md:hidden">
-            <Bars3Icon className="w-10 h-10" onClick={() => setIsOpen(!isOpen)} />
+          <div className="flex absolute right-0 sm:hidden">
+            <button 
+              onClick={() => setIsOpen(!isOpen)}
+              className="hover:cursor-pointer"
+            >
+              <BurgerIcon />
+            </button>
           </div>
         </div>
       </motion.header>

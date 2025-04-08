@@ -21,7 +21,7 @@ export default function Contact() {
     let totalTypingTime = 0;
     profile.background.forEach((line, index) => {
       // Add time for this paragraph (chars * time per char + pause)
-      if (index > 0) totalTypingTime += 0.5; // Pause between paragraphs
+      if (index > 0) totalTypingTime += 0.3; // Pause between paragraphs
       totalTypingTime += line.length * 0.03; // Time to type all characters
     });
     
@@ -37,13 +37,13 @@ export default function Contact() {
   }, [isClient]);
 
   return (
-    <div className="relative w-full pb-10 sm:mt-10">
+    <div className="relative w-full pb-10 md:pt-10">
       <div className="grid md:grid-cols-6 grid-cols-1 md:gap-4 gap-8">
 
         <div className="flex gap-6 md:col-span-4 col-span-1">
           <div className="gap-2 flex-1">
-            <div className="font-bold text-2xl">Bit about me</div>
-            <div className="flex flex-col gap-2 md:text-4xl sm:text-3xl text-xl ">
+            <div className="font-bold md:text-2xl text-lg">Bit about me</div>
+            <div className="flex flex-col gap-2 lg:text-3xl md:text-2xl sm:text-xl text-lg ">
               {isClient && profile.background.map((line, index) => {
                 // Calculate delay based on all previous paragraphs
                 let totalDelay = 0;
@@ -64,7 +64,12 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="col-span-1 md:col-span-2 flex justify-center">
+        <motion.div 
+          className="col-span-1 md:col-span-2 flex justify-center items-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 12 }}
+        >
           <Image 
             src={profile.image} 
             alt="Alice" 
@@ -78,7 +83,7 @@ export default function Contact() {
             }}
             className="shadow-lg shadow-black"
           />
-        </div>
+        </motion.div>
       </div>
 
       <motion.div 

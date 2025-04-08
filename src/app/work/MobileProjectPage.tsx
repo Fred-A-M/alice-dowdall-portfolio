@@ -63,7 +63,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
   const interleavedContent = createInterleavedContent();
 
   return (
-    <div className="relative w-full h-full mb-10 sm:mt-10">
+    <div className="relative w-full h-full mb-10 md:pt-10">
       <div className="grid grid-cols-1 gap-5">
         <div className="flex flex-col justify-center gap-4">
           <div className="flex flex-col text-xl">

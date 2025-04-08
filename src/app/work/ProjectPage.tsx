@@ -23,7 +23,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
   const previousProject = projects[projectIndex - 1];
 
   return (
-    <div className="relative w-full h-full mb-10 sm:mt-10">
+    <div className="relative w-full h-full mb-10 md:pt-10">
       <div className="grid grid-cols-2 gap-10">
 
         <div className="flex flex-col justify-center gap-4">

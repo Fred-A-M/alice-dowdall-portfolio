@@ -205,8 +205,9 @@ export interface Project {
 export const profile = {
   image: "/Alice.jpg",
   background: [
-    "I’m Alice, a senior solo creative with 8 years experience in advertising. Based in London but forever Manc.",
-    "Currently doing purpose properly at activist agency Revolt.",
+    "HEY👋 I’m Alice - a Manchester born, London based Senior Creative with 8+ years experience in advertising.",
+    "In this time I’ve made bras that bust taboos, billboards with bad bowels and lots lots more.",
+    "I’m currently working at Revolt London - making a whole load of real world impact.",
   ],
   contact: [
     "alice@revolt.agency",
