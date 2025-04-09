@@ -24,12 +24,12 @@ export default function ProjectPage({ project }: ProjectPageProps) {
 
   return (
     <div className="relative w-full h-full mb-10 md:pt-10">
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-2 gap-20 pb-10">
 
         <div className="flex flex-col justify-center gap-4">
           <div className="flex flex-col gap-2 text-4xl">
-            <p className="radio-canada-big-bold">{project.client}</p>
-            <p>{project.name}</p>
+            <p className="radio-canada-big-bold">{project.name}</p>
+            <p>{project.client}</p>
           </div>
           <div className="flex flex-col gap-2">
             {project.description.map((description, index) => (
@@ -44,18 +44,13 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           const isHovered = hoveredIndex === index;
           const floatDuration = 3 + (index % 2);
           const floatDelay = index * 0.05;
-          const floatAmount = 5;
-          const rotateAmount = 3;
-          
-          // Determine if this is the last image AND if there's an even number of images
-          const isLastImage = index === project.gallery.length - 1;
-          const hasEvenImages = project.gallery.length % 2 === 0;
-          const fullWidthLastImage = isLastImage && hasEvenImages;
+          const floatAmount = 3;
+          const rotateAmount = image.rotate || 0;
 
           return (
             <div 
               key={index} 
-              className={`flex items-center justify-center ${fullWidthLastImage ? 'col-span-2' : ''}`}
+              className={`flex items-center justify-center ${image.span && 'col-span-2'}`}
             >
               <motion.div 
                 className=""
@@ -99,7 +94,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                           index % 2 === 0 ? 10 : -10
                         ],
                         scale: image.scale,
-                        zIndex: 30,
+                        zIndex: 20,
                       }
                 }
                 transition={
@@ -127,7 +122,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
                   width={800}
                   height={800}
                   style={{
-                    maxWidth: fullWidthLastImage ? "600px" : "450px", // Larger max width for full-span image
+                    maxWidth: image.span ? "600px" : "450px", // Larger max width for full-span image
                     maxHeight: "600px",
                     width: "auto",
                     height: "auto",

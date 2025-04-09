@@ -1,0 +1,126 @@
+"use client";
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+
+interface ImageProps {
+  src: string;
+  alt: string;
+  rotation?: number;
+  scale?: number;
+  position: {
+    x: number | string;
+    y: number | string;
+  };
+  rotateAmount?: number;
+  floatAmount?: number;
+  floatDuration?: number;
+  floatDelay?: number;
+  isWideImage?: boolean;
+  isAbsolute?: boolean;
+  width?: number;
+  height?: number;
+}
+
+export default function FloatingImage({
+  src,
+  alt,
+  rotation = 0,
+  scale = 1,
+  position,
+  rotateAmount = 3,
+  floatAmount = 3,
+  floatDuration = 3,
+  floatDelay = 1,
+  isWideImage = false,
+  isAbsolute = false,
+  width = 0,
+  height = 0,
+}: ImageProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  
+  return (
+    <motion.div 
+      className={isAbsolute ? "absolute" : ""}
+      style={{
+        transformOrigin: 'center center',
+        left: typeof position.x === 'string' ? position.x : `${position.x}px`,
+        top: typeof position.y === 'string' ? position.y : `${position.y}px`,
+      }}
+      initial={{
+        rotate: rotation,
+        x: rotation > 0 ? -50 : 50,
+        y: rotation > 0 ? 50 : -50,
+      }}
+      animate={
+        isHovered 
+          ? {
+              rotate: rotation,
+              scale: scale * 1.2,
+              x: rotation > 0 ? -50 : 50,
+              y: rotation > 0 ? 50 : -50,
+              zIndex: 30,
+            }
+          : {
+              rotate: [
+                rotation, 
+                rotation + rotateAmount, 
+                rotation, 
+                rotation - rotateAmount, 
+                rotation
+              ],
+              x: [
+                rotation > 0 ? -10 : 10,
+                rotation > 0 ? -10 + floatAmount : 10 + floatAmount,
+                rotation > 0 ? -10 : 10,
+                rotation > 0 ? -10 - floatAmount : 10 - floatAmount,
+                rotation > 0 ? -10 : 10
+              ],
+              y: [
+                rotation > 0 ? 10 : -10,
+                rotation > 0 ? 10 - floatAmount : -10 - floatAmount,
+                rotation > 0 ? 10 : -10,
+                rotation > 0 ? 10 + floatAmount : -10 + floatAmount,
+                rotation > 0 ? 10 : -10
+              ],
+              scale: scale,
+              zIndex: 20,
+            }
+      }
+      transition={
+        isHovered
+          ? {
+              duration: 0.3,
+              ease: "easeOut",
+            }
+          : {
+              duration: floatDuration,
+              ease: "easeInOut",
+              times: [0, 0.25, 0.5, 0.75, 1],
+              repeat: Infinity,
+              repeatType: "loop",
+              delay: floatDelay,
+              scale: {duration: 0.3},
+            }
+      }
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+    >
+      <Image 
+        src={src} 
+        alt={alt} 
+        width={width ? width : 800}
+        height={height ? height : 800}
+        style={{
+          maxWidth: width ? `${width}px` : (isWideImage ? "700px" : "450px"),
+          maxHeight: height ? `${height}px` : "600px",
+          width: "auto",
+          height: "auto",
+          objectFit: "contain",
+          filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3))'
+        }}
+        className="rounded-sm"
+      />
+    </motion.div>
+  );
+}

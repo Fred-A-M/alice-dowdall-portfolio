@@ -1,8 +1,9 @@
 "use client";
-import ProjectPage from "@/app/work/ProjectPage";
 import MobileProjectPage from "@/app/work/MobileProjectPage";
 import { MobileProject, Project, projects, projectsMobile } from "@/app/consts";
 import { useEffect, useState } from 'react';
+import DesktopProjectPage from '../components/DesktopProjectPage';
+import { WorldWithoutSoilSections } from './sections';
 
 export default function MadeACprBra() {
   const [isMobile, setIsMobile] = useState(false);
@@ -32,7 +33,7 @@ export default function MadeACprBra() {
       {isMobile ? (
         <MobileProjectPage project={mobileProject as MobileProject} />
       ) : (
-        <ProjectPage project={project as Project} />
+        <DesktopProjectPage project={project as Project} sections={WorldWithoutSoilSections(project as Project)} />
       )}
     </>
   );

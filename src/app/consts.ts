@@ -11,11 +11,12 @@ export const projects = [
     image: "/projects/HowToOi.jpg",
     image2: "/projects2/HowToOi.gif",
     gallery: [
-      {image: "/projects/Oi/1.jpg", scale: 1},
-      {image: "/projects/Oi/3.jpg", scale: 1},
-      {image: "/projects/Oi/5.gif", scale: 1},
-      {image: "/projects/Oi/2.gif", scale: 1},
-      {image: "/projects/Oi/4.jpg", scale: 1},
+      {image: "/projects/Oi/1.gif", scale: 0.8, span: false, rotate: 0, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/Oi/2.jpg", scale: 1, span: true, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/Oi/3.jpg", scale: 1, span: true, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/Oi/4.jpg", scale: 1, span: true, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/Oi/5.jpg", scale: 1, span: true, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/Oi/6.gif", scale: 1, span: true, rotate: 0, floatAmount: 1, floatDuration: 3},
     ],
     link: "/work/how-to-oi",
   },
@@ -32,12 +33,12 @@ export const projects = [
     image: "/projects/WaterAid.jpg",
     image2: "/projects2/WaterAid.png",
     gallery: [
-      {image: "/projects/WaterAid/1.jpg", scale: 1},
-      {image: "/projects/WaterAid/2.png", scale: 1},
-      {image: "/projects/WaterAid/3.jpg", scale: 1},
-      {image: "/projects/WaterAid/4.jpg", scale: 1},
-      
+      {image: "/projects/WaterAid/1.png", scale: 1, rotate: 0, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/WaterAid/2.jpg", scale: 1, rotate: 0, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/WaterAid/3.jpg", scale: 0.8, rotate: 0, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/WaterAid/4.jpg", scale: 1, rotate: 0, floatAmount: 1, floatDuration: 3},
     ],
+    video: "https://www.youtube.com/embed/srLgGtOsRMY?rel=0&modestbranding=1",
     link: "/work/water-aid",
   },
   {
@@ -51,10 +52,16 @@ export const projects = [
     image: "/projects/SmallTalk.jpg",
     image2: "/projects2/SmallTalk.jpg",
     gallery: [
-      {image: "/projects/SmallTalk/1.jpg", scale: 1},
-      {image: "/projects/SmallTalk/2.jpg", scale: 1},
-      {image: "/projects/SmallTalk/3.jpg", scale: 1},
+      {image: "/projects/SmallTalk/1.png", scale: 0.9},
+      {image: "/projects/SmallTalk/2.png", scale: 0.4},
+      {image: "/projects/SmallTalk/3.png", scale: 0.8},
+      {image: "/projects/SmallTalk/4.jpg", scale: 1},
+      {image: "/projects/SmallTalk/5.png", scale: 0.7},
+      {image: "/projects/SmallTalk/6.png", scale: 0.5},
+      {image: "/projects/SmallTalk/7.jpg", scale: 1},
+      {image: "/projects/SmallTalk/8.jpg", scale: 0.8},
     ],
+    video: "https://www.youtube.com/embed/GvN42e0XzXs?rel=0&modestbranding=1",
     link: "/work/turned-small-talk-into-real-talk",
   },
   {
@@ -70,9 +77,10 @@ export const projects = [
     image: "/projects/WorldWithoutSoil.jpg",
     image2: "/projects2/WorldWithoutSoil.gif",
     gallery: [
-      {image: "/projects/WorldWithoutSoil/WWS2.jpg", scale: 1},
-      {image: "/projects/WorldWithoutSoil/WWS3.jpg", scale: 1},
-      {image: "/projects/WorldWithoutSoil/WWS1.gif", scale: 1},
+      {image: "/projects/WorldWithoutSoil/1.gif", scale: 1, rotate: 0, floatAmount: 0, floatDuration: 0},
+      {image: "/projects/WorldWithoutSoil/2.jpg", scale: 1, rotate: 0, floatAmount: 2, floatDuration: 3},
+      {image: "/projects/WorldWithoutSoil/3.jpg", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 4},
+      {image: "/projects/WorldWithoutSoil/4.jpg", scale: 1, rotate: 0, floatAmount: 1, floatDuration: 0},
     ],
     link: "/work/world-without-soil",
   },
@@ -89,11 +97,13 @@ export const projects = [
     image: "/projects/BiteBack2030.jpg",
     image2: "/projects2/BiteBack2030.png",
     gallery: [
-      {image: "/projects/BiteBack2030/1.jpg", scale: 1},
-      {image: "/projects/BiteBack2030/3.png", scale: 1},
-      {image: "/projects/BiteBack2030/2.jpg", scale: 1},
-      {image: "/projects/BiteBack2030/4.jpg", scale: 1},
+      {image: "/projects/BiteBack2030/1.png", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/BiteBack2030/2.jpg", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/BiteBack2030/3.png", scale: 1.2, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/BiteBack2030/4.png", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/BiteBack2030/5.jpg", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
     ],
+    video: "https://www.youtube.com/embed/TLf2gOrL1iM?rel=0&modestbranding=1",
     link: "/work/bite-back-2030",
   },
   {
@@ -109,14 +119,14 @@ export const projects = [
     image: "/projects/CPRBra.png",
     image2: "/projects2/CPRBra.png",
     gallery: [
-      {image: "/projects/CPRBra/1.gif", scale: 1},
-      {image: "/projects/CPRBra/2.png", scale: 0.9},
-      {image: "/projects/CPRBra/3.gif", scale: 1.3},
-      {image: "/projects/CPRBra/4.gif", scale: 0.6},
-      {image: "/projects/CPRBra/5.jpg", scale: 1},
-      {image: "/projects/CPRBra/6.png", scale: 0.9},
-      {image: "/projects/CPRBra/7.gif", scale: 1.3},
-      {image: "/projects/CPRBra/8.gif", scale: 1.2},
+      {image: "/projects/CPRBra/1.gif", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/CPRBra/2.png", scale: 1, rotate: 3, floatAmount: 1, floatDuration: 2},
+      {image: "/projects/CPRBra/3.gif", scale: 1, rotate: 0, floatAmount: 1, floatDuration: 1},
+      {image: "/projects/CPRBra/4.gif", scale: 1, rotate: 3, floatAmount: 1, floatDuration: 4},
+      {image: "/projects/CPRBra/5.jpg", scale: 1, rotate: 3, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/CPRBra/6.png", scale: 1, rotate: 3, floatAmount: 1, floatDuration: 2},
+      {image: "/projects/CPRBra/7.gif", scale: 1, rotate: 0, floatAmount: 1, floatDuration: 1},
+      {image: "/projects/CPRBra/8.gif", scale: 1, rotate: 0, floatAmount: 1, floatDuration: 4},
     ],
     link: "/work/made-a-cpr-bra",
   },
@@ -131,10 +141,13 @@ export const projects = [
     image: "/projects/WindInTheWillows.jpg",
     image2: "/projects2/WindInTheWillows.jpeg",
     gallery: [
-      {image: "/projects/WindInTheWillows/1.png", scale: 1},
-      {image: "/projects/WindInTheWillows/2.png", scale: 1},
-      {image: "/projects/WindInTheWillows/3.png", scale: 1},
+      {image: "/projects/WindInTheWillows/1.jpg", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/WindInTheWillows/2.png", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/WindInTheWillows/3.jpeg", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/WindInTheWillows/4.png", scale: 0.8, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/WindInTheWillows/5.png", scale: 0.8, rotate: 6, floatAmount: 1, floatDuration: 3},
     ],
+    video: "https://www.youtube.com/embed/JZYcoeqzxVI?rel=0&modestbranding=1",
     link: "/work/wind-in-the-willows",
   },
   {
@@ -143,15 +156,16 @@ export const projects = [
     tagline: "Made people think twice about tampons",
     description: [
       "A lot of products for women have changed a lot in the last 100 years. Except one very important thing a lot of us use every month: tampons. ",
-      "This is an unboxing video with an important twist. All to sell the new “tampliner”,  one of the first major innovations in tampons in the past century.",
+      "This is an unboxing video with an important twist. All to sell the new 'tampliner',  one of the first major innovations in tampons in the past century.",
     ],
     image: "/projects/Callaly.jpg",
     image2: "/projects2/Callaly.png",
     gallery: [
-      {image: "/projects/Callaly/1.jpg", scale: 1},
-      {image: "/projects/Callaly/2.jpg", scale: 1},
-      {image: "/projects/Callaly/3.jpg", scale: 1},
+      {image: "/projects/Callaly/1.jpg", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/Callaly/2.jpg", scale: 1, rotate: 3, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/Callaly/3.jpg", scale: 1, rotate: 1, floatAmount: 3, floatDuration: 3},
     ],
+    video: "https://www.youtube.com/embed/_KNIbxL-G7Y?rel=0&modestbranding=1",
     link: "/work/callaly",
   },
   {
@@ -166,12 +180,13 @@ export const projects = [
     image: "/projects/GiffGaff.png",
     image2: "/projects2/GiffGaff.png",
     gallery: [
-      {image: "/projects/GiffGaff/3.png", scale: 1},
-      {image: "/projects/GiffGaff/1.png", scale: 1},
-      {image: "/projects/GiffGaff/2.jpg", scale: 1},
-      {image: "/projects/GiffGaff/4.png", scale: 1},
-      {image: "/projects/GiffGaff/5.png", scale: 1},
+      {image: "/projects/GiffGaff/1.jpg", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/GiffGaff/2.png", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/GiffGaff/3.png", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/GiffGaff/4.png", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/GiffGaff/5.png", scale: 1, rotate: 1, floatAmount: 1, floatDuration: 3},
     ],
+    video: "https://www.youtube.com/embed/chNKKik4PhA?rel=0&modestbranding=1",
     link: "/work/giffgaff",
   },
   {
@@ -185,8 +200,10 @@ export const projects = [
     image: "/projects/MadeAFartingBillboard.png",
     image2: "/projects2/MadeAFartingBillboard.png",
     gallery: [
-      {image: "/projects/FartingBillboard/1.png", scale: 1},
-      {image: "/projects/FartingBillboard/2.png", scale: 1},
+      {image: "/projects/FartingBillboard/1.png", scale: 0.9, span: false, rotate: 2},
+      {image: "/projects/FartingBillboard/2.png", scale: 1.3, span: true, rotate: 1},
+      {image: "/projects/FartingBillboard/3.png", scale: 0.8, span: false, rotate: 2},
+      {image: "/projects/FartingBillboard/4.gif", scale: 2, span: false, rotate: 0},
     ],
     link: "/work/made-a-farting-billboard",
   },
@@ -199,7 +216,8 @@ export interface Project {
   description: string[];
   image: string;
   image2: string;
-  gallery: {image: string, scale: number}[];
+  gallery: {image: string, scale: number, span?: boolean, rotate?: number, floatAmount?: number, floatDuration?: number}[];
+  video?: string;
   link: string;
 }
 
