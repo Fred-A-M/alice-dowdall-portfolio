@@ -13,8 +13,6 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[1].image} 
           alt={project.name} 
-          position={{ x: 0, y: 0 }} 
-          scale={project.gallery[1].scale} 
           rotateAmount={project.gallery[1].rotate} 
           floatAmount={project.gallery[1].floatAmount} 
           floatDuration={project.gallery[1].floatDuration} 
@@ -25,11 +23,11 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[2].image} 
           alt={project.name} 
-          position={{ x: 0, y: 0 }} 
-          scale={project.gallery[2].scale} 
           rotateAmount={project.gallery[2].rotate} 
           floatAmount={project.gallery[2].floatAmount} 
           floatDuration={project.gallery[2].floatDuration} 
+          width={800}
+          height={800}
         />      
       </div>
     </div>,
@@ -39,12 +37,9 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[3].image}
           alt={project.name}
-          position={{ x: 0, y: 0 }}
-          scale={project.gallery[3].scale}
           rotateAmount={project.gallery[3].rotate}  
           floatAmount={project.gallery[3].floatAmount}
           floatDuration={project.gallery[3].floatDuration}
-          isWideImage={true}
           width={500}
         />
       </div>
@@ -52,13 +47,11 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[4].image}
           alt={project.name}
-          position={{ x: 0, y: 0 }}
-          scale={project.gallery[4].scale}
           rotateAmount={project.gallery[4].rotate}  
           floatAmount={project.gallery[4].floatAmount}
           floatDuration={project.gallery[4].floatDuration}
           isWideImage={true}
-          width={475}
+          width={450}
         />
       </div>
     </div>,

@@ -10,8 +10,6 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[1].image} 
           alt={project.name} 
-          position={{ x: 0, y: 0 }} 
-          scale={project.gallery[1].scale} 
           rotation={-4} 
           rotateAmount={project.gallery[1].rotate} 
           floatAmount={project.gallery[1].floatAmount} 
@@ -21,8 +19,6 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[2].image} 
           alt={project.name} 
-          position={{ x: 0, y: 0 }} 
-          scale={project.gallery[2].scale} 
           rotation={2} 
           rotateAmount={project.gallery[2].rotate} 
           floatAmount={project.gallery[2].floatAmount} 
@@ -35,8 +31,6 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[3].image} 
           alt={project.name} 
-          position={{ x: 0, y: 0 }} 
-          scale={project.gallery[3].scale} 
           rotation={10} 
           rotateAmount={project.gallery[3].rotate} 
           floatAmount={project.gallery[3].floatAmount} 
@@ -48,8 +42,6 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[4].image} 
           alt={project.name} 
-          position={{ x: 0, y: 0 }} 
-          scale={project.gallery[4].scale} 
           rotation={0} 
           rotateAmount={project.gallery[4].rotate} 
           floatAmount={project.gallery[4].floatAmount} 
@@ -63,8 +55,6 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[5].image} 
           alt={project.name} 
-          position={{ x: 0, y: 0 }} 
-          scale={project.gallery[5].scale} 
           rotation={-10} 
           rotateAmount={project.gallery[5].rotate} 
           floatAmount={project.gallery[5].floatAmount} 
@@ -75,13 +65,11 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[6].image} 
           alt={project.name} 
-          position={{ x: 0, y: 0 }} 
-          scale={project.gallery[6].scale} 
           rotation={2} 
           rotateAmount={project.gallery[6].rotate} 
           floatAmount={project.gallery[6].floatAmount} 
-          width={500}
           floatDuration={project.gallery[6].floatDuration} 
+          width={500}
         />
       </div>
     </div>,

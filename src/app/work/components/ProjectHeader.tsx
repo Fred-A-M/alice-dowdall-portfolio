@@ -22,9 +22,9 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
       <div className="flex justify-center items-center h-full">
         <FloatingImage 
           src={project.gallery[0].image} 
-          alt={project.name} 
-          position={{ x: 0, y: 0 }}
-          scale={project.gallery[0].scale}
+          alt={project.name}
+          width={project.gallery[0].width || undefined}
+          height={project.gallery[0].height || undefined}
           rotateAmount={project.gallery[0].rotate}
           floatAmount={project.gallery[0].floatAmount}
           floatDuration={project.gallery[0].floatDuration}

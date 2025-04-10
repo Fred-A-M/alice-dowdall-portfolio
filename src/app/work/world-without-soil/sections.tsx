@@ -12,8 +12,6 @@ export const WorldWithoutSoilSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[1].image}
           alt={project.name}
-          position={{ x: 0, y: 0 }}
-          scale={project.gallery[1].scale}
           rotateAmount={project.gallery[1].rotate}  
           floatAmount={project.gallery[1].floatAmount}
           floatDuration={project.gallery[1].floatDuration}
@@ -23,8 +21,6 @@ export const WorldWithoutSoilSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[2].image}
           alt={project.name}
-          position={{ x: 0, y: 0 }}
-          scale={project.gallery[2].scale}
           rotateAmount={project.gallery[2].rotate}  
           floatAmount={project.gallery[2].floatAmount}
           floatDuration={project.gallery[2].floatDuration}

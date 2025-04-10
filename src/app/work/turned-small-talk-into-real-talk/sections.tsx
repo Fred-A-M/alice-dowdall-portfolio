@@ -12,10 +12,9 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
           <FloatingImage 
             src={project.gallery[1].image} 
             alt={project.name} 
-            rotateAmount={4}
-            floatAmount={3}
-            floatDuration={5}
-            floatDelay={1}
+            rotateAmount={project.gallery[1].rotate}
+            floatAmount={project.gallery[1].floatAmount}
+            floatDuration={project.gallery[1].floatDuration}
             width={170}
             height={170}
           />
@@ -29,10 +28,9 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[2].image} 
           alt={project.name} 
-          rotateAmount={3}
-          floatAmount={2}
-          floatDuration={2}
-          floatDelay={1}  
+          rotateAmount={project.gallery[2].rotate}
+          floatAmount={project.gallery[2].floatAmount}
+          floatDuration={project.gallery[2].floatDuration}
           width={140}
           height={140}
         />
