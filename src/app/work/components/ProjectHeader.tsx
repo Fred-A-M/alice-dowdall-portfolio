@@ -10,7 +10,7 @@ export default function ProjectHeader({ project, isMobile }: ProjectHeaderProps)
   return (
     <div className="grid grid-cols-2">
       <div className="flex flex-col justify-center gap-4">
-        <div className="flex flex-col gap-2 sm:text-4xl text-xl">
+        <div className="flex flex-col sm:gap-2 gap-0 sm:text-4xl text-xl">
           <p className="radio-canada-big-bold">{project.name}</p>
           <p>{project.client}</p>
         </div>

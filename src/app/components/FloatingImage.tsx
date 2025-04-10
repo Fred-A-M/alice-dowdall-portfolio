@@ -46,16 +46,16 @@ export default function FloatingImage({
       }}
       initial={{
         rotate: rotation,
-        x: rotation > 0 ? -50 : 50,
-        y: rotation > 0 ? 50 : -50,
+        x: 0,
+        y: 0,
       }}
       animate={
         isHovered 
           ? {
               rotate: rotation,
               scale: scale * 1.2,
-              x: rotation > 0 ? -50 : 50,
-              y: rotation > 0 ? 50 : -50,
+              x: 0,
+              y: 0,
               zIndex: 30,
             }
           : {
@@ -67,18 +67,18 @@ export default function FloatingImage({
                 rotation
               ],
               x: [
-                rotation > 0 ? -10 : 10,
-                rotation > 0 ? -10 + floatAmount : 10 + floatAmount,
-                rotation > 0 ? -10 : 10,
-                rotation > 0 ? -10 - floatAmount : 10 - floatAmount,
-                rotation > 0 ? -10 : 10
+                0,
+                floatAmount,
+                0,
+                -floatAmount,
+                0
               ],
               y: [
-                rotation > 0 ? 10 : -10,
-                rotation > 0 ? 10 - floatAmount : -10 - floatAmount,
-                rotation > 0 ? 10 : -10,
-                rotation > 0 ? 10 + floatAmount : -10 + floatAmount,
-                rotation > 0 ? 10 : -10
+                0,
+                -floatAmount,
+                0,
+                floatAmount,
+                0
               ],
               scale: scale,
               zIndex: zIndex ? zIndex : 20,

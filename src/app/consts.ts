@@ -328,7 +328,7 @@ export const projectsMobile = [
     image: "/projects/SmallTalk.jpg",
     image2: "/projects2/SmallTalk.jpg",
     gallery: [
-      {image: "/projects/SmallTalk/1.png", rotate: 0, floatAmount: 0, floatDuration: 0},
+      {image: "/projects/SmallTalk/1.png", rotate: 0, floatAmount: 0, floatDuration: 0, width: 150, height: 150},
       {image: "/projects/SmallTalk/2.png", rotate: 3, floatAmount: 1, floatDuration: 3},
       {image: "/projects/SmallTalk/3.png", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/SmallTalk/4.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
