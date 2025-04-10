@@ -132,7 +132,7 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
     //   </div>
     // </div>,
 
-    <div key="gallery" className="grid grid-cols-6 gap-20 items-center mx-auto w-full ">
+    <div key="gallery" className="grid grid-cols-6 items-center mx-auto w-full">
       <div className="col-span-6">
         <div className="flex flex-col gap-5 justify-center h-full">
           <div className="grid grid-cols-6">
@@ -159,7 +159,7 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
             </div>
           </div>
           <div className="grid grid-cols-6">
-            <div className="col-span-1 flex items-end justify-end">
+            <div className="col-span-2 flex items-end justify-end pl-10">
               <FloatingImage 
                 src={project.gallery[5].image} 
                 alt={project.name} 
@@ -169,7 +169,7 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
                 width={100}
               />
             </div>
-            <div className="col-span-5 flex justify-start">
+            <div className="col-span-4 flex justify-end">
               <FloatingImage 
                 src={project.gallery[6].image} 
                 alt={project.name} 

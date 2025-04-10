@@ -27,6 +27,13 @@ export default function ProjectPage({ project, sections }: ProjectPageProps) {
     
     for (let i = 0; i < maxLength; i++) {
       // Add gallery item if available first
+      if (i < sections.length) {
+        result.push({
+          type: 'section',
+          content: sections[i],
+          index: i
+        });
+      }
       
       // Add description item if available
       if (Array.isArray(project.description) && i < project.description.length) {
@@ -41,14 +48,6 @@ export default function ProjectPage({ project, sections }: ProjectPageProps) {
           type: 'description',
           content: project.description,
           index: 0
-        });
-      }
-
-      if (i < sections.length) {
-        result.push({
-          type: 'section',
-          content: sections[i],
-          index: i
         });
       }
     }
