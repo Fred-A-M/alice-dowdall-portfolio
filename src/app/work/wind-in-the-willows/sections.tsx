@@ -12,11 +12,10 @@ export const WindInTheWillowsSections = (project: Project): ReactNode[] => {
       <FloatingImage 
         src={project.gallery[1].image} 
         alt={project.name} 
-        position={{ x: 0, y: 0 }}
-        scale={project.gallery[1].scale}
         rotateAmount={project.gallery[1].rotate}  
         floatAmount={project.gallery[1].floatAmount}
-        isWideImage={true}
+        width={900}
+        height={900}
       />
     </div>,
 
@@ -24,11 +23,10 @@ export const WindInTheWillowsSections = (project: Project): ReactNode[] => {
       <FloatingImage 
         src={project.gallery[2].image} 
         alt={project.name} 
-        position={{ x: 0, y: 0 }}
-        scale={project.gallery[2].scale}
-        rotateAmount={project.gallery[1].rotate}  
-        floatAmount={project.gallery[1].floatAmount}
-        isWideImage={true}
+        rotateAmount={project.gallery[2].rotate}  
+        floatAmount={project.gallery[2].floatAmount}
+        width={900}
+        height={900}
       />
     </div>,
 
@@ -36,18 +34,14 @@ export const WindInTheWillowsSections = (project: Project): ReactNode[] => {
       <FloatingImage 
         src={project.gallery[3].image} 
         alt={project.name} 
-        position={{ x: 0, y: 0 }}
-        scale={project.gallery[3].scale}
         rotateAmount={project.gallery[3].rotate}  
         floatAmount={project.gallery[3].floatAmount}
         floatDuration={project.gallery[3].floatDuration}
-        isWideImage={true}
+        width={675}
       />
       <FloatingImage 
         src={project.gallery[4].image} 
         alt={project.name} 
-        position={{ x: 0, y: 0 }}
-        scale={project.gallery[4].scale}
         rotateAmount={project.gallery[4].rotate}  
         floatAmount={project.gallery[4].floatAmount}
         floatDuration={project.gallery[4].floatDuration}

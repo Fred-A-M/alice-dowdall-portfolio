@@ -10,29 +10,28 @@ export const MadeAFartingBillboardSections = (project: Project): ReactNode[] => 
       <Image src={project.gallery[1].image} alt={project.name} width={900} height={500} />  
     </div>,
 
-    <div key="large-image" className="grid grid-cols-2 gap-30">
+    <div key="gallery" className="grid grid-cols-2 gap-30">
       <div className="flex justify-end items-center">
         <FloatingImage 
           src={project.gallery[2].image}
           alt={project.name}
-          position={{ x: 0, y: 0 }}
-          scale={project.gallery[2].scale}
           rotation={-6}
           floatAmount={project.gallery[2].floatAmount}
           floatDuration={project.gallery[2].floatDuration}
+          width={500}
+          height={400}
         />
       </div>
       <div className="flex justify-start items-center">
         <FloatingImage 
           src={project.gallery[3].image}
           alt={project.name}
-          position={{ x: 0, y: 0 }}
-          scale={project.gallery[3].scale}
+          rotation={6}
           rotateAmount={project.gallery[3].rotate}
           floatAmount={project.gallery[3].floatAmount}
-          rotation={6}
           floatDuration={project.gallery[3].floatDuration}
-          isWideImage={true}
+          width={600}
+          height={600}
         />
       </div>
     </div>

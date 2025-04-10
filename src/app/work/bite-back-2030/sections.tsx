@@ -16,7 +16,7 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
           rotateAmount={project.gallery[1].rotate} 
           floatAmount={project.gallery[1].floatAmount} 
           floatDuration={project.gallery[1].floatDuration} 
-          isWideImage={true}
+          width={700}
         />
       </div>
       <div className="flex w-full justify-start items-center col-span-1">
@@ -50,7 +50,6 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
           rotateAmount={project.gallery[4].rotate}  
           floatAmount={project.gallery[4].floatAmount}
           floatDuration={project.gallery[4].floatDuration}
-          isWideImage={true}
           width={450}
         />
       </div>

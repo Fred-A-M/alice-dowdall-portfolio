@@ -1,5 +1,5 @@
 "use client";
-import MobileProjectPage from "@/app/work/MobileProjectPage";
+import MobileProjectPage from "@/app/work/components/MobileProjectPage";
 import { MobileProject, Project, projects, projectsMobile } from "@/app/consts";
 import { useEffect, useState } from 'react';
 import { GiffGaffSections } from './sections';

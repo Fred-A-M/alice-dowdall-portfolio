@@ -102,4 +102,122 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
   ];
 };
 
+export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
+  return [
+    // Section 1: Video
+    <div key="video-section" className="flex flex-col gap-4">
+      
+      <VideoEmbed key="video" video={project.video as string} />
+    
+    </div>,
+
+    // <div key="small-icons" className="flex justify-between items-center gap-20">
+    //   <FloatingImage 
+    //     src={project.gallery[1].image} 
+    //     alt={project.name} 
+    //     rotateAmount={5}
+    //     floatAmount={project.gallery[1].floatAmount}
+    //     floatDuration={project.gallery[1].floatDuration}
+    //     width={100}
+    //   />
+    //   <div className="pr-10">
+    //     <FloatingImage 
+    //       src={project.gallery[2].image} 
+    //       alt={project.name} 
+    //       rotateAmount={4}
+    //       floatAmount={project.gallery[2].floatAmount}
+    //       floatDuration={project.gallery[2].floatDuration}
+    //       width={60}
+    //     />
+    //   </div>
+    // </div>,
+
+    <div key="gallery" className="grid grid-cols-6 gap-20 items-center mx-auto w-full ">
+      <div className="col-span-6">
+        <div className="flex flex-col gap-5 justify-center h-full">
+          <div className="grid grid-cols-6">
+            <div className="col-span-4">
+              <FloatingImage 
+                src={project.gallery[3].image} 
+                alt={project.name} 
+                rotateAmount={project.gallery[3].rotate}
+                floatAmount={project.gallery[3].floatAmount}
+                floatDuration={project.gallery[3].floatDuration}
+                isMobile={true}
+              />
+            </div>
+            <div className="col-span-2 flex justify-start items-center">
+              <FloatingImage 
+                src={project.gallery[4].image} 
+                alt={project.name} 
+                rotation={-15}
+                rotateAmount={project.gallery[4].rotate}
+                floatAmount={project.gallery[4].floatAmount}
+                floatDuration={project.gallery[4].floatDuration}
+                width={60}
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-6">
+            <div className="col-span-1 flex items-end justify-end">
+              <FloatingImage 
+                src={project.gallery[5].image} 
+                alt={project.name} 
+                rotateAmount={project.gallery[5].rotate}
+                floatAmount={project.gallery[5].floatAmount}
+                floatDuration={project.gallery[5].floatDuration}
+                width={100}
+              />
+            </div>
+            <div className="col-span-5 flex justify-start">
+              <FloatingImage 
+                src={project.gallery[6].image} 
+                alt={project.name} 
+                rotateAmount={project.gallery[6].rotate}
+                floatAmount={project.gallery[6].floatAmount}
+                floatDuration={project.gallery[6].floatDuration}
+                isMobile={true}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>,
+
+    <div key="gallery-2" className="grid grid-cols-6 mx-auto w-full ">
+      <div className="col-span-1 flex justify-center items-start">
+        <FloatingImage 
+          src={project.gallery[1].image} 
+          alt={project.name} 
+          rotateAmount={5}
+          floatAmount={project.gallery[1].floatAmount}
+          floatDuration={project.gallery[1].floatDuration}
+          width={70}
+          zIndex={30}
+        />
+      </div>
+      <div className="col-span-4 flex justify-center items-center">
+        <FloatingImage 
+          src={project.gallery[7].image} 
+          alt={project.name} 
+          rotateAmount={project.gallery[7].rotate}
+          floatAmount={project.gallery[7].floatAmount}
+          floatDuration={project.gallery[7].floatDuration}
+          width={240}
+        />
+      </div>
+      <div className="col-span-1 flex justify-center items-end">
+        <FloatingImage 
+          src={project.gallery[2].image} 
+          alt={project.name} 
+          rotateAmount={4}
+          floatAmount={project.gallery[2].floatAmount}
+          floatDuration={project.gallery[2].floatDuration}
+          width={50}
+        />
+      </div>
+    </div>,
+  ];
+};
+
   

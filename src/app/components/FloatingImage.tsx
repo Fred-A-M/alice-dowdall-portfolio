@@ -15,11 +15,10 @@ interface ImageProps {
   rotateAmount?: number;
   floatAmount?: number;
   floatDuration?: number;
-  floatDelay?: number;
-  isWideImage?: boolean;
-  isAbsolute?: boolean;
+  isMobile?: boolean;
   width?: number;
   height?: number;
+  zIndex?: number;
 }
 
 export default function FloatingImage({
@@ -31,17 +30,15 @@ export default function FloatingImage({
   rotateAmount = 3,
   floatAmount = 3,
   floatDuration = 3,
-  floatDelay = 1,
-  isWideImage = false,
-  isAbsolute = false,
+  isMobile = false,
   width = 0,
   height = 0,
+  zIndex = 20,
 }: ImageProps) {
   const [isHovered, setIsHovered] = useState(false);
   
   return (
     <motion.div 
-      className={isAbsolute ? "absolute" : ""}
       style={{
         transformOrigin: 'center center',
         left: typeof position.x === 'string' ? position.x : `${position.x}px`,
@@ -84,7 +81,7 @@ export default function FloatingImage({
                 rotation > 0 ? 10 : -10
               ],
               scale: scale,
-              zIndex: 20,
+              zIndex: zIndex ? zIndex : 20,
             }
       }
       transition={
@@ -99,7 +96,7 @@ export default function FloatingImage({
               times: [0, 0.25, 0.5, 0.75, 1],
               repeat: Infinity,
               repeatType: "loop",
-              delay: floatDelay,
+              delay: 1,
               scale: {duration: 0.3},
             }
       }
@@ -112,8 +109,8 @@ export default function FloatingImage({
         width={width ? width : 800}
         height={height ? height : 800}
         style={{
-          maxWidth: width ? `${width}px` : (isWideImage ? "700px" : "450px"),
-          maxHeight: height ? `${height}px` : "600px",
+          maxWidth: width ? `${width}px` : (isMobile ? "250px" : "450px"),
+          maxHeight: height ? `${height}px` : (isMobile ? "300px" : "600px"),
           width: "auto",
           height: "auto",
           objectFit: "contain",
