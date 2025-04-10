@@ -1,6 +1,6 @@
 "use client";
 import MobileProjectPage from "@/app/work/components/MobileProjectPage";
-import { MobileProject, Project, projects, projectsMobile } from "@/app/consts";
+import { Project, projects, projectsMobile } from "@/app/consts";
 import { useEffect, useState } from 'react';
 import { MadeACprBraSections } from './sections';
 import DesktopProjectPage from '../components/DesktopProjectPage';
@@ -31,7 +31,7 @@ export default function MadeACprBra() {
   return (
     <>
       {isMobile ? (
-        <MobileProjectPage project={mobileProject as MobileProject} />
+        <MobileProjectPage project={mobileProject as Project} sections={MadeACprBraSections(project as Project)} />
       ) : (
         <DesktopProjectPage project={project as Project} sections={MadeACprBraSections(project as Project)} />
       )}

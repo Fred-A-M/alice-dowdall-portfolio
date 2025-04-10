@@ -6,7 +6,7 @@ import ProjectFooter from './ProjectFooter';
 import ProjectHeader from './ProjectHeader';
 
 interface ProjectPageProps {
-  project: Project | undefined;
+  project: Project;
   sections: ReactNode[];
 }
 
@@ -63,7 +63,7 @@ export default function ProjectPage({ project, sections }: ProjectPageProps) {
         <p className="radio-canada-big-bold">{project.name}</p>
         <p>{project.client}</p>
       </div> */}
-      <ProjectHeader project={project} isMobile={true} />
+      <ProjectHeader project={project as Project} isMobile={true} />
       
         {/* Interleaved content */}
         {interleavedContent.map((item, ) => {
