@@ -2,6 +2,7 @@ import { Project } from "@/app/consts";
 import FloatingImage from '@/app/components/FloatingImage';
 import { ReactNode } from "react";
 import Image from "next/image";
+
 export const MadeACprBraSections = (project: Project): ReactNode[] => {
   return [
     <div key="pair-1" className="grid grid-cols-2">
@@ -40,7 +41,7 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
           rotateAmount={project.gallery[3].rotate} 
           floatAmount={project.gallery[3].floatAmount} 
           floatDuration={project.gallery[3].floatDuration} 
-          width={200}
+          width={250}
         />
       </div>
       <div className="col-span-1 flex justify-center items-center">
@@ -89,8 +90,8 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
       <Image 
         src={project.gallery[7].image} 
         alt={project.name} 
-        width={1000} 
-        height={1000} 
+        width={900} 
+        height={500}
         className="rounded-sm"
       />
     </div>,

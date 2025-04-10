@@ -1,13 +1,15 @@
 "use client";
-import MobileProjectPage from "@/app/work/MobileProjectPage";
-import { MobileProject, Project, projects, projectsMobile } from "@/app/consts";
+// import MobileProjectPage from "@/app/work/MobileProjectPage";
+// import { MobileProject, Project, projects, projectsMobile } from "@/app/consts";
+import { Project, projects, } from "@/app/consts";
 import { useEffect, useState } from 'react';
-import SmallTalkComp from './SmallTalkComp';
+import DesktopProjectPage from '../components/DesktopProjectPage';
+import { SmallTalkSections } from './sections';
 
 export default function MadeACprBra() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const mobileProject = projectsMobile.find(project => project.name === "Small Talk");
+  // const mobileProject = projectsMobile.find(project => project.name === "Small Talk");
   const project = projects.find(project => project.name === "Small Talk");
 
   useEffect(() => {
@@ -30,9 +32,9 @@ export default function MadeACprBra() {
   return (
     <>
       {isMobile ? (
-        <MobileProjectPage project={mobileProject as MobileProject} />
+        <DesktopProjectPage project={project as Project} sections={SmallTalkSections(project as Project)} />
       ) : (
-        <SmallTalkComp project={project as Project} />
+        <DesktopProjectPage project={project as Project} sections={SmallTalkSections(project as Project)} />
       )}
     </>
   );

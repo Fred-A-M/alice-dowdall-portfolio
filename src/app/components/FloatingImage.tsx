@@ -8,7 +8,7 @@ interface ImageProps {
   alt: string;
   rotation?: number;
   scale?: number;
-  position: {
+  position?: {
     x: number | string;
     y: number | string;
   };
@@ -27,7 +27,7 @@ export default function FloatingImage({
   alt,
   rotation = 0,
   scale = 1,
-  position,
+  position = { x: 0, y: 0 },
   rotateAmount = 3,
   floatAmount = 3,
   floatDuration = 3,

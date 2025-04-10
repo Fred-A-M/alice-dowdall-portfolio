@@ -16,7 +16,7 @@ export default function DesktopProjectPage({ project, sections }: ProjectPagePro
   }
 
   return (
-    <div className="flex flex-col gap-10 w-full h-full mb-10 md:pt-10">
+    <div className="flex flex-col gap-20 w-full h-full mb-10 md:pt-10">
       <ProjectHeader project={project} />
 
       {sections && sections.map((section, index) => (
