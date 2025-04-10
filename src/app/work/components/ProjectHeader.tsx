@@ -3,21 +3,22 @@ import { Project } from '@/app/consts';
 
 interface ProjectHeaderProps {
   project: Project;
+  isMobile?: boolean;
 }
 
-export default function ProjectHeader({ project }: ProjectHeaderProps) {
+export default function ProjectHeader({ project, isMobile }: ProjectHeaderProps) {
   return (
     <div className="grid grid-cols-2">
       <div className="flex flex-col justify-center gap-4">
-        <div className="flex flex-col gap-2 text-4xl">
+        <div className="flex flex-col gap-2 sm:text-4xl text-xl">
           <p className="radio-canada-big-bold">{project.name}</p>
           <p>{project.client}</p>
         </div>
-        <div className="flex flex-col gap-2">
+        {!isMobile && <div className="flex flex-col gap-2">
           {project.description.map((description, index) => (
             <p key={index} className="text-lg">{description}</p>
           ))}
-        </div>
+        </div>}
       </div>
       <div className="flex justify-center items-center h-full">
         <FloatingImage 

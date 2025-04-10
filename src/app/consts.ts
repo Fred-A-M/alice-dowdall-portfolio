@@ -484,6 +484,23 @@ export const projectsMobile = [
   },
 ];
 
+export interface MobileProject {
+  name: string;
+  client: string;
+  tagline: string;
+  description: string[];
+  image: string;
+  image2: string;
+  gallery: {
+    image: string, 
+    rotate?: number, 
+    floatAmount?: number, 
+    floatDuration?: number,
+  }[];
+  video?: string;
+  link: string;
+}
+
 
 
 export const features = [

@@ -3,6 +3,7 @@
 import { Project } from "@/app/consts";
 import { ReactNode } from 'react';
 import ProjectFooter from './ProjectFooter';
+import ProjectHeader from './ProjectHeader';
 
 interface ProjectPageProps {
   project: Project | undefined;
@@ -58,10 +59,11 @@ export default function ProjectPage({ project, sections }: ProjectPageProps) {
 
   return (
     <div className="flex flex-col w-full justify-center gap-5 mb-5">
-      <div className="flex flex-col text-xl">
+      {/* <div className="flex flex-col text-xl">
         <p className="radio-canada-big-bold">{project.name}</p>
         <p>{project.client}</p>
-      </div>
+      </div> */}
+      <ProjectHeader project={project} isMobile={true} />
       
         {/* Interleaved content */}
         {interleavedContent.map((item, ) => {
