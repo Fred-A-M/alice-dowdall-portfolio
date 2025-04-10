@@ -51,8 +51,6 @@ export const GiffGaffSections = (project: Project): ReactNode[] => {
           <FloatingImage 
             src={project.gallery[4].image} 
             alt={project.name} 
-            position={{ x: 0, y: 0 }}
-            scale={project.gallery[4].scale}
             rotateAmount={project.gallery[4].rotate}
             floatAmount={project.gallery[4].floatAmount}
             floatDuration={project.gallery[4].floatDuration}
