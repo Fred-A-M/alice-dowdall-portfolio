@@ -5,22 +5,24 @@ import { ReactNode } from "react";
 // Create a function that takes the project and returns the sections
 export const GiffGaffSections = (project: Project): ReactNode[] => {
   return [
-    <div key="videoandimage" className="flex justify-center items-center w-full my-8"> 
-      <div className="w-[400px] h-[400px]">
+    <div key="videoandimage" className="grid grid-cols-2 items-center w-full lg:w-[80%] mx-auto"> 
+      <div className="flex justify-center">
         <iframe
           src={project.video}
           title="YouTube video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          className="w-full h-full rounded-sm"
+          className="w-[400px] h-[400px] rounded-sm"
         />
       </div>
-      <FloatingImage 
-        src={project.gallery[1].image} 
-        alt={project.name} 
-        rotateAmount={project.gallery[1].rotate}
-        floatAmount={project.gallery[1].floatAmount}
-        floatDuration={project.gallery[1].floatDuration}
-      />
+      <div className="flex justify-center">
+        <FloatingImage 
+          src={project.gallery[1].image} 
+          alt={project.name} 
+          rotateAmount={project.gallery[1].rotate}
+          floatAmount={project.gallery[1].floatAmount}
+          floatDuration={project.gallery[1].floatDuration}
+        />
+      </div>
     </div>,
 
     <div key="gallery" className="grid grid-cols-2 lg:w-[70%] w-[100%] mx-auto">
@@ -65,23 +67,25 @@ export const GiffGaffSections = (project: Project): ReactNode[] => {
 
 export const GiffGaffSectionsMobile = (project: Project): ReactNode[] => {
   return [
-    <div key="videoandimage" className="flex justify-center items-center w-full"> 
-      <div className="w-[200px] h-[200px]">
+    <div key="videoandimage" className="grid grid-cols-2 items-center w-full sm:w-[80%] mx-auto"> 
+      <div className="flex justify-center">
         <iframe
           src={project.video}
           title="YouTube video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          className="w-full h-full rounded-sm"
+          className="w-[200px] h-[200px] rounded-sm"
         />
       </div>
-      <FloatingImage 
-        src={project.gallery[1].image} 
-        alt={project.name} 
-        rotateAmount={project.gallery[1].rotate}
-        floatAmount={project.gallery[1].floatAmount}
-        floatDuration={project.gallery[1].floatDuration}
-        isMobile={true}
-      />
+      <div className="flex justify-center">
+        <FloatingImage 
+          src={project.gallery[1].image} 
+          alt={project.name} 
+          rotateAmount={project.gallery[1].rotate}
+          floatAmount={project.gallery[1].floatAmount}
+          floatDuration={project.gallery[1].floatDuration}
+          isMobile={true}
+        />
+      </div>
     </div>,
 
     <div key="gallery" className="grid grid-cols-2 sm:w-[70%] w-full mx-auto">

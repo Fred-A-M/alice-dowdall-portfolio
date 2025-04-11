@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { GiffGaffSections, GiffGaffSectionsMobile } from './sections';
 import DesktopProjectPage from '../components/DesktopProjectPage';
 
-export default function MadeACprBra() {
+export default function GiffGaff() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
 

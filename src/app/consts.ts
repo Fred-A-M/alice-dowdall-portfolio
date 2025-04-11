@@ -286,7 +286,7 @@ export const projectsMobile = [
     image: "/projects/CPRBra.png",
     image2: "/projects2/CPRBra.png",
     gallery: [
-       {image: "/projects/CPRBra/1.gif", rotate: 0, floatAmount: 0, floatDuration: 0},
+       {image: "/projects/CPRBra/1.gif", rotate: 0, floatAmount: 0, floatDuration: 0, width: 160, height: 160},
        {image: "/projects/CPRBra/2.png", rotate: 3, floatAmount: 1, floatDuration: 2},
        {image: "/projects/CPRBra/3.gif", rotate: 0, floatAmount: 1, floatDuration: 1},
        {image: "/projects/CPRBra/4.gif", rotate: 3, floatAmount: 1, floatDuration: 4},
@@ -310,7 +310,7 @@ export const projectsMobile = [
     image: "/projects/WorldWithoutSoil.jpg",
     image2: "/projects2/WorldWithoutSoil.gif",
     gallery: [
-      {image: "/projects/WorldWithoutSoil/1.gif", rotate: 0, floatAmount: 0, floatDuration: 0},
+      {image: "/projects/WorldWithoutSoil/1.gif", rotate: 0, floatAmount: 0, floatDuration: 0, width: 125, height: 125},
       {image: "/projects/WorldWithoutSoil/2.jpg", rotate: 3, floatAmount: 1, floatDuration: 3},
       {image: "/projects/WorldWithoutSoil/3.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/WorldWithoutSoil/4.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
@@ -353,7 +353,7 @@ export const projectsMobile = [
     image: "/projects/WaterAid.jpg",
     image2: "/projects2/WaterAid.png",
     gallery: [
-      {image: "/projects/WaterAid/1.png", rotate: 0, floatAmount: 0, floatDuration: 0},
+      {image: "/projects/WaterAid/1.png", rotate: 0, floatAmount: 0, floatDuration: 0, width: 150, height: 150},
       {image: "/projects/WaterAid/2.jpg", rotate: 3, floatAmount: 1, floatDuration: 3},
       {image: "/projects/WaterAid/3.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/WaterAid/4.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
@@ -374,7 +374,7 @@ export const projectsMobile = [
     image: "/projects/GiffGaff.png",
     image2: "/projects2/GiffGaff.png",
     gallery: [
-      {image: "/projects/Giffgaff/1.jpg", rotate: 1, floatAmount: 1, floatDuration: 3, width: 150, height: 150},
+      {image: "/projects/Giffgaff/1.jpg", rotate: 1, floatAmount: 1, floatDuration: 3, width: 125, height: 125},
       {image: "/projects/Giffgaff/2.png", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/Giffgaff/3.png", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/Giffgaff/4.png", rotate: 1, floatAmount: 1, floatDuration: 3},
@@ -395,7 +395,7 @@ export const projectsMobile = [
     image: "/projects/HowToOi.jpg",
     image2: "/projects2/HowToOi.gif",
     gallery: [
-      {image: "/projects/Oi/1.gif", rotate: 0, floatAmount: 0, floatDuration: 0},
+      {image: "/projects/Oi/1.gif", rotate: 0, floatAmount: 0, floatDuration: 0, width: 125, height: 125},
       {image: "/projects/Oi/2.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/Oi/3.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/Oi/4.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
@@ -417,7 +417,7 @@ export const projectsMobile = [
     image: "/projects/BiteBack2030.jpg",
     image2: "/projects2/BiteBack2030.png",
     gallery: [
-      {image: "/projects/BiteBack2030/1.png", rotate: 0, floatAmount: 0, floatDuration: 0, width: 100, height: 100},
+      {image: "/projects/BiteBack2030/1.png", rotate: 0, floatAmount: 0, floatDuration: 0, width: 125, height: 125},
       {image: "/projects/BiteBack2030/2.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/BiteBack2030/3.png", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/BiteBack2030/4.png", rotate: 1, floatAmount: 1, floatDuration: 3},
@@ -437,7 +437,7 @@ export const projectsMobile = [
     image: "/projects/WindInTheWillows.jpg",
     image2: "/projects2/WindInTheWillows.jpg",
     gallery: [
-      {image: "/projects/WindInTheWillows/1.jpg", rotate: 0, floatAmount: 0, floatDuration: 0},
+      {image: "/projects/WindInTheWillows/1.jpg", rotate: 0, floatAmount: 0, floatDuration: 0, width: 170, height: 170},
       {image: "/projects/WindInTheWillows/2.png", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/WindInTheWillows/3.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/WindInTheWillows/4.png", rotate: 1, floatAmount: 1, floatDuration: 3},
@@ -475,7 +475,7 @@ export const projectsMobile = [
     image: "/projects/MadeAFartingBillboard.png",
     image2: "/projects2/MadeAFartingBillboard.png",
     gallery: [
-      {image: "/projects/FartingBillboard/1.png", rotate: 0, floatAmount: 0, floatDuration: 0},
+      {image: "/projects/FartingBillboard/1.png", rotate: 0, floatAmount: 0, floatDuration: 0, width: 170, height: 170},
       {image: "/projects/FartingBillboard/2.png", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/FartingBillboard/3.png", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/FartingBillboard/4.gif", rotate: 1, floatAmount: 1, floatDuration: 3},

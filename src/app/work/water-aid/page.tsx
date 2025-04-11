@@ -2,13 +2,12 @@
 import MobileProjectPage from "@/app/work/components/MobileProjectPage";
 import { Project, projects, projectsMobile } from "@/app/consts";
 import { useEffect, useState } from 'react';
-import { WaterAidSections } from './sections';
+import { WaterAidSections, WaterAidSectionsMobile } from './sections';
 import DesktopProjectPage from '../components/DesktopProjectPage';
-export default function MadeACprBra() {
+
+export default function WaterAid() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const mobileProject = projectsMobile.find(project => project.name === "There's No Rainbow Without Water");
-  const project = projects.find(project => project.name === "There's No Rainbow Without Water");
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -27,10 +26,14 @@ export default function MadeACprBra() {
   if (!mounted) {
     return <div className="h-[700px]"></div>;
   }
+
+  const project = isMobile ? projectsMobile.find(project => project.name === "There's No Rainbow Without Water") 
+  : projects.find(project => project.name === "There's No Rainbow Without Water");
+
   return (
     <>
       {isMobile ? (
-        <MobileProjectPage project={mobileProject as Project} sections={WaterAidSections(project as Project)} />
+        <MobileProjectPage project={project as Project} sections={WaterAidSectionsMobile(project as Project)} />
       ) : (
         <DesktopProjectPage project={project as Project} sections={WaterAidSections(project as Project)} />
       )}

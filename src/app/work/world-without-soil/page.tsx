@@ -3,13 +3,11 @@ import MobileProjectPage from "@/app/work/components/MobileProjectPage";
 import { Project, projects, projectsMobile } from "@/app/consts";
 import { useEffect, useState } from 'react';
 import DesktopProjectPage from '../components/DesktopProjectPage';
-import { WorldWithoutSoilSections } from './sections';
+import { WorldWithoutSoilSections, WorldWithoutSoilSectionsMobile } from './sections';
 
-export default function MadeACprBra() {
+export default function WorldWithoutSoil() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const mobileProject = projectsMobile.find(project => project.name === "Picture a World Without Soil");
-  const project = projects.find(project => project.name === "Picture a World Without Soil");
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -28,10 +26,14 @@ export default function MadeACprBra() {
   if (!mounted) {
     return <div className="h-[700px]"></div>;
   }
+
+  const project = isMobile ? projectsMobile.find(project => project.name === "Picture a World Without Soil") 
+  : projects.find(project => project.name === "Picture a World Without Soil");
+
   return (
     <>
       {isMobile ? (
-        <MobileProjectPage project={mobileProject as Project} sections={WorldWithoutSoilSections(project as Project)} />
+        <MobileProjectPage project={project as Project} sections={WorldWithoutSoilSectionsMobile(project as Project)} />
       ) : (
         <DesktopProjectPage project={project as Project} sections={WorldWithoutSoilSections(project as Project)} />
       )}

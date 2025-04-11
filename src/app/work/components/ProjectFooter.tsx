@@ -22,7 +22,7 @@ export default function ProjectFooter({ project, isMobile = false }: ProjectFoot
   }
 
   return (
-    <div className={`grid grid-cols-2 items-center ${isMobile ? 'text-md' : 'text-3xl'}`}>
+    <div className={`grid grid-cols-2 items-center ${isMobile ? 'text-lg' : 'text-3xl'}`}>
       <div className="flex justify-start">
         {previousProject && (
           <Link href={`${previousProject.link}`} scroll={false}>

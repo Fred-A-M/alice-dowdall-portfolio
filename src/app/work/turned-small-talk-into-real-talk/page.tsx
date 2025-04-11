@@ -8,8 +8,6 @@ import { SmallTalkSections, SmallTalkSectionsMobile } from './sections';
 export default function SmallTalk() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const mobileProject = projectsMobile.find(project => project.name === "Small Talk");
-  const project = projects.find(project => project.name === "Small Talk");
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -28,10 +26,13 @@ export default function SmallTalk() {
   if (!mounted) {
     return <div className="h-[700px]"></div>;
   }
+  const project = isMobile ? projectsMobile.find(project => project.name === "Small Talk") 
+  : projects.find(project => project.name === "Small Talk");
+  
   return (
     <>
       {isMobile ? (
-        <MobileProjectPage project={mobileProject as Project} sections={SmallTalkSectionsMobile(project as Project)} />
+        <MobileProjectPage project={project as Project} sections={SmallTalkSectionsMobile(project as Project)} />
       ) : (
         <DesktopProjectPage project={project as Project} sections={SmallTalkSections(project as Project)} />
       )}

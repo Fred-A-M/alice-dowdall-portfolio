@@ -3,13 +3,11 @@ import MobileProjectPage from "@/app/work/components/MobileProjectPage";
 import { Project, projects, projectsMobile } from "@/app/consts";
 import { useEffect, useState } from 'react';
 import DesktopProjectPage from '../components/DesktopProjectPage';
-import { MadeAFartingBillboardSections } from './sections';
+import {  FartingBillboardSections, FartingBillboardSectionsMobile } from './sections';
 
-export default function MadeACprBra() {
+export default function FartingBillboard() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const mobileProject = projectsMobile.find(project => project.name === "Farting Billboard");
-  const project = projects.find(project => project.name === "Farting Billboard");
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -28,12 +26,16 @@ export default function MadeACprBra() {
   if (!mounted) {
     return <div className="h-[700px]"></div>;
   }
+
+  const project = isMobile ? projectsMobile.find(project => project.name === "Farting Billboard") 
+  : projects.find(project => project.name === "Farting Billboard");
+
   return (
     <>
       {isMobile ? (
-        <MobileProjectPage project={mobileProject as Project} sections={MadeAFartingBillboardSections(project as Project)} />
+        <MobileProjectPage project={project as Project} sections={FartingBillboardSectionsMobile(project as Project)} />
       ) : (
-        <DesktopProjectPage project={project as Project} sections={MadeAFartingBillboardSections(project as Project)} />
+        <DesktopProjectPage project={project as Project} sections={FartingBillboardSections(project as Project)} />
       )}
     </>
   );

@@ -2,15 +2,12 @@
 import MobileProjectPage from "@/app/work/components/MobileProjectPage";
 import { Project, projects, projectsMobile } from "@/app/consts";
 import { useEffect, useState } from 'react';
-import { MadeACprBraSections } from './sections';
+import { MadeACprBraSections, MadeACprBraSectionsMobile } from './sections';
 import DesktopProjectPage from '../components/DesktopProjectPage';
 
 export default function MadeACprBra() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const mobileProject = projectsMobile.find(project => project.name === "The CPR Bra");
-  const project = projects.find(project => project.name === "The CPR Bra");
-
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -28,10 +25,14 @@ export default function MadeACprBra() {
   if (!mounted) {
     return <div className="h-[700px]"></div>;
   }
+
+  const project = isMobile ? projectsMobile.find(project => project.name === "The CPR Bra") 
+  : projects.find(project => project.name === "The CPR Bra");
+
   return (
     <>
       {isMobile ? (
-        <MobileProjectPage project={mobileProject as Project} sections={MadeACprBraSections(project as Project)} />
+        <MobileProjectPage project={project as Project} sections={MadeACprBraSectionsMobile(project as Project)} />
       ) : (
         <DesktopProjectPage project={project as Project} sections={MadeACprBraSections(project as Project)} />
       )}

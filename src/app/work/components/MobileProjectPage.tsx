@@ -27,13 +27,7 @@ export default function ProjectPage({ project, sections }: ProjectPageProps) {
     
     for (let i = 0; i < maxLength; i++) {
       // Add gallery item if available first
-      if (i < sections.length) {
-        result.push({
-          type: 'section',
-          content: sections[i],
-          index: i
-        });
-      }
+      
       
       // Add description item if available
       if (Array.isArray(project.description) && i < project.description.length) {
@@ -50,6 +44,14 @@ export default function ProjectPage({ project, sections }: ProjectPageProps) {
           index: 0
         });
       }
+
+      if (i < sections.length) {
+        result.push({
+          type: 'section',
+          content: sections[i],
+          index: i
+        });
+      }
     }
     
     return result;
@@ -59,23 +61,17 @@ export default function ProjectPage({ project, sections }: ProjectPageProps) {
 
   return (
     <div className="flex flex-col w-full justify-center gap-5 mb-5">
-      {/* <div className="flex flex-col text-xl">
-        <p className="radio-canada-big-bold">{project.name}</p>
-        <p>{project.client}</p>
-      </div> */}
       <ProjectHeader project={project as Project} isMobile={true} />
       
         {/* Interleaved content */}
         {interleavedContent.map((item, ) => {
           if (item.type === 'description') {
-            // Render description paragraph
             return (
               <div key={`desc-${item.index}`} className="w-full">
                 <p className="text-md">{item.content}</p>
               </div>
             );
           } else {
-            // Render gallery image with animation
             return (
               <div key={`section-${item.index}`} className="w-full">
                 {item.content}

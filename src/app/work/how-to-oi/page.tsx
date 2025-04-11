@@ -2,14 +2,12 @@
 import MobileProjectPage from "@/app/work/components/MobileProjectPage";
 import { Project, projects, projectsMobile } from "@/app/consts";
 import { useEffect, useState } from 'react';
-import { HowToOiSections } from './sections';
+import { HowToOiSections, HowToOiSectionsMobile } from './sections';
 import DesktopProjectPage from '../components/DesktopProjectPage';
 
-export default function MadeACprBra() {
+export default function HowToOi() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const mobileProject = projectsMobile.find(project => project.name === "Oi! Observe and Intervene");
-  const project = projects.find(project => project.name === "Oi! Observe and Intervene");
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -28,10 +26,14 @@ export default function MadeACprBra() {
   if (!mounted) {
     return <div className="h-[700px]"></div>;
   }
+
+  const project = isMobile ? projectsMobile.find(project => project.name === "Oi! Observe and Intervene") 
+    : projects.find(project => project.name === "Oi! Observe and Intervene");
+  
   return (
     <>
       {isMobile ? (
-        <MobileProjectPage project={mobileProject as Project} sections={HowToOiSections(project as Project)} />
+        <MobileProjectPage project={project as Project} sections={HowToOiSectionsMobile(project as Project)} />
       ) : (
         <DesktopProjectPage project={project as Project} sections={HowToOiSections(project as Project)} />
       )}
