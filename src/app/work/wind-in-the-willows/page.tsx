@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { WindInTheWillowsSections, WindInTheWillowsSectionsMobile } from "./sections";
 import DesktopProjectPage from '../components/DesktopProjectPage';
 
-export default function MadeACprBra() {
+export default function WindInTheWillows() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
 

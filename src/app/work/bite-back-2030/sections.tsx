@@ -69,7 +69,7 @@ export const BiteBackSectionsMobile = (project: Project): ReactNode[] => {
           rotateAmount={project.gallery[1].rotate} 
           floatAmount={project.gallery[1].floatAmount} 
           floatDuration={project.gallery[1].floatDuration} 
-          width={310}
+          width={270}
         />
       </div>
       <div className="flex w-full justify-center items-center col-span-1">
