@@ -2,13 +2,12 @@
 import MobileProjectPage from "@/app/work/components/MobileProjectPage";
 import { Project, projects, projectsMobile } from "@/app/consts";
 import { useEffect, useState } from 'react';
-import { CallalySections } from "./sections";
+import { CallalySections, CallalySectionsMobile } from "./sections";
 import DesktopProjectPage from '../components/DesktopProjectPage';
-export default function MadeACprBra() {
+
+export default function Callaly() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const mobileProject = projectsMobile.find(project => project.name === "Unboxing: 1930");
-  const project = projects.find(project => project.name === "Unboxing: 1930");
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -27,10 +26,14 @@ export default function MadeACprBra() {
   if (!mounted) {
     return <div className="h-[700px]"></div>;
   }
+
+  const project = isMobile ? projectsMobile.find(project => project.name === "Unboxing: 1930") 
+    : projects.find(project => project.name === "Unboxing: 1930");
+
   return (
     <>
       {isMobile ? (
-        <MobileProjectPage project={mobileProject as Project} sections={CallalySections(project as Project)} />
+        <MobileProjectPage project={project as Project} sections={CallalySectionsMobile(project as Project)} />
       ) : (
         <DesktopProjectPage project={project as Project} sections={CallalySections(project as Project)} />
       )}

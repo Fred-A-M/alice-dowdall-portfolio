@@ -20,7 +20,7 @@ export default function ProjectHeader({ project, isMobile }: ProjectHeaderProps)
           ))}
         </div>}
       </div>
-      <div className="flex justify-center items-center h-full">
+      <div className={`flex ${isMobile ? 'justify-end' : 'justify-center'} items-center h-full`}>
         <FloatingImage 
           src={project.gallery[0].image} 
           alt={project.name}

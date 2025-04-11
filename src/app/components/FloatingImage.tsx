@@ -7,7 +7,6 @@ interface ImageProps {
   src: string;
   alt: string;
   rotation?: number;
-  scale?: number;
   position?: {
     x: number | string;
     y: number | string;
@@ -25,7 +24,6 @@ export default function FloatingImage({
   src,
   alt,
   rotation = 0,
-  scale = 1,
   position = { x: 0, y: 0 },
   rotateAmount = 3,
   floatAmount = 3,
@@ -53,7 +51,7 @@ export default function FloatingImage({
         isHovered 
           ? {
               rotate: rotation,
-              scale: scale * 1.2,
+              scale: 1.2,
               x: 0,
               y: 0,
               zIndex: 30,
@@ -80,7 +78,7 @@ export default function FloatingImage({
                 floatAmount,
                 0
               ],
-              scale: scale,
+              scale: 1,
               zIndex: zIndex ? zIndex : 20,
             }
       }

@@ -2,36 +2,38 @@
 import MobileProjectPage from "@/app/work/components/MobileProjectPage";
 import { Project, projects, projectsMobile } from "@/app/consts";
 import { useEffect, useState } from 'react';
-import { BiteBackSections } from './sections';
+import { BiteBackSections, BiteBackSectionsMobile } from './sections';
 import DesktopProjectPage from '../components/DesktopProjectPage';
 
-export default function MadeACprBra() {
+export default function BiteBack2030() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const mobileProject = projectsMobile.find(project => project.name === "It's Not Your Fault You Can't Resist");
-  const project = projects.find(project => project.name === "It's Not Your Fault You Can't Resist");
-
+  
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-
+    
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
-
+  
   useEffect(() => {
     setMounted(true);
   }, []);
-
+  
   if (!mounted) {
     return <div className="h-[700px]"></div>;
   }
+  
+  const project = isMobile ? projectsMobile.find(project => project.name === "It's Not Your Fault You Can't Resist") 
+    : projects.find(project => project.name === "It's Not Your Fault You Can't Resist");
+  
   return (
     <>
       {isMobile ? (
-        <MobileProjectPage project={mobileProject as Project} sections={BiteBackSections(project as Project)} />
+        <MobileProjectPage project={project as Project} sections={BiteBackSectionsMobile(project as Project)} />
       ) : (
         <DesktopProjectPage project={project as Project} sections={BiteBackSections(project as Project)} />
       )}

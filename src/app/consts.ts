@@ -374,7 +374,7 @@ export const projectsMobile = [
     image: "/projects/GiffGaff.png",
     image2: "/projects2/GiffGaff.png",
     gallery: [
-      {image: "/projects/GiffGaff/1.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/GiffGaff/1.jpg", rotate: 1, floatAmount: 1, floatDuration: 3, width: 150, height: 150},
       {image: "/projects/GiffGaff/2.png", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/GiffGaff/3.png", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/GiffGaff/4.png", rotate: 1, floatAmount: 1, floatDuration: 3},
@@ -417,11 +417,11 @@ export const projectsMobile = [
     image: "/projects/BiteBack2030.jpg",
     image2: "/projects2/BiteBack2030.png",
     gallery: [
-      {image: "/projects/BiteBack2030/1.png", rotate: 0, floatAmount: 0, floatDuration: 0},
+      {image: "/projects/BiteBack2030/1.png", rotate: 0, floatAmount: 0, floatDuration: 0, width: 100, height: 100},
       {image: "/projects/BiteBack2030/2.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/BiteBack2030/3.png", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/BiteBack2030/4.png", rotate: 1, floatAmount: 1, floatDuration: 3},
-      {image: "/projects/BiteBack2030/5.png", rotate: 1, floatAmount: 1, floatDuration: 3},
+      {image: "/projects/BiteBack2030/5.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
     ],
     video: "https://www.youtube.com/embed/TLf2gOrL1iM?rel=0&modestbranding=1",
     link: "/work/bite-back-2030",
@@ -457,7 +457,7 @@ export const projectsMobile = [
     image: "/projects/Callaly.jpg",
     image2: "/projects2/Callaly.png",
     gallery: [
-      {image: "/projects/Callaly/1.jpg", rotate: 0, floatAmount: 0, floatDuration: 0},
+      {image: "/projects/Callaly/1.jpg", rotate: 0, floatAmount: 0, floatDuration: 0, width: 200, height: 200},
       {image: "/projects/Callaly/2.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
       {image: "/projects/Callaly/3.jpg", rotate: 1, floatAmount: 1, floatDuration: 3},
     ],

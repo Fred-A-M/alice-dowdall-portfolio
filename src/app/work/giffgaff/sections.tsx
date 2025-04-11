@@ -63,4 +63,63 @@ export const GiffGaffSections = (project: Project): ReactNode[] => {
   ];
 };
 
+export const GiffGaffSectionsMobile = (project: Project): ReactNode[] => {
+  return [
+    <div key="videoandimage" className="flex justify-center items-center w-full"> 
+      <div className="w-[200px] h-[200px]">
+        <iframe
+          src={project.video}
+          title="YouTube video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          className="w-full h-full rounded-sm"
+        />
+      </div>
+      <FloatingImage 
+        src={project.gallery[1].image} 
+        alt={project.name} 
+        rotateAmount={project.gallery[1].rotate}
+        floatAmount={project.gallery[1].floatAmount}
+        floatDuration={project.gallery[1].floatDuration}
+        isMobile={true}
+      />
+    </div>,
+
+    <div key="gallery" className="grid grid-cols-2 sm:w-[70%] w-full mx-auto">
+      <div className="flex col-span-1 justify-start items-center">
+        <FloatingImage 
+          src={project.gallery[2].image} 
+          alt={project.name} 
+          rotateAmount={project.gallery[2].rotate}
+          floatAmount={project.gallery[2].floatAmount}
+          floatDuration={project.gallery[2].floatDuration}
+          isMobile={true}
+        />
+      </div>
+      <div className="flex flex-col col-span-1 gap-4">
+        <div className="self-end">
+          <FloatingImage 
+            src={project.gallery[3].image} 
+            alt={project.name} 
+            rotateAmount={project.gallery[3].rotate}
+            floatAmount={project.gallery[3].floatAmount}
+            floatDuration={project.gallery[3].floatDuration}
+            isMobile={true}
+          />
+        </div>
+        <div className="self-start">
+          <FloatingImage 
+            src={project.gallery[4].image} 
+            alt={project.name} 
+            rotateAmount={project.gallery[4].rotate}
+            floatAmount={project.gallery[4].floatAmount}
+            floatDuration={project.gallery[4].floatDuration}
+            width={150}
+            height={150}
+          />
+        </div>
+      </div>
+    </div>
+  ];
+};
+
   
