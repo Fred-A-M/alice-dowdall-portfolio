@@ -14,6 +14,7 @@ interface ImageProps {
   rotateAmount?: number;
   floatAmount?: number;
   floatDuration?: number;
+  floatDelay?: number;
   isMobile?: boolean;
   width?: number;
   height?: number;
@@ -28,6 +29,7 @@ export default function FloatingImage({
   rotateAmount = 3,
   floatAmount = 3,
   floatDuration = 3,
+  floatDelay = 1,
   isMobile = false,
   width = 0,
   height = 0,
@@ -94,7 +96,7 @@ export default function FloatingImage({
               times: [0, 0.25, 0.5, 0.75, 1],
               repeat: Infinity,
               repeatType: "loop",
-              delay: 1,
+              delay: floatDelay,
               scale: {duration: 0.3},
             }
       }

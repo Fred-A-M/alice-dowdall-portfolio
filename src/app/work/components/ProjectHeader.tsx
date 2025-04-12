@@ -1,4 +1,4 @@
-import FloatingImage from '@/app/components/FloatingImage';
+import StaticImage from '@/app/components/StaticImage';
 import { Project } from '@/app/consts';
 
 interface ProjectHeaderProps {
@@ -21,14 +21,11 @@ export default function ProjectHeader({ project, isMobile }: ProjectHeaderProps)
         </div>}
       </div>
       <div className={`flex ${isMobile ? 'justify-end' : 'justify-center'} items-center h-full`}>
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[0].image} 
           alt={project.name}
           width={project.gallery[0].width || undefined}
           height={project.gallery[0].height || undefined}
-          rotateAmount={project.gallery[0].rotate}
-          floatAmount={project.gallery[0].floatAmount}
-          floatDuration={project.gallery[0].floatDuration}
         />
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { Project } from "@/app/consts";
 import FloatingImage from '@/app/components/FloatingImage';
+import StaticImage from '@/app/components/StaticImage';
 import { ReactNode } from "react";
 
 // Create a function that takes the project and returns the sections
@@ -18,9 +19,10 @@ export const GiffGaffSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[1].image} 
           alt={project.name} 
-          rotateAmount={project.gallery[1].rotate}
-          floatAmount={project.gallery[1].floatAmount}
-          floatDuration={project.gallery[1].floatDuration}
+          rotateAmount={4}
+          floatAmount={2}
+          floatDuration={3}
+          floatDelay={0.5}
         />
       </div>
     </div>,
@@ -30,32 +32,29 @@ export const GiffGaffSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[2].image} 
           alt={project.name} 
-          rotateAmount={project.gallery[2].rotate}
-          floatAmount={project.gallery[2].floatAmount}
-          floatDuration={project.gallery[2].floatDuration}
+          rotateAmount={4}
+          floatAmount={2}
+          floatDuration={3}
+          floatDelay={1.5}
           width={550}
           height={550}
         />
       </div>
       <div className="flex flex-col col-span-1 gap-4">
         <div className="self-end">
-          <FloatingImage 
+          <StaticImage 
             src={project.gallery[3].image} 
             alt={project.name} 
-            rotateAmount={project.gallery[3].rotate}
-            floatAmount={project.gallery[3].floatAmount}
-            floatDuration={project.gallery[3].floatDuration}
+            rotation={2}
             width={800}
             height={800}
           />
         </div>
         <div className="self-start">
-          <FloatingImage 
+          <StaticImage 
             src={project.gallery[4].image} 
             alt={project.name} 
-            rotateAmount={project.gallery[4].rotate}
-            floatAmount={project.gallery[4].floatAmount}
-            floatDuration={project.gallery[4].floatDuration}
+            rotation={-2}
             width={300}
             height={300}
           />
@@ -80,9 +79,10 @@ export const GiffGaffSectionsMobile = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[1].image} 
           alt={project.name} 
-          rotateAmount={project.gallery[1].rotate}
-          floatAmount={project.gallery[1].floatAmount}
-          floatDuration={project.gallery[1].floatDuration}
+          rotateAmount={4}
+          floatAmount={2}
+          floatDuration={3}
+          floatDelay={0.5}
           isMobile={true}
         />
       </div>
@@ -93,30 +93,27 @@ export const GiffGaffSectionsMobile = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[2].image} 
           alt={project.name} 
-          rotateAmount={project.gallery[2].rotate}
-          floatAmount={project.gallery[2].floatAmount}
-          floatDuration={project.gallery[2].floatDuration}
+          rotateAmount={4}
+          floatAmount={2}
+          floatDuration={3}
+          floatDelay={1.5}
           isMobile={true}
         />
       </div>
       <div className="flex flex-col col-span-1 gap-4">
         <div className="self-end">
-          <FloatingImage 
+          <StaticImage 
             src={project.gallery[3].image} 
             alt={project.name} 
-            rotateAmount={project.gallery[3].rotate}
-            floatAmount={project.gallery[3].floatAmount}
-            floatDuration={project.gallery[3].floatDuration}
+            rotation={2}
             isMobile={true}
           />
         </div>
         <div className="self-start">
-          <FloatingImage 
+          <StaticImage 
             src={project.gallery[4].image} 
             alt={project.name} 
-            rotateAmount={project.gallery[4].rotate}
-            floatAmount={project.gallery[4].floatAmount}
-            floatDuration={project.gallery[4].floatDuration}
+            rotation={-2}
             width={150}
             height={150}
           />

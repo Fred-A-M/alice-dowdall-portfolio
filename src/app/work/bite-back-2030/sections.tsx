@@ -1,5 +1,6 @@
 import { Project } from "@/app/consts";
 import FloatingImage from '@/app/components/FloatingImage';
+import StaticImage from '@/app/components/StaticImage';
 import { ReactNode } from "react";
 import VideoEmbed from '../components/VideoEmbed';
 
@@ -10,12 +11,9 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
 
     <div key="gallery" className="grid grid-cols-4 mx-auto w-full lg:w-[80%]">
       <div className="flex w-full justify-center col-span-3">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[1].image} 
-          alt={project.name} 
-          rotateAmount={project.gallery[1].rotate} 
-          floatAmount={project.gallery[1].floatAmount} 
-          floatDuration={project.gallery[1].floatDuration} 
+          alt={project.name}
           width={700}
         />
       </div>
@@ -23,9 +21,10 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[2].image} 
           alt={project.name} 
-          rotateAmount={project.gallery[2].rotate} 
-          floatAmount={project.gallery[2].floatAmount} 
-          floatDuration={project.gallery[2].floatDuration} 
+          rotation={-5}
+          rotateAmount={4} 
+          floatAmount={1} 
+          floatDuration={3} 
           width={600}
         />      
       </div>
@@ -33,22 +32,18 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
 
     <div key="gallery2" className="grid grid-cols-1 mx-auto lg:w-[80%] w-full">
       <div className="flex justify-start items-start">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[3].image}
           alt={project.name}
-          rotateAmount={project.gallery[3].rotate}  
-          floatAmount={project.gallery[3].floatAmount}
-          floatDuration={project.gallery[3].floatDuration}
+          rotation={-5}
           width={500}
         />
       </div>
       <div className="flex justify-end items-end">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[4].image}
           alt={project.name}
-          rotateAmount={project.gallery[4].rotate}  
-          floatAmount={project.gallery[4].floatAmount}
-          floatDuration={project.gallery[4].floatDuration}
+          rotation={5}
           width={450}
         />
       </div>
@@ -63,12 +58,9 @@ export const BiteBackSectionsMobile = (project: Project): ReactNode[] => {
 
     <div key="gallery" className="grid grid-cols-4 w-full sm:w-[80%] mx-auto">
       <div className="flex w-full justify-center items-center col-span-3">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[1].image} 
           alt={project.name} 
-          rotateAmount={project.gallery[1].rotate} 
-          floatAmount={project.gallery[1].floatAmount} 
-          floatDuration={project.gallery[1].floatDuration} 
           width={270}
         />
       </div>
@@ -77,9 +69,9 @@ export const BiteBackSectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[2].image} 
           alt={project.name} 
           rotation={-5}
-          rotateAmount={project.gallery[2].rotate} 
-          floatAmount={project.gallery[2].floatAmount} 
-          floatDuration={project.gallery[2].floatDuration} 
+          rotateAmount={4} 
+          floatAmount={1} 
+          floatDuration={3} 
           width={100}
         />      
       </div>
@@ -87,24 +79,18 @@ export const BiteBackSectionsMobile = (project: Project): ReactNode[] => {
 
     <div key="gallery2" className="grid grid-cols-1 w-full sm:w-[80%] mx-auto">
       <div className="flex justify-start items-start">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[3].image}
           alt={project.name}
           rotation={-5}
-          rotateAmount={project.gallery[3].rotate}  
-          floatAmount={project.gallery[3].floatAmount}
-          floatDuration={project.gallery[3].floatDuration}
           isMobile={true}
         />
       </div>
       <div className="flex justify-end items-end">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[4].image}
           alt={project.name}
           rotation={5}
-          rotateAmount={project.gallery[4].rotate}  
-          floatAmount={project.gallery[4].floatAmount}
-          floatDuration={project.gallery[4].floatDuration}
           isMobile={true}
         />
       </div>

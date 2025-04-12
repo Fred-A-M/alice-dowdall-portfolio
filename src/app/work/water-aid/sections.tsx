@@ -1,5 +1,5 @@
 import { Project } from "@/app/consts";
-import FloatingImage from '@/app/components/FloatingImage';
+import StaticImage from '@/app/components/StaticImage';
 import { ReactNode } from "react";
 import VideoEmbed from '../components/VideoEmbed';
 import Image from "next/image";
@@ -12,21 +12,17 @@ export const WaterAidSections = (project: Project): ReactNode[] => {
     <div key="gallery-grid" className="grid grid-cols-2 mx-auto w-full lg:w-[80%]">
       <div className="flex flex-col gap-8 col-span-1">
         <div className="self-start pl-20">
-          <FloatingImage 
+          <StaticImage 
             src={project.gallery[1].image} 
-            alt={project.name} 
-            rotateAmount={project.gallery[1].rotate}
-            floatAmount={project.gallery[1].floatAmount}
-            floatDuration={project.gallery[1].floatDuration}
+            alt={project.name}
+            rotation={2}
           />
         </div>
         <div className="self-end pl-10"> 
-          <FloatingImage 
+          <StaticImage 
             src={project.gallery[2].image} 
             alt={project.name} 
-            rotateAmount={project.gallery[2].rotate}
-            floatAmount={project.gallery[2].floatAmount}
-            floatDuration={project.gallery[2].floatDuration}
+            rotation={-2}
             width={370}
             height={370}
           />
@@ -35,12 +31,9 @@ export const WaterAidSections = (project: Project): ReactNode[] => {
       
       <div className="flex items-center justify-center col-span-1">
         <div className="">
-          <FloatingImage 
+          <StaticImage 
             src={project.gallery[3].image} 
-            alt={project.name} 
-            rotateAmount={project.gallery[3].rotate}
-            floatAmount={project.gallery[3].floatAmount}
-            floatDuration={project.gallery[3].floatDuration}
+            alt={project.name}
           />
         </div>
       </div>
@@ -55,24 +48,18 @@ export const WaterAidSectionsMobile = (project: Project): ReactNode[] => {
 
     <div key="gallery-grid" className="grid grid-cols-1 mx-auto w-full sm:w-[80%]">
       <div className="flex justify-start items-center">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[1].image} 
           alt={project.name} 
           rotation={-6}
-          rotateAmount={project.gallery[1].rotate}
-          floatAmount={project.gallery[1].floatAmount}
-          floatDuration={project.gallery[1].floatDuration}
           isMobile={true}
         />
       </div>
       <div className="flex justify-end items-center"> 
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[3].image} 
           alt={project.name}
           rotation={6}
-          rotateAmount={project.gallery[3].rotate}
-          floatAmount={project.gallery[3].floatAmount}
-          floatDuration={project.gallery[3].floatDuration}
           isMobile={true}
         />
       </div>

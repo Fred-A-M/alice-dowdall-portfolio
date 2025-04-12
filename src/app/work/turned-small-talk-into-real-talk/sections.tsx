@@ -1,5 +1,6 @@
 import { Project } from "@/app/consts";
 import FloatingImage from '@/app/components/FloatingImage';
+import StaticImage from '@/app/components/StaticImage';
 import { ReactNode } from "react";
 import VideoEmbed from '../components/VideoEmbed';
 
@@ -12,9 +13,10 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
           <FloatingImage 
             src={project.gallery[1].image} 
             alt={project.name} 
-            rotateAmount={project.gallery[1].rotate}
-            floatAmount={project.gallery[1].floatAmount}
-            floatDuration={project.gallery[1].floatDuration}
+            rotateAmount={4}
+            floatAmount={2}
+            floatDuration={3}
+            floatDelay={0.5}
             width={170}
             height={170}
           />
@@ -28,9 +30,10 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
         <FloatingImage 
           src={project.gallery[2].image} 
           alt={project.name} 
-          rotateAmount={project.gallery[2].rotate}
-          floatAmount={project.gallery[2].floatAmount}
-          floatDuration={project.gallery[2].floatDuration}
+          rotateAmount={5}
+          floatAmount={2}
+          floatDuration={3}
+          floatDelay={1}
           width={140}
           height={140}
         />
@@ -42,12 +45,10 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
         <div className="flex flex-col gap-20 justify-center h-full">
           <div className="grid grid-cols-6">
             <div className="col-span-4">
-              <FloatingImage 
+              <StaticImage 
                 src={project.gallery[3].image} 
                 alt={project.name} 
-                rotateAmount={project.gallery[3].rotate}
-                floatAmount={project.gallery[3].floatAmount}
-                floatDuration={project.gallery[3].floatDuration}
+                rotation={2}
               />
             </div>
             <div className="col-span-2 flex lg:justify-end justify-start items-center">
@@ -55,9 +56,10 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
                 src={project.gallery[4].image} 
                 alt={project.name} 
                 rotation={-15}
-                rotateAmount={project.gallery[4].rotate}
-                floatAmount={project.gallery[4].floatAmount}
-                floatDuration={project.gallery[4].floatDuration}
+                rotateAmount={3}
+                floatAmount={2}
+                floatDuration={3}
+                floatDelay={1.5}
                 width={130}
                 height={130}
               />
@@ -68,32 +70,28 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
               <FloatingImage 
                 src={project.gallery[5].image} 
                 alt={project.name} 
-                rotateAmount={project.gallery[5].rotate}
-                floatAmount={project.gallery[5].floatAmount}
-                floatDuration={project.gallery[5].floatDuration}
+                rotateAmount={4}
+                floatAmount={2}
+                floatDuration={3}
+                floatDelay={2}
                 width={170}
                 height={170}
               />
             </div>
             <div className="col-span-4 flex lg:justify-start justify-end">
-              <FloatingImage 
+              <StaticImage 
                 src={project.gallery[6].image} 
                 alt={project.name} 
-                rotateAmount={project.gallery[6].rotate}
-                floatAmount={project.gallery[6].floatAmount}
-                floatDuration={project.gallery[6].floatDuration}
+                rotation={-2}
               />
             </div>
           </div>
         </div>
       </div>
       <div className="lg:col-span-4 col-span-6 flex lg:justify-end justify-center items-center h-full">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[7].image} 
           alt={project.name} 
-          rotateAmount={project.gallery[7].rotate}
-          floatAmount={project.gallery[7].floatAmount}
-          floatDuration={project.gallery[7].floatDuration}
           width={400}
           height={400}
         />
@@ -104,45 +102,19 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
 
 export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
   return [
-    // Section 1: Video
-    <div key="video-section" className="flex flex-col gap-4">
-      
-      <VideoEmbed key="video" video={project.video as string} />
-    
-    </div>,
+    <VideoEmbed key="video" video={project.video as string} />,
 
-    // <div key="small-icons" className="flex justify-between items-center gap-20">
-    //   <FloatingImage 
-    //     src={project.gallery[1].image} 
-    //     alt={project.name} 
-    //     rotateAmount={5}
-    //     floatAmount={project.gallery[1].floatAmount}
-    //     floatDuration={project.gallery[1].floatDuration}
-    //     width={100}
-    //   />
-    //   <div className="pr-10">
-    //     <FloatingImage 
-    //       src={project.gallery[2].image} 
-    //       alt={project.name} 
-    //       rotateAmount={4}
-    //       floatAmount={project.gallery[2].floatAmount}
-    //       floatDuration={project.gallery[2].floatDuration}
-    //       width={60}
-    //     />
-    //   </div>
-    // </div>,
+  
 
     <div key="gallery" className="grid grid-cols-6 items-center mx-auto w-full sm:w-[70%]">
       <div className="col-span-6">
         <div className="flex flex-col gap-5 justify-center h-full">
           <div className="grid grid-cols-6">
             <div className="col-span-4">
-              <FloatingImage 
+              <StaticImage 
                 src={project.gallery[3].image} 
                 alt={project.name} 
-                rotateAmount={project.gallery[3].rotate}
-                floatAmount={project.gallery[3].floatAmount}
-                floatDuration={project.gallery[3].floatDuration}
+                rotation={2}
                 isMobile={true}
               />
             </div>
@@ -151,9 +123,10 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
                 src={project.gallery[4].image} 
                 alt={project.name} 
                 rotation={-15}
-                rotateAmount={project.gallery[4].rotate}
-                floatAmount={project.gallery[4].floatAmount}
-                floatDuration={project.gallery[4].floatDuration}
+                rotateAmount={4}
+                floatAmount={2}
+                floatDuration={3}
+                floatDelay={0.5}
                 width={60}
               />
             </div>
@@ -163,19 +136,18 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
               <FloatingImage 
                 src={project.gallery[5].image} 
                 alt={project.name} 
-                rotateAmount={project.gallery[5].rotate}
-                floatAmount={project.gallery[5].floatAmount}
-                floatDuration={project.gallery[5].floatDuration}
+                rotateAmount={3}
+                floatAmount={2}
+                floatDuration={3}
+                floatDelay={1}
                 width={100}
               />
             </div>
             <div className="col-span-4 flex justify-end">
-              <FloatingImage 
+              <StaticImage 
                 src={project.gallery[6].image} 
                 alt={project.name} 
-                rotateAmount={project.gallery[6].rotate}
-                floatAmount={project.gallery[6].floatAmount}
-                floatDuration={project.gallery[6].floatDuration}
+                rotation={-2}
                 isMobile={true}
               />
             </div>
@@ -190,19 +162,17 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[1].image} 
           alt={project.name} 
           rotateAmount={5}
-          floatAmount={project.gallery[1].floatAmount}
-          floatDuration={project.gallery[1].floatDuration}
+          floatAmount={2}
+          floatDuration={3}
+          floatDelay={1.5}
           width={80}
           zIndex={30}
         />
       </div>
       <div className="col-span-4 flex justify-center items-center">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[7].image} 
           alt={project.name} 
-          rotateAmount={project.gallery[7].rotate}
-          floatAmount={project.gallery[7].floatAmount}
-          floatDuration={project.gallery[7].floatDuration}
           width={240}
         />
       </div>
@@ -211,8 +181,9 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[2].image} 
           alt={project.name} 
           rotateAmount={4}
-          floatAmount={project.gallery[2].floatAmount}
-          floatDuration={project.gallery[2].floatDuration}
+          floatAmount={2}
+          floatDuration={3}
+          floatDelay={1}
           width={50}
         />
       </div>

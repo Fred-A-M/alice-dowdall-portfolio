@@ -1,5 +1,6 @@
 import { Project } from "@/app/consts";
 import FloatingImage from '@/app/components/FloatingImage';
+import StaticImage from '@/app/components/StaticImage';
 import { ReactNode } from "react";
 import Image from "next/image";
 
@@ -11,19 +12,17 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
           src={project.gallery[1].image} 
           alt={project.name} 
           rotation={-4} 
-          rotateAmount={project.gallery[1].rotate} 
-          floatAmount={project.gallery[1].floatAmount} 
-          floatDuration={project.gallery[1].floatDuration} 
+          rotateAmount={4} 
+          floatAmount={2} 
+          floatDuration={3} 
+          floatDelay={0.5}
         />
       </div>
       <div className="col-span-1 flex justify-center items-center">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[2].image} 
           alt={project.name} 
           rotation={2} 
-          rotateAmount={project.gallery[2].rotate} 
-          floatAmount={project.gallery[2].floatAmount} 
-          floatDuration={project.gallery[2].floatDuration} 
           width={500}
         />
       </div>
@@ -35,20 +34,18 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
           src={project.gallery[3].image} 
           alt={project.name} 
           rotation={10} 
-          rotateAmount={project.gallery[3].rotate} 
-          floatAmount={project.gallery[3].floatAmount} 
-          floatDuration={project.gallery[3].floatDuration} 
+          rotateAmount={4} 
+          floatAmount={2} 
+          floatDuration={3} 
+          floatDelay={1.5}
           width={250}
         />
       </div>
       <div className="col-span-1 flex justify-center items-center">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[4].image} 
           alt={project.name} 
-          rotation={0} 
-          rotateAmount={project.gallery[4].rotate} 
-          floatAmount={project.gallery[4].floatAmount} 
-          floatDuration={project.gallery[4].floatDuration} 
+          rotation={-2} 
         />
       </div>
     </div>,
@@ -59,19 +56,17 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
           src={project.gallery[5].image} 
           alt={project.name} 
           rotation={-10} 
-          rotateAmount={project.gallery[5].rotate} 
-          floatAmount={project.gallery[5].floatAmount} 
-          floatDuration={project.gallery[5].floatDuration} 
+          rotateAmount={4} 
+          floatAmount={2} 
+          floatDuration={3} 
+          floatDelay={2.5}
         />
       </div>
       <div className="col-span-2 flex justify-end items-center">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[6].image} 
           alt={project.name} 
           rotation={2} 
-          rotateAmount={project.gallery[6].rotate} 
-          floatAmount={project.gallery[6].floatAmount} 
-          floatDuration={project.gallery[6].floatDuration} 
           width={500}
         />
       </div>
@@ -97,20 +92,18 @@ export const MadeACprBraSectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[1].image} 
           alt={project.name} 
           rotation={-4} 
-          rotateAmount={project.gallery[1].rotate} 
-          floatAmount={project.gallery[1].floatAmount} 
-          floatDuration={project.gallery[1].floatDuration} 
+          rotateAmount={4} 
+          floatAmount={2} 
+          floatDuration={3} 
+          floatDelay={0.5}
           isMobile={true}
         />
       </div>
       <div className="col-span-2 flex justify-center items-center">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[2].image} 
           alt={project.name} 
           rotation={2} 
-          rotateAmount={project.gallery[2].rotate} 
-          floatAmount={project.gallery[2].floatAmount} 
-          floatDuration={project.gallery[2].floatDuration} 
           isMobile={true}
         />
       </div>
@@ -122,20 +115,18 @@ export const MadeACprBraSectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[3].image} 
           alt={project.name} 
           rotation={10} 
-          rotateAmount={project.gallery[3].rotate} 
-          floatAmount={project.gallery[3].floatAmount} 
-          floatDuration={project.gallery[3].floatDuration} 
+          rotateAmount={4} 
+          floatAmount={2} 
+          floatDuration={3} 
+          floatDelay={1.5}
           width={125}
         />
       </div>
       <div className="col-span-2 flex justify-center items-center">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[4].image} 
           alt={project.name} 
-          rotation={0} 
-          rotateAmount={project.gallery[4].rotate} 
-          floatAmount={project.gallery[4].floatAmount} 
-          floatDuration={project.gallery[4].floatDuration} 
+          rotation={-2} 
           isMobile={true}
         />
       </div>
@@ -147,20 +138,18 @@ export const MadeACprBraSectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[5].image} 
           alt={project.name} 
           rotation={-10} 
-          rotateAmount={project.gallery[5].rotate} 
-          floatAmount={project.gallery[5].floatAmount} 
-          floatDuration={project.gallery[5].floatDuration} 
+          rotateAmount={4} 
+          floatAmount={2} 
+          floatDuration={3} 
+          floatDelay={2.5}
           isMobile={true}
         />
       </div>
       <div className="col-span-2 flex justify-center items-center">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[6].image} 
           alt={project.name} 
           rotation={2} 
-          rotateAmount={project.gallery[6].rotate} 
-          floatAmount={project.gallery[6].floatAmount} 
-          floatDuration={project.gallery[6].floatDuration} 
           isMobile={true}
         />
       </div>

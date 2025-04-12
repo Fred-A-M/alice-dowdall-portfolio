@@ -1,5 +1,5 @@
 import { Project } from "@/app/consts";
-import FloatingImage from '@/app/components/FloatingImage';
+import StaticImage from '@/app/components/StaticImage';
 import { ReactNode } from "react";
 import Image from "next/image";
 
@@ -9,25 +9,19 @@ export const WorldWithoutSoilSections = (project: Project): ReactNode[] => {
 
     <div key="gallery2" className="grid grid-cols-1 mx-auto lg:w-[75%] w-full">
       <div className="flex justify-start items-start">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[1].image}
           alt={project.name}
           rotation={-3}
-          rotateAmount={project.gallery[1].rotate}  
-          floatAmount={project.gallery[1].floatAmount}
-          floatDuration={project.gallery[1].floatDuration}
           width={500}
           height={500}
         />
       </div>
       <div className="flex justify-end items-end">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[2].image}
           alt={project.name}
           rotation={3}
-          rotateAmount={project.gallery[2].rotate}  
-          floatAmount={project.gallery[2].floatAmount}
-          floatDuration={project.gallery[2].floatDuration}
           width={500}
           height={500}
         />
@@ -49,24 +43,18 @@ export const WorldWithoutSoilSectionsMobile = (project: Project): ReactNode[] =>
 
     <div key="gallery2" className="grid grid-cols-1 mx-auto sm:w-[80%] w-full">
       <div className="flex justify-start items-start">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[1].image}
           alt={project.name}
           rotation={-6}
-          rotateAmount={project.gallery[1].rotate}  
-          floatAmount={project.gallery[1].floatAmount}
-          floatDuration={project.gallery[1].floatDuration}
           isMobile={true}
         />
       </div>
       <div className="flex justify-end items-end">
-        <FloatingImage 
+        <StaticImage 
           src={project.gallery[2].image}
           alt={project.name}
           rotation={6}
-          rotateAmount={project.gallery[2].rotate}  
-          floatAmount={project.gallery[2].floatAmount}
-          floatDuration={project.gallery[2].floatDuration}
           isMobile={true}
         />
       </div>
