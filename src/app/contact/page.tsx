@@ -1,10 +1,11 @@
 "use client";
 
-import { profile, newFeatures } from "../consts";
+import { profile } from "../consts";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from 'next/link';
+import FeaturesLoop from '../components/FeaturesLoop';
 
 export default function Contact() {
   const [isClient, setIsClient] = useState(false);
@@ -22,11 +23,11 @@ export default function Contact() {
     profile.background.forEach((line, index) => {
       // Add time for this paragraph (chars * time per char + pause)
       if (index > 0) totalTypingTime += 0.3; // Pause between paragraphs
-      totalTypingTime += line.length * 0.03; // Time to type all characters
+      totalTypingTime += line.length * 0.02; // Time to type all characters
     });
     
     // Add a small buffer to ensure everything is displayed
-    totalTypingTime += 0.5;
+    totalTypingTime += 0.1;
     
     const timer = setTimeout(() => {
       setIsTypingComplete(true);
@@ -49,7 +50,7 @@ export default function Contact() {
                 let totalDelay = 0;
                 for (let i = 0; i < index; i++) {
                   // Each letter takes 0.04 seconds + 0.5 seconds pause between paragraphs
-                  totalDelay += profile.background[i].length * 0.03 + 0.5;
+                  totalDelay += profile.background[i].length * 0.02 + 0.1;
                 }
                 
                 return (
@@ -87,7 +88,7 @@ export default function Contact() {
       </div>
 
       <motion.div 
-        className="flex flex-col gap-4 mt-10"
+        className="flex flex-col gap-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: isTypingComplete ? 1 : 0 }}
         transition={{ duration: 0.7 }}
@@ -135,51 +136,9 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        
 
-        <div className="-mx-5 sm:-mx-10 w-screen relative overflow-hidden">
-          <div className="px-5 sm:px-10 font-bold sm:text-2xl text-lg">
-            Work featured in...
-          </div>
+        <FeaturesLoop />
 
-          <div className="w-full overflow-hidden relative bg-transparent">
-            <div
-              className="flex animate-scroll items-center"
-              style={{
-                animation: "scroll 30s linear infinite",
-                width: `${newFeatures.length * 204}px`, // Exact width calculation: 200px per image + 4px margin
-              }}
-            >
-              {/* First set of images */}
-              {newFeatures.map((src, index) => (
-                <div key={`first-${index}`} className="w-[200px] flex-shrink-0 mr-4">
-                  <Image
-                    src={src}
-                    alt={`slider-img-${index}`}
-                    width={200}
-                    height={100}
-                    className="object-contain"
-                    style={{ maxHeight: '100px' }}
-                  />
-                </div>
-              ))}
-              
-              {/* Duplicate set for seamless looping - these will appear exactly when the first set ends */}
-              {newFeatures.map((src, index) => (
-                <div key={`second-${index}`} className="w-[200px] flex-shrink-0 mr-4">
-                  <Image
-                    src={src}
-                    alt={`slider-img-${index}`}
-                    width={200}
-                    height={100}
-                    className="object-contain"
-                    style={{ maxHeight: '100px' }}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </motion.div>
 
     </div>
@@ -191,7 +150,7 @@ function TypewriterText({ text, delay = 0 }: { text: string; delay?: number }) {
   // Create an array of letter objects for animating
   const letters = Array.from(text).map((char, i) => ({
     char,
-    delay: i * 0.03 // 40ms between each character
+    delay: i * 0.02 // 20ms between each character
   }));
   
   return (

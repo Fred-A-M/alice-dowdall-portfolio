@@ -107,7 +107,7 @@ export default function ProjectsScattered() {
               <div className="relative overflow-hidden group">
                 <div className="relative">
                   <Image 
-                    src={project.image2} 
+                    src={project.image} 
                     alt={project.name} 
                     width={300}
                     height={0}

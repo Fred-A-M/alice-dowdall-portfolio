@@ -131,7 +131,7 @@ export default function ProjectsScattered() {
                 <div className="relative group">
                   <div className="relative">
                     <Image 
-                      src={project.image2} 
+                      src={project.image} 
                       alt={project.name} 
                       width={150}
                       height={0}
