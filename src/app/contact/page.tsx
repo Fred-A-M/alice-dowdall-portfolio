@@ -31,7 +31,6 @@ export default function Contact() {
     
     const timer = setTimeout(() => {
       setIsTypingComplete(true);
-      console.log("Typing complete!");
     }, totalTypingTime * 1000);
     
     return () => clearTimeout(timer);

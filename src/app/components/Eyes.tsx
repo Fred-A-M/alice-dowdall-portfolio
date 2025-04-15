@@ -61,6 +61,8 @@ export default function Eyes() {
             alt="Eye" 
             fill
             className="object-contain"
+            priority={true}
+            loading="eager"
           />
         </div>
       </div>
@@ -74,6 +76,8 @@ export default function Eyes() {
             alt="Eye" 
             fill
             className="object-contain"
+            priority={true}
+            loading="eager"
           />
         </div>
       </div>

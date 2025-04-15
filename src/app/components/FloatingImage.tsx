@@ -15,10 +15,11 @@ interface ImageProps {
   floatAmount?: number;
   floatDuration?: number;
   floatDelay?: number;
-  isMobile?: boolean;
   width?: number;
   height?: number;
   zIndex?: number;
+  isMobile?: boolean;
+  // isMain?: boolean;
 }
 
 export default function FloatingImage({
@@ -34,6 +35,7 @@ export default function FloatingImage({
   width = 0,
   height = 0,
   zIndex = 20,
+  // isMain = false,
 }: ImageProps) {
   const [isHovered, setIsHovered] = useState(false);
   
@@ -116,7 +118,7 @@ export default function FloatingImage({
           objectFit: "contain",
           filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3))'
         }}
-        className="rounded-sm"
+        className="rounded-sm object-contain transition-all duration-300 group-hover:opacity-40 p-7 group-hover:p-0"
         priority={true}
         loading="eager"
       />

@@ -17,8 +17,8 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
             floatAmount={2}
             floatDuration={3}
             floatDelay={0.5}
-            width={170}
-            height={170}
+            width={200}
+            height={200}
           />
       </div>
       
@@ -34,8 +34,8 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
           floatAmount={2}
           floatDuration={3}
           floatDelay={1}
-          width={140}
-          height={140}
+          width={180}
+          height={180}
         />
       </div>
     </div>,
@@ -60,8 +60,8 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
                 floatAmount={2}
                 floatDuration={3}
                 floatDelay={1.5}
-                width={130}
-                height={130}
+                width={180}
+                height={180}
               />
             </div>
           </div>
@@ -74,8 +74,8 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
                 floatAmount={2}
                 floatDuration={3}
                 floatDelay={2}
-                width={170}
-                height={170}
+                width={200}
+                height={200}
               />
             </div>
             <div className="col-span-4 flex lg:justify-start justify-end">
@@ -127,7 +127,7 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
                 floatAmount={2}
                 floatDuration={3}
                 floatDelay={0.5}
-                width={60}
+                width={110}
               />
             </div>
           </div>
@@ -140,7 +140,7 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
                 floatAmount={2}
                 floatDuration={3}
                 floatDelay={1}
-                width={100}
+                width={160}
               />
             </div>
             <div className="col-span-4 flex justify-end">
@@ -165,7 +165,7 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
           floatAmount={2}
           floatDuration={3}
           floatDelay={1.5}
-          width={80}
+          width={140}
           zIndex={30}
         />
       </div>
@@ -184,7 +184,7 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
           floatAmount={2}
           floatDuration={3}
           floatDelay={1}
-          width={50}
+          width={110}
         />
       </div>
     </div>,

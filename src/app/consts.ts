@@ -92,7 +92,7 @@ export const projects = [
     ],
     image: "/projects/BiteBack2030/Main.png",
     gallery: [
-      {image: "/projects/BiteBack2030/1.png"},
+      {image: "/projects/BiteBack2030/1.png", width: 500, height: 500},
       {image: "/projects/BiteBack2030/2.jpg"},
       {image: "/projects/BiteBack2030/3.png"},
       {image: "/projects/BiteBack2030/4.png"},
@@ -113,7 +113,7 @@ export const projects = [
     ],
     image: "/projects/CPRBra/Main.png",
     gallery: [
-      {image: "/projects/CPRBra/1.gif"},
+      {image: "/projects/CPRBra/1.gif", height: 750},
       {image: "/projects/CPRBra/2.png"},
       {image: "/projects/CPRBra/3.gif"},
       {image: "/projects/CPRBra/4.gif"},
@@ -131,10 +131,11 @@ export const projects = [
     description: [
       "The UK is one of the most nature-depleted countries in the world. So we got Brits to connect to the issue by reinventing a classic British story",
       "We created a fake trailer for a Wind in the Willows remake, where Badger, Toad, Ratty and Mole find themselves in a world affected by climate change.",
+      "The film ran in cinemas and on social. It received 190+ pieces of news coverage including The Sun, BBC and Vogue.",
     ],
     image: "/projects/WindInTheWillows/Main.jpg",
     gallery: [
-      {image: "/projects/WindInTheWillows/1.jpg", width: 450, height: 450},
+      {image: "/projects/WindInTheWillows/1.jpg", width: 500, height: 500},
       {image: "/projects/WindInTheWillows/2.png"},
       {image: "/projects/WindInTheWillows/3.jpg"},
       {image: "/projects/WindInTheWillows/4.png"},
@@ -391,6 +392,7 @@ export const projectsMobile = [
     description: [
       "The UK is one of the most nature-depleted countries in the world. So we got Brits to connect to the issue by reinventing a classic British story",
       "We created a fake trailer for a Wind in the Willows remake, where Badger, Toad, Ratty and Mole find themselves in a world affected by climate change.",
+      "The film ran in cinemas and on social. It received 190+ pieces of news coverage including The Sun, BBC and Vogue.",
     ],
     image: "/projects/WindInTheWillows/Main.jpg",
     gallery: [

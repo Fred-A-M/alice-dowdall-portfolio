@@ -1,8 +1,8 @@
 "use client";
 
 import { Project } from "@/app/consts";
-import ProjectHeader from '../components/ProjectHeader';
 import ProjectFooter from '../components/ProjectFooter';
+import ProjectHeaderDesktop from '../components/ProjectHeaderDesktop';
 
 interface ProjectPageProps {
   project: Project | undefined;
@@ -16,8 +16,8 @@ export default function DesktopProjectPage({ project, sections }: ProjectPagePro
   }
 
   return (
-    <div className="flex flex-col gap-20 w-full h-full mb-10 md:pt-10">
-      <ProjectHeader project={project} />
+    <div className="flex flex-col gap-20 w-full h-full mb-10">
+      <ProjectHeaderDesktop project={project} />
 
       {sections && sections.map((section, index) => (
         <div key={index}>

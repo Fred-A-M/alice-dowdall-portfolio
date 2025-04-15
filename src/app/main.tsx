@@ -39,8 +39,8 @@ export default function Main() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center sm:mt-10">
-        {isMobile ? (
+    <div className={`flex items-center justify-center ${!isMobile && 'min-h-[calc(100vh-150px)]'}`}>
+      {isMobile ? (
         <div className="w-full h-full">
           <ProjectsMobile />
         </div>
@@ -56,6 +56,6 @@ export default function Main() {
           </div>
         </div>
       )}
-      </div>
+    </div>
   );
 }
