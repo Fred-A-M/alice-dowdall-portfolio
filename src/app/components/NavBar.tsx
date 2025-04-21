@@ -16,7 +16,7 @@ export default function NavBar() {
   
   // Track scroll direction and toggle navbar visibility
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest < 50) {
+    if (latest < 300) {
       setIsVisible(true);
       lastScrollY.current = latest;
       return;
