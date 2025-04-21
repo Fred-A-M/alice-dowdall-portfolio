@@ -53,7 +53,7 @@ export const HowToOiSectionsMobile = (project: Project): ReactNode[] => {
         src={project.gallery[1].image}
         alt={project.name} 
         rotation={-3}
-        width={400}
+        width={350}
       />
     </div>,
 
@@ -62,7 +62,7 @@ export const HowToOiSectionsMobile = (project: Project): ReactNode[] => {
         src={project.gallery[2].image}
         alt={project.name}
         rotation={3}
-        width={400}
+        width={350}
       />
     </div>,
 
@@ -71,7 +71,7 @@ export const HowToOiSectionsMobile = (project: Project): ReactNode[] => {
         src={project.gallery[3].image}
         alt={project.name} 
         rotation={-4}
-        width={400}
+        width={350}
       />
     </div>,
 
@@ -80,7 +80,7 @@ export const HowToOiSectionsMobile = (project: Project): ReactNode[] => {
         src={project.gallery[4].image}
         alt={project.name} 
         rotation={2}
-        width={400}
+        width={350}
       />
     </div>
   ];
