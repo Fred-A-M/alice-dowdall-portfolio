@@ -144,6 +144,8 @@ export default function ProjectsScattered() {
                       }}
                       quality={95}
                       className="object-contain transition-all duration-300 group-hover:opacity-40"
+                      priority={true}
+                      loading="eager"
                     />
                   </div>
                   
