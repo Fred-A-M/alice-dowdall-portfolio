@@ -16,14 +16,16 @@ export default function DesktopProjectPage({ project, sections }: ProjectPagePro
   }
 
   return (
-    <div className="flex flex-col gap-20 w-full h-full mb-10">
+    <div className="relative inset-0 flex flex-col gap-20 w-full h-full mb-10">
       <ProjectHeaderDesktop project={project} />
 
-      {sections && sections.map((section, index) => (
-        <div key={index}>
-          {section}
-        </div>
-      ))}
+      <div className="pt-[70vh]">
+        {sections && sections.map((section, index) => (
+          <div key={index}>
+            {section}
+          </div>
+        ))}
+      </div>
 
       <ProjectFooter project={project} />
     </div>
