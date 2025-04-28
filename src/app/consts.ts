@@ -4,11 +4,12 @@ export const projects = [
     client: "UN Women UK",
     tagline: "Taught people how to Oi!",
     description: [
-      "Sexism should be a thing of the past, yet unfortunately it happens daily and too often goes unchecked.",
-      "Oi! Observe and Intervene is a simple way people can challenge sexism when they overhear it.",
-      "All the quotes we used were overheard by real women on social media, in the workplace, or in the street."
+      "Sexism should be a thing of the past, yet unfortunately it happens daily and too often goes\u00A0unchecked.",
+      "Oi! Observe and Intervene is a simple way people can challenge sexism when they overhear\u00A0it.",
+      "All the quotes we used were overheard by real women on social media, in the workplace, or in the\u00A0street.",
     ],
     image: "/projects/Oi/Main.gif",
+    headerImage: "/projects/Oi/2.jpg",
     gallery: [
       {image: "/projects/Oi/1.gif", width: 400, height: 400},
       {image: "/projects/Oi/2.jpg"},
@@ -24,12 +25,13 @@ export const projects = [
     client: "WaterAid",
     tagline: "Brought hope during COVID",
     description: [
-      "This was an emergency film for WaterAid during the start of the COVID-19 pandemic. We had 2 weeks to come up with an idea, and shoot something to raise money quickly for people in need. ",
-      "Water had never been so important, yet this moment in time, only 1/4 health centres globally had access to clean water.",
-      "We borrowed the rainbow that became a sign of hope globally, and brought hope to those who need it most. ",
-      "The film got WaterAid’s highest ever engagement rate online, and the most donations off the back of a TV they’d had to date.",
+      "This was an emergency film for WaterAid during the start of the COVID-19 pandemic. We had 2 weeks to come up with an idea, and shoot something to raise money quickly for people in\u00A0need.",
+      "Water had never been so important, yet this moment in time, only 1/4 health centres globally had access to clean\u00A0water.",
+      "We borrowed the rainbow that became a sign of hope globally, and brought hope to those who need it\u00A0most. ",
+      "The film got WaterAid’s highest ever engagement rate online, and the most donations off the back of a TV they’d had to\u00A0date.",
     ],
     image: "/projects/WaterAid/Main.png",
+    headerImage: "/projects/WaterAid/3.jpg",
     gallery: [
       {image: "/projects/WaterAid/1.png"},
       {image: "/projects/WaterAid/2.jpg"},
@@ -44,10 +46,11 @@ export const projects = [
     client: "Frazzled",
     tagline: "Turned small talk into real talk",
     description: [
-      "Conversations, particularly in workplaces always follow the same format. This film for Ruby Wax’s mental health charity is a funny depiction of office small talk, and encourages people to swap this boring talk for real talk.",
-      "The campaign video launched on World Mental Health Day, and got Campaign’s Ad of the Day.",
+      "Conversations, particularly in workplaces always follow the same format. This film for Ruby Wax’s mental health charity is a funny depiction of office small talk, and encourages people to swap this boring talk for real\u00A0talk.",
+      "The campaign video launched on World Mental Health Day, and got Campaign’s Ad of the\u00A0Day.",
     ],
     image: "/projects/SmallTalk/Main.jpg",
+    headerImage: "/projects/SmallTalk/7.jpg",
     gallery: [
       {image: "/projects/SmallTalk/1.png", width: 400, height: 400},
       {image: "/projects/SmallTalk/2.png"},
@@ -66,12 +69,13 @@ export const projects = [
     client: "Heinz",
     tagline: "Pictured a world without soil",
     description: [
-      "40% of the world’s farming soil is degraded. Terrifying, considering 95% of the food we eat relies on soil (including Heinz ketchup!)",
-      "It’s hard to get people to care about soil. So we helped them picture a world without it.",
-      "We took an iconic Van Gogh painting and repainted to reflect the present, and the future. The immersive exhibition was held for 3 days the Thyssen Gallery in Madrid.",
-      "112M PR Impressions. Over 2,000 visitors. Coverage from 90+ media outlets. The campaign was even recognised for a Spanish sustainability award. ",
+      "40% of the world’s farming soil is degraded. Terrifying, considering 95% of the food we eat relies on soil (including Heinz\u00A0ketchup!)",
+      "It’s hard to get people to care about soil. So we helped them picture a world without\u00A0it.",
+      "We took an iconic Van Gogh painting and repainted to reflect the present, and the future. The immersive exhibition was held for 3 days the Thyssen Gallery in\u00A0Madrid.",
+      "112M PR Impressions. Over 2,000 visitors. Coverage from 90+ media outlets. The campaign was even recognised for a Spanish sustainability\u00A0award. ",
     ],
     image: "/projects/WorldWithoutSoil/Main.gif",
+    headerImage: "/projects/WorldWithoutSoil/2.jpg",
     gallery: [
       {image: "/projects/WorldWithoutSoil/1.gif", width: 410, height: 410},
       {image: "/projects/WorldWithoutSoil/2.jpg"},
@@ -85,12 +89,13 @@ export const projects = [
     client: "BiteBack2030",
     tagline: "Exposed fast food brands",
     description: [
-      "BiteBack2030 are a youth-led movement backed by Jamie Oliver. They wanted to launch the brand and raise awareness of its mission to challenge a food system that’s been set up to fool us.",
-      "This social experiment used exactly the same techniques as the advertising industry to manipulate teens food choices.",
-      "We made a fake brand and plastered it everywhere. From posters, to radio ads. We even got famous Love Island influencers to post about it. Every teen in the experiment picked Triple Dipped Chicken.",
-      "The campaign received worldwide coverage from the Washington Post, to the BBC.",
+      "BiteBack2030 are a youth-led movement backed by Jamie Oliver. They wanted to launch the brand and raise awareness of its mission to challenge a food system that’s been set up to fool\u00A0us.",
+      "This social experiment used exactly the same techniques as the advertising industry to manipulate teens food\u00A0choices.",
+      "We made a fake brand and plastered it everywhere. From posters, to radio ads. We even got famous Love Island influencers to post about it. Every teen in the experiment picked Triple Dipped\u00A0Chicken.",
+      "The campaign received worldwide coverage from the Washington Post, to the\u00A0BBC.",
     ],
     image: "/projects/BiteBack2030/Main.png",
+    headerImage: "/projects/BiteBack2030/5.jpg",
     gallery: [
       {image: "/projects/BiteBack2030/1.png", width: 500, height: 500},
       {image: "/projects/BiteBack2030/2.jpg"},
@@ -106,12 +111,12 @@ export const projects = [
     client: "St John Ambulance",
     tagline: "Made a CPR Bra",
     description: [
-      "Boobs shouldn’t be the difference between life and death. But St John Ambulance revealed that 1/3 people are afraid to give CPR to women because they are worried about inappropriate touching.",
-      "We stepped in with the CPR Bra. The world’s first educational bra to bust the touch taboo.",
-      "The campaign was launched on Restart a Heart day with Lioness legend Millie Bright and others. It spread far and wide on social and beyond.",
-      "It was covered by BBC Breakfast, The Guardian, Forbes, The Mirror, The Daily Mail, Campaign, PR Week, Famous Campaigns and more. Plus St John Ambulance had an 26,000% traffic increase to their website!",
+      "Boobs shouldn’t be the difference between life and death. But St John Ambulance revealed that 1/3 people are afraid to give CPR to women because they are worried about inappropriate\u00A0touching.",
+      "We stepped in with the CPR Bra. The world’s first educational bra to bust the touch\u00A0taboo.",
+      "The campaign was launched on Restart a Heart day with Lioness legend Millie Bright and others. It was covered by BBC Breakfast, The Guardian, Forbes, The Mirror, The Daily Mail, Campaign, PR Week, Famous Campaigns and\u00a0more.",
     ],
     image: "/projects/CPRBra/Main.png",
+    headerImage: "/projects/CPRBra/9.jpg",
     gallery: [
       {image: "/projects/CPRBra/1.gif", height: 750},
       {image: "/projects/CPRBra/2.png"},
@@ -129,11 +134,12 @@ export const projects = [
     client: "The Wildlife Trust",
     tagline: "Reimagined an old classic",
     description: [
-      "The UK is one of the most nature-depleted countries in the world. So we got Brits to connect to the issue by reinventing a classic British story",
-      "We created a fake trailer for a Wind in the Willows remake, where Badger, Toad, Ratty and Mole find themselves in a world affected by climate change.",
-      "The film ran in cinemas and on social. It received 190+ pieces of news coverage including The Sun, BBC and Vogue.",
+      "The UK is one of the most nature-depleted countries in the world. So we got Brits to connect to the issue by reinventing a classic British\u00A0story.",
+      "We created a fake trailer for a Wind in the Willows remake, where Badger, Toad, Ratty and Mole find themselves in a world affected by climate\u00A0change.",
+      "The film ran in cinemas and on social. It received 190+ pieces of news coverage including The Sun, BBC and\u00A0Vogue.",
     ],
     image: "/projects/WindInTheWillows/Main.jpg",
+    headerImage: "/projects/WindInTheWillows/Main.jpg",
     gallery: [
       {image: "/projects/WindInTheWillows/1.jpg", width: 500, height: 500},
       {image: "/projects/WindInTheWillows/2.png"},
@@ -149,10 +155,11 @@ export const projects = [
     client: "Callaly",
     tagline: "Made people think twice about tampons",
     description: [
-      "A lot of products for women have changed a lot in the last 100 years. Except one very important thing a lot of us use every month: tampons. ",
-      "This is an unboxing video with an important twist. All to sell the new 'tampliner',  one of the first major innovations in tampons in the past century.",
+      "A lot of products for women have changed a lot in the last 100 years. Except one very important thing a lot of us use every month:\u00A0tampons.",
+      "This is an unboxing video with an important twist. All to sell the new 'tampliner',  one of the first major innovations in tampons in the past\u00A0century.",
     ],
     image: "/projects/Callaly/Main.png",
+    headerImage: "/projects/Callaly/2.jpg",
     gallery: [
       {image: "/projects/Callaly/1.jpg", width: 500, height: 500},
       {image: "/projects/Callaly/2.jpg"},
@@ -166,11 +173,12 @@ export const projects = [
     client: "giffgaff",
     tagline: "Made people less lonely",
     description: [
-      "giffgaff and Global Radio's huge campaign against loneliness: Have a Proper Chat.",
-      "We got everybody talking between 6 and 7pm during peak covid, aiming make it the least lonely hour in Britain ever. All customer calls to anywhere in the UK were free.",
-      "16M people reached. 26 pieces of national press coverage. Thousands of proper chats.",
+      "giffgaff and Global Radio's huge campaign against loneliness: Have a Proper\u00A0Chat.",
+      "We got everybody talking between 6 and 7pm during peak covid, aiming make it the least lonely hour in Britain ever. All customer calls to anywhere in the UK were\u00A0free.",
+      "16M people reached. 26 pieces of national press coverage. Thousands of proper\u00A0chats.",
     ],
     image: "/projects/Giffgaff/Main.png",
+    headerImage: "/projects/Giffgaff/6.png",
     gallery: [
       {image: "/projects/Giffgaff/1.jpg", width: 350, height: 350},
       {image: "/projects/Giffgaff/2.png"},
@@ -186,10 +194,11 @@ export const projects = [
     client: "The Gut Stuff",
     tagline: "Made a farting billboard",
     description: [
-      "The brief was simple. Use The Gut Stuff’s free OOH space to break a taboo around gut health. ",
-      "The brief led to this silly idea, and some beautiful art direction and copywriting. Even better, the hero site was in the Trafford Centre, so I got to go back to my hometown to get Manchester talking about farts. My dad found it hilarious.",
+      "The brief was simple. Use The Gut Stuff’s free OOH space to break a taboo around gut\u00A0health. ",
+      "The brief led to this silly idea, and some beautiful art direction and copywriting. Even better, the hero site was in the Trafford Centre, so I got to go back to my hometown to get Manchester talking about farts. My dad found it\u00A0hilarious.",
     ],
     image: "/projects/FartingBillboard/Main.png",
+    headerImage: "/projects/FartingBillboard/2.png",
     gallery: [
       {image: "/projects/FartingBillboard/1.png", width: 500, height: 500},
       {image: "/projects/FartingBillboard/2.png"},
@@ -206,6 +215,7 @@ export interface Project {
   tagline: string;
   description: string[];
   image: string;
+  headerImage?: string;
   gallery: {
     image: string, 
     width?: number,
@@ -244,10 +254,9 @@ export const projectsMobile = [
     client: "St John Ambulance",
     tagline: "Made a CPR Bra",
     description: [
-      "Boobs shouldn’t be the difference between life and death. But St John Ambulance revealed that 1/3 people are afraid to give CPR to women because they are worried about inappropriate touching.",
-      "We stepped in with the CPR Bra. The world’s first educational bra to bust the touch taboo.",
-      "The campaign was launched on Restart a Heart day with Lioness legend Millie Bright and others. It spread far and wide on social and beyond.",
-      "It was covered by BBC Breakfast, The Guardian, Forbes, The Mirror, The Daily Mail, Campaign, PR Week, Famous Campaigns and more. Plus St John Ambulance had an 26,000% traffic increase to their website!",
+      "Boobs shouldn’t be the difference between life and death. But St John Ambulance revealed that 1/3 people are afraid to give CPR to women because they are worried about inappropriate\u00A0touching.",
+      "We stepped in with the CPR Bra. The world’s first educational bra to bust the touch\u00A0taboo.",
+      "The campaign was launched on Restart a Heart day with Lioness legend Millie Bright and others. It was covered by BBC Breakfast, The Guardian, Forbes, The Mirror, The Daily Mail, Campaign, PR Week, Famous Campaigns and\u00a0more.",
     ],
     image: "/projects/CPRBra/Main.png",
     gallery: [
@@ -267,10 +276,10 @@ export const projectsMobile = [
     client: "Heinz",
     tagline: "Pictured a world without soil",
     description: [
-      "40% of the world’s farming soil is degraded. Terrifying, considering 95% of the food we eat relies on soil (including Heinz ketchup!)",
-      "It’s hard to get people to care about soil. So we helped them picture a world without it.",
-      "We took an iconic Van Gogh painting and repainted to reflect the present, and the future. The immersive exhibition was held for 3 days the Thyssen Gallery in Madrid.",
-      "112M PR Impressions. Over 2,000 visitors. Coverage from 90+ media outlets. The campaign was even recognised for a Spanish sustainability award. ",
+      "40% of the world’s farming soil is degraded. Terrifying, considering 95% of the food we eat relies on soil (including Heinz\u00A0ketchup!)",
+      "It’s hard to get people to care about soil. So we helped them picture a world without\u00A0it.",
+      "We took an iconic Van Gogh painting and repainted to reflect the present, and the future. The immersive exhibition was held for 3 days the Thyssen Gallery in\u00A0Madrid.",
+      "112M PR Impressions. Over 2,000 visitors. Coverage from 90+ media outlets. The campaign was even recognised for a Spanish sustainability\u00A0award. ",
     ],
     image: "/projects/WorldWithoutSoil/Main.gif",
     gallery: [
@@ -286,8 +295,8 @@ export const projectsMobile = [
     client: "Frazzled",
     tagline: "Turned small talk into real talk",
     description: [
-      "Conversations, particularly in workplaces always follow the same format. This film for Ruby Wax’s mental health charity is a funny depiction of office small talk, and encourages people to swap this boring talk for real talk.",
-      "The campaign video launched on World Mental Health Day, and got Campaign’s Ad of the Day.",
+      "Conversations, particularly in workplaces always follow the same format. This film for Ruby Wax’s mental health charity is a funny depiction of office small talk, and encourages people to swap this boring talk for real\u00A0talk.",
+      "The campaign video launched on World Mental Health Day, and got Campaign’s Ad of the\u00A0Day.",
     ],
     image: "/projects/SmallTalk/Main.jpg",
     gallery: [
@@ -308,10 +317,10 @@ export const projectsMobile = [
     client: "WaterAid",
     tagline: "Brought hope during COVID",
     description: [
-      "This was an emergency film for WaterAid during the start of the COVID-19 pandemic. We had 2 weeks to come up with an idea, and shoot something to raise money quickly for people in need. ",
-      "Water had never been so important, yet this moment in time, only 1/4 health centres globally had access to clean water.",
-      "We borrowed the rainbow that became a sign of hope globally, and brought hope to those who need it most. ",
-      "The film got WaterAid’s highest ever engagement rate online, and the most donations off the back of a TV they’d had to date.",
+      "This was an emergency film for WaterAid during the start of the COVID-19 pandemic. We had 2 weeks to come up with an idea, and shoot something to raise money quickly for people in\u00A0need.",
+      "Water had never been so important, yet this moment in time, only 1/4 health centres globally had access to clean\u00A0water.",
+      "We borrowed the rainbow that became a sign of hope globally, and brought hope to those who need it\u00A0most. ",
+      "The film got WaterAid’s highest ever engagement rate online, and the most donations off the back of a TV they’d had to\u00A0date.",
     ],
     image: "/projects/WaterAid/Main.png",
     gallery: [
@@ -329,9 +338,9 @@ export const projectsMobile = [
     client: "giffgaff",
     tagline: "Made people less lonely",
     description: [
-      "giffgaff and Global Radio's huge campaign against loneliness: Have a Proper Chat.",
-      "We got everybody talking between 6 and 7pm during peak covid, aiming make it the least lonely hour in Britain ever. All customer calls to anywhere in the UK were free.",
-      "16M people reached. 26 pieces of national press coverage. Thousands of proper chats.",
+      "giffgaff and Global Radio's huge campaign against loneliness: Have a Proper\u00A0Chat.",
+      "We got everybody talking between 6 and 7pm during peak covid, aiming make it the least lonely hour in Britain ever. All customer calls to anywhere in the UK were\u00A0free.",
+      "16M people reached. 26 pieces of national press coverage. Thousands of proper\u00A0chats.",
     ],
     image: "/projects/Giffgaff/Main.png",
     gallery: [
@@ -349,9 +358,9 @@ export const projectsMobile = [
     client: "UN Women UK",
     tagline: "Taught people how to Oi!",
     description: [
-      "Sexism should be a thing of the past, yet unfortunately it happens daily and too often goes unchecked.",
-      "Oi! Observe and Intervene is a simple way people can challenge sexism when they overhear it.",
-      "All the quotes we used were overheard by real women on social media, in the workplace, or in the street."
+      "Sexism should be a thing of the past, yet unfortunately it happens daily and too often goes\u00A0unchecked.",
+      "Oi! Observe and Intervene is a simple way people can challenge sexism when they overhear\u00A0it.",
+      "All the quotes we used were overheard by real women on social media, in the workplace, or in the\u00A0street.",
     ],
     image: "/projects/Oi/Main.gif",
     gallery: [
@@ -369,10 +378,10 @@ export const projectsMobile = [
     client: "BiteBack2030",
     tagline: "Exposed fast food brands",
     description: [
-      "BiteBack2030 are a youth-led movement backed by Jamie Oliver. They wanted to launch the brand and raise awareness of its mission to challenge a food system that’s been set up to fool us.",
-      "This social experiment used exactly the same techniques as the advertising industry to manipulate teens food choices.",
-      "We made a fake brand and plastered it everywhere. From posters, to radio ads. We even got famous Love Island influencers to post about it. Every teen in the experiment picked Triple Dipped Chicken.",
-      "The campaign received worldwide coverage from the Washington Post, to the BBC.",
+      "BiteBack2030 are a youth-led movement backed by Jamie Oliver. They wanted to launch the brand and raise awareness of its mission to challenge a food system that’s been set up to fool\u00A0us.",
+      "This social experiment used exactly the same techniques as the advertising industry to manipulate teens food\u00A0choices.",
+      "We made a fake brand and plastered it everywhere. From posters, to radio ads. We even got famous Love Island influencers to post about it. Every teen in the experiment picked Triple Dipped\u00A0Chicken.",
+      "The campaign received worldwide coverage from the Washington Post, to the\u00A0BBC.",
     ],
     image: "/projects/BiteBack2030/Main.png",
     gallery: [
@@ -390,9 +399,9 @@ export const projectsMobile = [
     client: "The Wildlife Trust",
     tagline: "Reimagined an old classic",
     description: [
-      "The UK is one of the most nature-depleted countries in the world. So we got Brits to connect to the issue by reinventing a classic British story",
-      "We created a fake trailer for a Wind in the Willows remake, where Badger, Toad, Ratty and Mole find themselves in a world affected by climate change.",
-      "The film ran in cinemas and on social. It received 190+ pieces of news coverage including The Sun, BBC and Vogue.",
+      "The UK is one of the most nature-depleted countries in the world. So we got Brits to connect to the issue by reinventing a classic British\u00A0story.",
+      "We created a fake trailer for a Wind in the Willows remake, where Badger, Toad, Ratty and Mole find themselves in a world affected by climate\u00A0change.",
+      "The film ran in cinemas and on social. It received 190+ pieces of news coverage including The Sun, BBC and\u00A0Vogue.",
     ],
     image: "/projects/WindInTheWillows/Main.jpg",
     gallery: [
@@ -410,8 +419,8 @@ export const projectsMobile = [
     client: "Callaly",
     tagline: "Made people think twice about tampons",
     description: [
-      "A lot of products for women have changed a lot in the last 100 years. Except one very important thing a lot of us use every month: tampons. ",
-      "This is an unboxing video with an important twist. All to sell the new “tampliner”,  one of the first major innovations in tampons in the past century.",
+      "A lot of products for women have changed a lot in the last 100 years. Except one very important thing a lot of us use every month:\u00A0tampons.",
+      "This is an unboxing video with an important twist. All to sell the new 'tampliner',  one of the first major innovations in tampons in the past\u00A0century.",
     ],
     image: "/projects/Callaly/Main.png",
     gallery: [
@@ -427,8 +436,8 @@ export const projectsMobile = [
     client: "The Gut Stuff",
     tagline: "Made a farting billboard",
     description: [
-      "The brief was simple. Use The Gut Stuff’s free OOH space to break a taboo around gut health. ",
-      "The brief led to this silly idea, and some beautiful art direction and copywriting. Even better, the hero site was in the Trafford Centre, so I got to go back to my hometown to get Manchester talking about farts. My dad found it hilarious.",
+      "The brief was simple. Use The Gut Stuff’s free OOH space to break a taboo around gut\u00A0health. ",
+      "The brief led to this silly idea, and some beautiful art direction and copywriting. Even better, the hero site was in the Trafford Centre, so I got to go back to my hometown to get Manchester talking about farts. My dad found it\u00A0hilarious.",
     ],
     image: "/projects/FartingBillboard/Main.png",
     gallery: [

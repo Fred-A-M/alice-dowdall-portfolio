@@ -41,16 +41,12 @@ export default function StaticImage({
         width={width ? width : 800}
         height={height ? height : 800}
         style={{
-          maxWidth: width ? `${width}px` : (isMobile ? "250px" : "450px"),
-          maxHeight: height ? `${height}px` : (isMobile ? "300px" : "600px"),
-          width: "auto",
+          width: width ? `${width}px` : (isMobile ? "250px" : "450px"),
           height: "auto",
           objectFit: "contain",
           filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3))'
         }}
         className={`rounded-sm ${className}`}
-        priority={true}
-        loading="eager"
       />
     </div>
   );

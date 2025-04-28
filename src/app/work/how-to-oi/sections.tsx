@@ -8,7 +8,6 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
       <StaticImage 
         src={project.gallery[1].image}
         alt={project.name} 
-        rotation={-3}
         width={900}
         height={900}
       />
@@ -18,7 +17,6 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
       <StaticImage 
         src={project.gallery[2].image}
         alt={project.name}
-        rotation={3}
         width={900}
         height={900}
       />
@@ -28,7 +26,6 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
       <StaticImage 
         src={project.gallery[3].image}
         alt={project.name} 
-        rotation={-4}
         width={900}
         height={900}
       />
@@ -38,7 +35,6 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
       <StaticImage 
         src={project.gallery[4].image}
         alt={project.name} 
-        rotation={2}
         width={900}
         height={900}
       />

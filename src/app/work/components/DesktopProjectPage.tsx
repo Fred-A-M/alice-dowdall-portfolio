@@ -19,7 +19,7 @@ export default function DesktopProjectPage({ project, sections }: ProjectPagePro
     <div className="relative inset-0 flex flex-col gap-20 w-full h-full mb-10">
       <ProjectHeaderDesktop project={project} />
 
-      <div className="pt-[70vh]">
+      <div className="pt-[70vh] flex flex-col gap-80 justify-center items-center w-full">
         {sections && sections.map((section, index) => (
           <div key={index}>
             {section}

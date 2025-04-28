@@ -7,34 +7,34 @@ import Image from "next/image";
 export const WorldWithoutSoilSections = (project: Project): ReactNode[] => {
   return [
 
-    <div key="gallery2" className="grid grid-cols-1 mx-auto lg:w-[75%] w-full">
-      <div className="flex justify-start items-start">
-        <StaticImage 
-          src={project.gallery[1].image}
-          alt={project.name}
-          rotation={-3}
-          width={500}
-          height={500}
-        />
-      </div>
-      <div className="flex justify-end items-end">
-        <StaticImage 
-          src={project.gallery[2].image}
-          alt={project.name}
-          rotation={3}
-          width={500}
-          height={500}
-        />
-      </div>
-    </div>,
-
-    <div key="large-image" className="flex justify-center items-center w-full">
-      <Image 
-        src={project.gallery[3].image} 
-        alt={project.name} 
-        width={900} 
-        height={500} />  
-    </div>
+    <StaticImage 
+      src={project.gallery[0].image}
+      alt={project.name}
+      width={800}
+      height={800}
+      key="0"
+    />,
+    <StaticImage 
+      src={project.gallery[1].image}
+      alt={project.name}
+      width={900}
+      height={900}
+      key="1"
+    />,
+    <StaticImage 
+      src={project.gallery[2].image}
+      alt={project.name}
+      width={900}
+      height={900}
+      key="2"
+    />,
+    <StaticImage 
+      src={project.gallery[3].image}
+      alt={project.name}
+      width={900}
+      height={900}
+      key="3"
+    />,
   ];
 };
 
