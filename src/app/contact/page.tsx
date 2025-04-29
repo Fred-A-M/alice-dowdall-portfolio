@@ -41,9 +41,9 @@ export default function Contact() {
       <div className="grid md:grid-cols-6 grid-cols-1 md:gap-4 gap-8">
 
         <div className="flex gap-6 md:col-span-4 col-span-1">
-          <div className="gap-2 flex-1">
+          <div className="flex-1">
             <div className="font-bold md:text-2xl text-lg">Bit about me</div>
-            <div className="flex flex-col gap-2 lg:text-3xl md:text-2xl sm:text-xl text-lg ">
+            <div className="flex flex-col gap-2 md:text-2xl sm:text-xl text-lg ">
               {isClient && profile.background.map((line, index) => {
                 // Calculate delay based on all previous paragraphs
                 let totalDelay = 0;
@@ -81,7 +81,7 @@ export default function Contact() {
               objectFit: "cover",
               borderRadius: "50%",
             }}
-            className="shadow-lg shadow-black"
+            className=""
           />
         </motion.div>
       </div>
@@ -105,8 +105,8 @@ export default function Contact() {
               <p className="">alicedowdall@gmail.com</p>
           </div>
 
-          <div className="md:col-span-2 col-span-1 flex flex-col gap-2">
-            <div className="font-bold sm:text-2xl text-lg">{"I've worked:"}</div>
+          <div className="md:col-span-2 col-span-1 flex flex-col">
+            <div className="font-bold sm:text-2xl text-lg">{"Worked:"}</div>
             <div className="flex flex-col gap-2">
               {profile.worked.map((work, index) => (
                 <div key={index}>
@@ -119,19 +119,22 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="md:col-span-2 col-span-1 flex flex-col gap-2">
-            <div className="font-bold sm:text-2xl text-lg">{"I've worked with:"}</div>
-            <div>
-              <p>
-                <span className="font-bold">Brands: </span> 
-                {profile.workedWith[0].brands}
-              </p>
-            </div>
-            <div>
-              <p>
-                <span className="font-bold">Charities: </span> 
-                {profile.workedWith[1].charities}
-              </p>
+          
+          <div className="md:col-span-4 col-span-1 flex flex-col">
+            <div className="font-bold sm:text-2xl text-lg">{"Worked with:"}</div>
+            <div className="flex flex-col gap-2">
+              <div>
+                <p>
+                  <span className="font-bold">Brands: </span> 
+                  {profile.workedWith[0].brands}
+                </p>
+              </div>
+              <div>
+                <p>
+                  <span className="font-bold">Charities: </span> 
+                  {profile.workedWith[1].charities}
+                </p>
+              </div>
             </div>
           </div>
         </div>
