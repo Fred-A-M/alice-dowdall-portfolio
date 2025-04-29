@@ -9,8 +9,16 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
   return [
     <VideoEmbed key="video" video={project.video as string} />,
 
+    <Image 
+      src={project.image} 
+      alt={project.name}
+      width={1000}
+      height={1000}
+      key="0"
+    />,
+
     <div key="gallery" className="grid grid-cols-4 mx-auto w-full gap-20 lg:w-[80%]">
-      <div className="flex w-full justify-center col-span-3 pb-30">
+      <div className="flex w-full justify-center col-span-3">
         <Image 
           src={project.gallery[1].image} 
           alt={project.name}
@@ -18,7 +26,7 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
           height={800}
         />
       </div>
-      <div className="flex w-full justify-center items-center col-span-1 pt-30">
+      <div className="flex w-full justify-center items-center col-span-1">
         <Image 
           src={project.gallery[2].image} 
           alt={project.name} 

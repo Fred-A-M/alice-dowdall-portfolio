@@ -13,11 +13,12 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
       muted 
       playsInline 
       preload="none" 
-      poster={project.image}
+      poster={project.gallery[11].image}
     >
-      <source src={project.video?.mp4} type="video/mp4" />
-      <source src={project.video?.webm} type="video/webm" />
+      <source src={project.gallery[11].mp4} type="video/mp4" />
+      <source src={project.gallery[11].webm} type="video/webm" />
     </video>,
+
     <Image 
       key="2"
       src={project.gallery[2].image}
@@ -71,13 +72,32 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
       height={1100}
     />,
 
+    <div key="6" className="grid grid-cols-2 gap-20">
+      <div className="col-span-1 flex justify-center items-center pb-20">
+        <Image 
+          src={project.gallery[8].image} 
+          alt={project.name} 
+          width={500}
+          height={500}
+        />
+      </div>
+      <div className="col-span-1 flex justify-center items-center pt-20">
+        <Image 
+          src={project.gallery[9].image} 
+          alt={project.name} 
+          width={500}
+          height={500}
+        />
+      </div>
+    </div>,
+
     <Image 
-      key="6"
+      key="7"
       src={project.gallery[7].image} 
       alt={project.name} 
       width={1200} 
       height={1200}
-    />
+    />,
   
     ];
 };

@@ -7,40 +7,28 @@ import Image from "next/image";
 // Create a function that takes the project and returns the sections
 export const FartingBillboardSections = (project: Project): ReactNode[] => {
   return [
-    <div key="large-image" className="flex justify-center items-center w-full">
-      <Image 
-        src={project.gallery[1].image} 
-        alt={project.name} 
-        width={900} 
-        height={500} 
-        className="rounded-sm"
-      />  
-    </div>,
-
-    <div key="gallery" className="grid grid-cols-2 gap-30">
-      <div className="flex justify-end items-center">
-        <FloatingImage 
-          src={project.gallery[2].image}
-          alt={project.name}
-          rotation={-6}
-          rotateAmount={4}
-          floatAmount={2}
-          floatDuration={3}
-          floatDelay={0.5}
-          width={500}
-          height={400}
-        />
-      </div>
-      <div className="flex justify-start items-center">
-        <StaticImage 
-          src={project.gallery[3].image}
-          alt={project.name}
-          rotation={6}
-          width={600}
-          height={600}
-        />
-      </div>
-    </div>
+ 
+    <Image 
+      src={project.gallery[1].image} 
+      alt={project.name} 
+      width={1100} 
+      height={1100} 
+      key="0"
+    />,
+    <Image 
+      src={project.gallery[0].image} 
+      alt={project.name} 
+      width={700} 
+      height={700} 
+      key="1"
+    />,
+   <Image 
+      src={project.gallery[2].image} 
+      alt={project.name} 
+      width={400} 
+      height={400} 
+      key="2"
+    />,
   ];
 };
 

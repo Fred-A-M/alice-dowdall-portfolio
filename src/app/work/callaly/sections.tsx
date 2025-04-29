@@ -2,26 +2,33 @@ import { Project } from "@/app/consts";
 import StaticImage from '@/app/components/StaticImage';
 import { ReactNode } from "react";
 import VideoEmbed from '../components/VideoEmbed';
-
+import Image from 'next/image';
 export const CallalySections = (project: Project): ReactNode[] => {
   return [
-    <div key="video" className="w-full">
-      <VideoEmbed key="video" video={project.video as string} />
-    </div>,
-
+    <VideoEmbed key="video" video={project.video as string} />,
     
-    <StaticImage 
+    <Image 
+      key="0"
+      src={project.gallery[0].image}
+      alt={project.name}
+      width={1200}
+      height={1200}
+    />,
+
+    <Image 
       key="1"
       src={project.gallery[1].image}
       alt={project.name}
-      width={1000}
+      width={1200}
+      height={1200}
     />,
 
-    <StaticImage 
+    <Image 
       key="2"
       src={project.gallery[2].image}
       alt={project.name}
-      width={900}
+      width={1200}
+      height={1200}
     />,
 
   ];

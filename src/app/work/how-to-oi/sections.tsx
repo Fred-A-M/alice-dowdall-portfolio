@@ -47,8 +47,8 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
       <Image 
         src={project.gallery[0].image}
         alt={project.name} 
-        width={900}
-        height={1000}
+        width={700}
+        height={700}
         className="shadow-xl shadow-black/30"
       />
     </div>,

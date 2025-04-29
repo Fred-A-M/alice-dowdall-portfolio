@@ -3,48 +3,53 @@ import FloatingImage from '@/app/components/FloatingImage';
 import StaticImage from '@/app/components/StaticImage';
 import { ReactNode } from "react";
 import VideoEmbed from '../components/VideoEmbed';
+import Image from 'next/image';
 // Create a function that takes the project and returns the sections
 export const WindInTheWillowsSections = (project: Project): ReactNode[] => {
   return [
     // Section 1: Video
     <VideoEmbed key="video" video={project.video as string} />,
 
-    <div key="image1" className="flex justify-center items-center w-full">
-      <StaticImage 
-        src={project.gallery[1].image} 
-        alt={project.name} 
-        rotation={-2}
-        width={900}
-        height={900}
-      />
-    </div>,
+    <Image 
+      key="image0"
+      src={project.gallery[0].image} 
+      alt={project.name} 
+      width={600}
+      height={600}
+    />,
 
-    <div key="image2" className="flex justify-center items-center w-full">
-      <StaticImage 
-        src={project.gallery[2].image} 
-        alt={project.name} 
-        rotation={2}
-        width={900}
-        height={900}
-      />
-    </div>,
+ 
+    <Image 
+      key="image1"
+      src={project.gallery[1].image} 
+      alt={project.name} 
+      width={1200}
+      height={1200}
+    />,
 
-    <div key="gallery" className="grid grid-cols-3 items-center mx-auto w-full lg:w-[80%]">
-      <div className="col-span-2 flex justify-start">  
-        <StaticImage
+    <Image 
+      key="image2"
+      src={project.gallery[2].image} 
+      alt={project.name} 
+      width={1200}
+      height={1200}
+    />,
+
+    <div key="gallery" className="grid grid-cols-4 gap-20 items-center mx-auto w-full">
+      <div className="col-span-3 flex justify-start">  
+        <Image
           src={project.gallery[3].image} 
           alt={project.name} 
-          width={675}
+          width={1100}
+          height={1100}
         />
       </div>
-      <div className="col-span-1 flex justify-end">
-        <FloatingImage 
+      <div className="col-span-1 flex justify-start">
+        <Image 
           src={project.gallery[4].image} 
           alt={project.name} 
-          rotateAmount={4}  
-          floatAmount={2}
-          floatDuration={3}
-          floatDelay={0.5}
+          width={300}
+          height={300}
         />
       </div>
     </div>

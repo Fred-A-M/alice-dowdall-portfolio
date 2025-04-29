@@ -117,7 +117,6 @@ export const projects = [
     ],
     image: "/projects/CPRBra/Main.png",
     headerImage: "/projects/CPRBra/9.jpg",
-    video: {mp4: "/projects/CPRBra/video.mp4", webm: "/projects/CPRBra/video.webm"},
     gallery: [
       {image: "/projects/CPRBra/1.gif", height: 750},
       {image: "/projects/CPRBra/2.png"},
@@ -126,7 +125,11 @@ export const projects = [
       {image: "/projects/CPRBra/5.jpg"},
       {image: "/projects/CPRBra/6.png"},
       {image: "/projects/CPRBra/7.gif"},
-      {image: "/projects/CPRBra/8.gif"},
+      {image: "/projects/CPRBra/8.gif"}, 
+      {image: "/projects/CPRBra/9.jpg"},
+      {image: "/projects/CPRBra/10.jpg"},
+      {image: "/projects/CPRBra/11.jpg"},
+      {mp4: "/projects/CPRBra/video.mp4", webm: "/projects/CPRBra/video.webm", image: "/projects/CPRBra/video.png"},
     ],
     link: "/work/made-a-cpr-bra",
   },
@@ -220,9 +223,11 @@ export interface Project {
   gallery: {
     image: string, 
     width?: number,
-    height?: number
+    height?: number,
+    mp4?: string,
+    webm?: string,
   }[];
-  video?: {mp4: string, webm: string};
+  video?: string;
   link: string;
 }
 
