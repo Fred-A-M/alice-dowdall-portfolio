@@ -2,7 +2,7 @@ export default function VideoEmbed({ video }: { video: string }) {
   
   return (
     <div key="video" className="flex justify-center w-full">
-        <div className="w-[900px] aspect-video shadow-xl">
+        <div className="max-w-[1100px] w-full aspect-video shadow-xl shadow-black/30">
           <iframe
             src={video}
             title="YouTube video"

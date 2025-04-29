@@ -6,39 +6,33 @@ import Image from "next/image";
 
 export const WaterAidSections = (project: Project): ReactNode[] => {
   return [
-   
     <VideoEmbed key="video" video={project.video as string} />,
 
-    <div key="0">
-      <StaticImage 
-        src={project.gallery[0].image}
-        alt={project.name} 
-        width={900}
-        height={900}
-      />
-    </div>,
     <div key="1">
-      <StaticImage 
+      <Image 
         src={project.gallery[1].image}
         alt={project.name} 
-        width={900}
-        height={900}
+        width={1100}
+        height={1000}
+        className="shadow-xl shadow-black/30"
       />
     </div>,
     <div key="2">
-      <StaticImage 
+      <Image 
         src={project.gallery[2].image}
-        alt={project.name} 
-        width={900}
-        height={900}
-      />
-    </div>,
-    <div key="3">
-      <StaticImage 
-        src={project.gallery[3].image}
         alt={project.name} 
         width={1000}
         height={1000}
+        className="shadow-xl shadow-black/30"
+      />
+    </div>,
+    <div key="3">
+      <Image 
+        src={project.gallery[3].image}
+        alt={project.name} 
+        width={1100}
+        height={1000}
+        className="shadow-xl shadow-black/30"
       />
     </div>,
 

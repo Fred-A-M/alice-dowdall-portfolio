@@ -3,48 +3,46 @@ import FloatingImage from '@/app/components/FloatingImage';
 import StaticImage from '@/app/components/StaticImage';
 import { ReactNode } from "react";
 import VideoEmbed from '../components/VideoEmbed';
-
+import Image from 'next/image';
 // Create a function that takes the project and returns the sections
 export const BiteBackSections = (project: Project): ReactNode[] => {
   return [
     <VideoEmbed key="video" video={project.video as string} />,
 
-    <div key="gallery" className="grid grid-cols-4 mx-auto w-full lg:w-[80%]">
-      <div className="flex w-full justify-center col-span-3">
-        <StaticImage 
+    <div key="gallery" className="grid grid-cols-4 mx-auto w-full gap-20 lg:w-[80%]">
+      <div className="flex w-full justify-center col-span-3 pb-30">
+        <Image 
           src={project.gallery[1].image} 
           alt={project.name}
-          width={700}
+          width={800}
+          height={800}
         />
       </div>
-      <div className="flex w-full justify-center items-center col-span-1">
-        <FloatingImage 
+      <div className="flex w-full justify-center items-center col-span-1 pt-30">
+        <Image 
           src={project.gallery[2].image} 
           alt={project.name} 
-          rotation={-5}
-          rotateAmount={4} 
-          floatAmount={1} 
-          floatDuration={3} 
           width={600}
+          height={600}
         />      
       </div>
     </div>,
 
-    <div key="gallery2" className="grid grid-cols-1 mx-auto lg:w-[80%] w-full">
-      <div className="flex justify-start items-start">
-        <StaticImage 
+    <div key="gallery2" className="grid grid-cols-2 mx-auto w-full">
+      <div className="flex justify-center pb-30">
+        <Image 
           src={project.gallery[3].image}
           alt={project.name}
-          rotation={-5}
-          width={500}
+          width={650}
+          height={650}
         />
       </div>
-      <div className="flex justify-end items-end">
-        <StaticImage 
+      <div className="flex justify-center pt-30">
+        <Image 
           src={project.gallery[4].image}
           alt={project.name}
-          rotation={5}
-          width={450}
+          width={650}
+          height={650}
         />
       </div>
     </div>,

@@ -62,7 +62,7 @@ export const projects = [
       {image: "/projects/SmallTalk/8.jpg"},
     ],
     video: "https://www.youtube.com/embed/GvN42e0XzXs?rel=0&modestbranding=1",
-    link: "/work/turned-small-talk-into-real-talk",
+    link: "/work/small-talk",
   },
   {
     name: "Picture a World Without Soil", 
@@ -117,6 +117,7 @@ export const projects = [
     ],
     image: "/projects/CPRBra/Main.png",
     headerImage: "/projects/CPRBra/9.jpg",
+    video: {mp4: "/projects/CPRBra/video.mp4", webm: "/projects/CPRBra/video.webm"},
     gallery: [
       {image: "/projects/CPRBra/1.gif", height: 750},
       {image: "/projects/CPRBra/2.png"},
@@ -221,7 +222,7 @@ export interface Project {
     width?: number,
     height?: number
   }[];
-  video?: string;
+  video?: {mp4: string, webm: string};
   link: string;
 }
 
@@ -310,7 +311,7 @@ export const projectsMobile = [
       {image: "/projects/SmallTalk/8.jpg"},
     ],
     video: "https://www.youtube.com/embed/GvN42e0XzXs?rel=0&modestbranding=1",
-    link: "/work/turned-small-talk-into-real-talk",
+    link: "/work/small-talk",
   },
   {
     name: "There's No Rainbow Without Water",

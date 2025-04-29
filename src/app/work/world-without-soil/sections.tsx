@@ -6,33 +6,32 @@ import Image from "next/image";
 // Create a function that takes the project and returns the sections
 export const WorldWithoutSoilSections = (project: Project): ReactNode[] => {
   return [
-
-    <StaticImage 
+    <Image 
       src={project.gallery[0].image}
       alt={project.name}
       width={800}
       height={800}
       key="0"
     />,
-    <StaticImage 
+    <Image 
       src={project.gallery[1].image}
       alt={project.name}
-      width={900}
-      height={900}
+      width={1100}
+      height={1100}
       key="1"
     />,
-    <StaticImage 
+    <Image 
       src={project.gallery[2].image}
       alt={project.name}
-      width={900}
-      height={900}
+      width={1100}
+      height={1100}
       key="2"
     />,
-    <StaticImage 
+    <Image 
       src={project.gallery[3].image}
       alt={project.name}
-      width={900}
-      height={900}
+      width={1100}
+      height={1100}
       key="3"
     />,
   ];

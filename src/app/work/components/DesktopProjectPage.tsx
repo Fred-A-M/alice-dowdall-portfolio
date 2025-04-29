@@ -21,7 +21,7 @@ export default function DesktopProjectPage({ project, sections }: ProjectPagePro
 
       <div className="pt-[70vh] flex flex-col gap-80 justify-center items-center w-full">
         {sections && sections.map((section, index) => (
-          <div key={index}>
+          <div key={index} className="w-full flex justify-center">
             {section}
           </div>
         ))}
