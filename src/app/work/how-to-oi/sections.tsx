@@ -10,7 +10,6 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
         alt={project.name} 
         width={1200}
         height={1000}
-        className="shadow-xl shadow-black/30"
       />
     </div>,
 
@@ -20,7 +19,6 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
         alt={project.name}
         width={1200}
         height={1000}
-        className="shadow-xl shadow-black/30"
       />
     </div>,
 
@@ -30,7 +28,6 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
         alt={project.name} 
         width={1200}
         height={1000}
-        className="shadow-xl shadow-black/30"
       />
     </div>,
 
@@ -52,7 +49,6 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
         alt={project.name} 
         width={700}
         height={700}
-        className="shadow-xl shadow-black/30"
       />
     </div>,
   ];

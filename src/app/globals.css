@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
 @import "tailwindcss";
 
-/* Import slick carousel styles */
-@import "slick-carousel/slick/slick.css";
-@import "slick-carousel/slick/slick-theme.css";
 
 :root {
   --background: #9AF8A9;
@@ -17,7 +14,7 @@
   src: url('/fonts/Antique_Olive_Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 .antique-olive {
@@ -73,15 +70,5 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Radio Canada Big", sans-serif;
-  /* cursor: url('/rocketLolly.png') 0 0, auto; */
 }
 
-/* a, button, [role="button"], input[type="submit"], 
-.cursor-pointer, [onclick], select, details, summary,
-input[type="checkbox"], input[type="radio"] {
-  cursor: url('/monsterMunch.png') 0 0, pointer !important;
-}
-
-.hover\:cursor-pointer:hover {
-  cursor: url('/monsterMunch.png') 0 0, pointer !important;
-} */

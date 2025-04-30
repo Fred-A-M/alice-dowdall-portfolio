@@ -118,7 +118,7 @@ export default function FloatingImage({
           objectFit: "contain",
           filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3))'
         }}
-        className="rounded-sm object-contain transition-all duration-300 group-hover:opacity-40 p-7 group-hover:p-0"
+        className="object-contain transition-all duration-300 group-hover:opacity-40 p-7 group-hover:p-0"
         priority={true}
         loading="eager"
       />

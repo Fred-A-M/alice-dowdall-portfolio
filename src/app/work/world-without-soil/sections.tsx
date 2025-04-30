@@ -6,6 +6,17 @@ import Image from "next/image";
 // Create a function that takes the project and returns the sections
 export const WorldWithoutSoilSections = (project: Project): ReactNode[] => {
   return [
+    <video 
+      key="video" 
+      playsInline 
+      preload="none" 
+      controls
+      poster={project.gallery[4].image}
+      className="max-w-[1200px] w-full aspect-video"
+    >
+      <source src={project.gallery[4].mp4} type="video/mp4" />
+      <source src={project.gallery[4].webm} type="video/webm" />
+    </video>,
     <Image 
       src={project.gallery[0].image}
       alt={project.name}
@@ -39,6 +50,18 @@ export const WorldWithoutSoilSections = (project: Project): ReactNode[] => {
 
 export const WorldWithoutSoilSectionsMobile = (project: Project): ReactNode[] => {
   return [
+
+    <video 
+      key="video" 
+      playsInline 
+      preload="none" 
+      controls
+      poster={project.gallery[4].image}
+      className="max-w-[1200px] w-full aspect-video"
+    >
+      <source src={project.gallery[4].mp4} type="video/mp4" />
+      <source src={project.gallery[4].webm} type="video/webm" />
+    </video>,
 
     <div key="gallery2" className="grid grid-cols-1 mx-auto sm:w-[80%] w-full">
       <div className="flex justify-start items-start">

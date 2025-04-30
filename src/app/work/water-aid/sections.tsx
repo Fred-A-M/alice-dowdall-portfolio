@@ -14,7 +14,6 @@ export const WaterAidSections = (project: Project): ReactNode[] => {
         alt={project.name} 
         width={1100}
         height={1000}
-        className="shadow-xl shadow-black/30"
       />
     </div>,
     <div key="2">
@@ -23,7 +22,6 @@ export const WaterAidSections = (project: Project): ReactNode[] => {
         alt={project.name} 
         width={1000}
         height={1000}
-        className="shadow-xl shadow-black/30"
       />
     </div>,
     <div key="3">
@@ -32,7 +30,6 @@ export const WaterAidSections = (project: Project): ReactNode[] => {
         alt={project.name} 
         width={1100}
         height={1000}
-        className="shadow-xl shadow-black/30"
       />
     </div>,
 

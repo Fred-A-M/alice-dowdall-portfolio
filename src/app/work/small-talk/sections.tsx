@@ -18,17 +18,17 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
 
     <div key="video-section" className="grid grid-cols-10 gap-4 items-center w-full">
       <div className="col-span-1 flex justify-center h-full pt-10">
-          <FloatingImage 
-            src={project.gallery[1].image} 
-            alt={project.name} 
-            rotateAmount={4}
-            floatAmount={2}
-            floatDuration={3}
-            floatDelay={0.5}
-            width={200}
-            height={200}
-          />
-      </div>
+        <FloatingImage 
+          src={project.gallery[1].image} 
+          alt={project.name} 
+          rotateAmount={4}
+          floatAmount={2}
+          floatDuration={3}
+          floatDelay={0.5}
+          width={200}
+          height={200}
+        />
+    </div>
       
       <div className="col-span-8 ">
         <VideoEmbed key="video" video={project.video as string} />
@@ -54,7 +54,6 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
       width={1200}
       height={1200}
       key="1"
-      className="shadow-lg shadow-black/30"
     />,
     <div key="5" className="grid grid-cols-4 gap-4">
       <div className="col-span-1 flex justify-center items-start">
@@ -72,7 +71,6 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
           alt={project.name}
           width={500}
           height={500}
-          className="shadow-lg shadow-black/30"
         />
       </div>
       <div className="flex justify-center items-end gap-4 col-span-1">
@@ -93,7 +91,6 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
       width={1200}
       height={1200}
       key="4"
-      className="shadow-lg shadow-black/30"
     />,
   ];
 };
