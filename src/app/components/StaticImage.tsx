@@ -44,7 +44,6 @@ export default function StaticImage({
           width: width ? `${width}px` : (isMobile ? "250px" : "450px"),
           height: "auto",
           objectFit: "contain",
-          filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3))'
         }}
         className={`${className}`}
       />
