@@ -60,6 +60,7 @@ export default function Eyes() {
             src="/Pupils.png" 
             alt="Eye" 
             fill
+            sizes="(max-width: 768px) 48px, 72px"
             className="object-contain"
             priority={true}
             loading="eager"
@@ -75,6 +76,7 @@ export default function Eyes() {
             src="/Pupils.png" 
             alt="Eye" 
             fill
+            sizes="(max-width: 768px) 48px, 72px"
             className="object-contain"
             priority={true}
             loading="eager"

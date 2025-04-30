@@ -34,15 +34,18 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
       />
     </div>,
 
-    <div key="large-image4">
-      <Image 
-        src={project.gallery[4].image}
-        alt={project.name} 
-        width={1200}
-        height={1000}
-        className="shadow-xl shadow-black/30"
-      />
-    </div>,
+    <video 
+      key="video" 
+      autoPlay 
+      loop 
+      muted 
+      playsInline 
+      preload="none" 
+      poster={project.gallery[4].image}
+    >
+      <source src={project.gallery[4].mp4} type="video/mp4" />
+      <source src={project.gallery[4].webm} type="video/webm" />
+    </video>,
     <div key="0">
       <Image 
         src={project.gallery[0].image}

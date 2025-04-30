@@ -108,15 +108,15 @@ export default function FeaturesLoop() {
         <Slider ref={sliderRef} {...settings}>
           {features.map((src, index) => (
             <div key={index} className="h-[80px] flex items-center justify-center box-border">
-              <div className="w-full h-full flex items-center justify-center">
+              <div className="w-full h-full flex items-center justify-center relative">
                 <Image
                   src={src}
                   alt={`featured-logo-${index}`}
-                  width={150}
-                  height={80}
                   className="object-contain max-h-[80px] max-w-[150px] w-auto h-auto"
                   priority={true}
                   loading="eager"
+                  fill
+                  sizes="(max-width: 150px) 100vw, 150px"
                 />
               </div>
             </div>

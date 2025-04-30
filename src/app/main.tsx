@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Eyes from "./components/Eyes";
-import ProjectsScattered from './components/DesktopProjects';
+import DesktopProjects from './components/DesktopProjects';
 import ProjectsMobile from './components/MobileProjects';
 
 // import ProjectsMap from "./ProjectsMap";
@@ -45,8 +45,8 @@ export default function Main() {
           <ProjectsMobile />
         </div>
       ) : (
-        <div className="relative w-[90%] h-[580px] flex items-center justify-center">
-          <ProjectsScattered />
+        <div className="relative w-full lg:w-[75%] h-[70vh] flex items-center justify-center">
+          <DesktopProjects />
           <div className="absolute left-1/2" 
             style={{
               transform: 'translateX(-50%)',

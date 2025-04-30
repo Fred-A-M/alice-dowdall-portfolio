@@ -15,7 +15,7 @@ export const projects = [
       {image: "/projects/Oi/2.jpg"},
       {image: "/projects/Oi/3.jpg"},
       {image: "/projects/Oi/4.jpg"},
-      {image: "/projects/Oi/5.jpg"},
+      {image: "/projects/Oi/5.jpg", mp4: "/projects/Oi/5.mp4", webm: "/projects/Oi/5.webm", gif: "/projects/Oi/5.gif"},
       {image: "/projects/Oi/6.gif"},
     ],
     link: "/work/how-to-oi",
@@ -226,6 +226,7 @@ export interface Project {
     height?: number,
     mp4?: string,
     webm?: string,
+    gif?: string,
   }[];
   video?: string;
   link: string;

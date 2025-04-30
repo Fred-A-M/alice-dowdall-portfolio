@@ -14,6 +14,10 @@ export default function Contact() {
   // Prevent hydration errors by only rendering the animation on the client
   useEffect(() => {
     setIsClient(true);
+    document.addEventListener('click', mouseClick);
+    return () => {
+      document.removeEventListener('click', mouseClick);
+    }
   }, []);
 
   useEffect(() => {
@@ -36,6 +40,10 @@ export default function Contact() {
     return () => clearTimeout(timer);
   }, [isClient]);
 
+  const mouseClick = () => {
+    setIsTypingComplete(true);
+  }
+
   return (
     <div className="relative w-full pb-10 md:pt-10">
       <div className="grid md:grid-cols-6 grid-cols-1 md:gap-4 gap-8">
@@ -44,7 +52,7 @@ export default function Contact() {
           <div className="flex-1">
             <div className="font-bold md:text-2xl text-lg">Bit about me</div>
             <div className="flex flex-col gap-2 md:text-2xl sm:text-xl text-lg ">
-              {isClient && profile.background.map((line, index) => {
+              {!isTypingComplete && isClient ? profile.background.map((line, index) => {
                 // Calculate delay based on all previous paragraphs
                 let totalDelay = 0;
                 for (let i = 0; i < index; i++) {
@@ -58,6 +66,11 @@ export default function Contact() {
                     text={line} 
                     delay={totalDelay} 
                   />
+                );
+              }) :
+              profile.background.map((line, index) => {
+                return (
+                  <p key={index}>{line}</p>
                 );
               })}
             </div>
