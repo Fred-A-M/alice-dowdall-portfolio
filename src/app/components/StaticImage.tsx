@@ -1,6 +1,6 @@
 "use client";
 import Image from 'next/image';
-
+import './StaticImage.css';
 interface StaticImageProps {
   src: string;
   alt: string;
@@ -45,7 +45,7 @@ export default function StaticImage({
           height: "auto",
           objectFit: "contain",
         }}
-        className={`${className}`}
+        className={`${className} antiAliased`}
       />
     </div>
   );

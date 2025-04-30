@@ -36,11 +36,26 @@ export default function DesktopProjects() {
           const adjustedAngle = angle + Math.PI / 2;
           
           // Fixed radius for a consistent circle
-          const radius = 35;
+          const radius = 38;
+
+          let xOffset = 0;
+          let yOffset = 0;
+          if (index === 1 || index === 2) {
+            xOffset = 6;
+            yOffset = 4;
+          }
+
+          if (index === 4) {
+            xOffset = 2;
+          }
+
+          if (index === 6) {
+            xOffset = -2;
+          }
           
           // Calculate x and y with small fixed offset for variety
-          const x = Math.cos(adjustedAngle) * radius;
-          const y = Math.sin(adjustedAngle) * radius;
+          const x = Math.cos(adjustedAngle) * radius + xOffset;
+          const y = Math.sin(adjustedAngle) * radius + yOffset;
           
           // Alternate rotation for visual interest
           const rotation = index % 2 === 0 ? -5 : 5;

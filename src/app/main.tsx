@@ -45,7 +45,7 @@ export default function Main() {
           <ProjectsMobile />
         </div>
       ) : (
-        <div className="relative w-full lg:w-[75%] h-[70vh] flex items-center justify-center">
+        <div className="relative w-full lg:w-[80%] h-[70vh] flex items-center justify-center">
           <DesktopProjects />
           <div className="absolute left-1/2" 
             style={{
