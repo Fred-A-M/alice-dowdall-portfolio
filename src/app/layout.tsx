@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/Banner.png',
-        width: 1267,
-        height: 194,
+        width: 1200,
+        height: 629,
         alt: 'Alice Dowdall - Senior Advertising Creative',
       },
     ],
