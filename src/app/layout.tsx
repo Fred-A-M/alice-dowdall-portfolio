@@ -2,11 +2,27 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/NavBar";
 import Scroll from './Scroll';
-// import CustomCursor from './components/CustomCursor';
 
 export const metadata: Metadata = {
   title: "Alice Dowdall",
-  description: "Alice Dowdall's portfolio website",
+  description: "Senior Advertising Creative",
+  openGraph: {
+    title: 'Alice Dowdall',
+    description: 'Senior Advertising Creative',
+    images: [
+      {
+        url: '/Banner.png',
+        width: 1267,
+        height: 194,
+        alt: 'Alice Dowdall - Senior Advertising Creative',
+      },
+    ],
+    type: 'website',
+  },
+  icons: {
+    icon: '/A.png',
+    apple: '/A.png',
+  },
 };
 
 export default function RootLayout({

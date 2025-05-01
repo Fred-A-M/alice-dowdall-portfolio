@@ -12,7 +12,7 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
       loop 
       muted 
       playsInline 
-      preload="none" 
+      preload="auto"
       poster={project.gallery[0].image}
     >
       <source src={project.gallery[0].mp4} type="video/mp4" />
