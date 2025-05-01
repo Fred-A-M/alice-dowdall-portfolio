@@ -1,12 +1,13 @@
 'use client';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Eyes() {
   const leftEyeRef = useRef(null);
   const rightEyeRef = useRef(null);
   const target = useRef({ x: 0, y: 0 }); // mouse position
   const current = useRef({ x: 0, y: 0 }); // current pupil position
+  const [eyeLoaded, setEyeLoaded] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -54,41 +55,44 @@ export default function Eyes() {
         transform: 'translateX(-50%)',
       }}
     >
-    <div className="flex gap-6 justify-center items-baseline">
-      
-      <div
-        ref={leftEyeRef}
-        className="eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden shadow-2xl shadow-black"
-      >
-        <div className="pupil absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-18 h-18">
-          <Image 
-            src="/Pupils.png" 
-            alt="Eye" 
-            fill
-            sizes="(max-width: 768px) 48px, 72px"
-            className="object-contain"
-            priority={true}
-            loading="eager"
-          />
+      <div className="flex gap-6 justify-center items-baseline">
+        <div
+          ref={leftEyeRef}
+          className={`eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden shadow-2xl shadow-black ${eyeLoaded ? 'opacity-100' : 'opacity-0'}`}
+          style={{ transition: 'opacity 0.3s' }}
+        >
+          <div className="pupil absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-18 h-18">
+            <Image 
+              src="/Pupils.png" 
+              alt="Eye" 
+              fill
+              sizes="(max-width: 768px) 48px, 72px"
+              className="object-contain"
+              priority={true}
+              loading="eager"
+              onLoad={() => setEyeLoaded(true)}
+            />
+          </div>
+        </div>
+        <div
+          ref={rightEyeRef}
+          className={`eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden shadow-2xl shadow-black ${eyeLoaded ? 'opacity-100' : 'opacity-0'}`}
+          style={{ transition: 'opacity 0.3s' }}
+        >
+          <div className="pupil absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-18 h-18">
+            <Image 
+              src="/Pupils.png" 
+              alt="Eye" 
+              fill
+              sizes="(max-width: 768px) 48px, 72px"
+              className="object-contain"
+              priority={true}
+              loading="eager"
+              onLoad={() => setEyeLoaded(true)}
+            />
+          </div>
         </div>
       </div>
-      <div
-        ref={rightEyeRef}
-        className="eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden shadow-2xl shadow-black"
-      >
-        <div className="pupil absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-18 h-18">
-          <Image 
-            src="/Pupils.png" 
-            alt="Eye" 
-            fill
-            sizes="(max-width: 768px) 48px, 72px"
-            className="object-contain"
-            priority={true}
-            loading="eager"
-          />
-        </div>
-      </div>
-    </div>
     </div>
   );
 }
