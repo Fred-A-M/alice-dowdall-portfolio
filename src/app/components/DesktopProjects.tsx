@@ -5,15 +5,31 @@ import Image from "next/image";
 import { projects } from '../consts';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Eyes from './Eyes';
 
 export default function DesktopProjects() {
   const [mounted, setMounted] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  
+  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
+  const [allImagesLoaded, setAllImagesLoaded] = useState(false);
   
   useEffect(() => {
     setMounted(true);
   }, []);
+  
+  useEffect(() => {
+    if (Object.keys(loadedImages).length === projects.length && 
+        Object.values(loadedImages).every(loaded => loaded)) {
+      setAllImagesLoaded(true);
+    }
+  }, [loadedImages]);
+
+  const handleImageLoaded = (index: number) => {
+    setLoadedImages(prev => ({
+      ...prev,
+      [index]: true
+    }));
+  };
   
   if (!mounted) {
     return <div className="h-[700px]"></div>;
@@ -26,8 +42,15 @@ export default function DesktopProjects() {
   ];
 
   return (
+    <>
     <div className="relative w-full h-full">
-      <div className="w-[80%] h-full">
+      {!allImagesLoaded && (
+        <div className="absolute inset-0 flex items-center justify-center z-50">
+          <div className="w-30 h-30 border-b-8 border-t-8 rounded-full animate-spin"></div>
+        </div>
+      )}
+      
+      <div className={`w-[80%] h-full transition-opacity duration-500 ${allImagesLoaded ? 'opacity-100' : 'opacity-0'}`}>
         {projects.map((project, index) => {
           // Calculate position in a circle
           const angle = (index / projects.length) * Math.PI * 2;
@@ -141,6 +164,7 @@ export default function DesktopProjects() {
                       loading="eager"
                       quality={95}
                       className="object-contain transition-all duration-300 group-hover:opacity-40 p-7 group-hover:p-0"
+                      onLoad={() => handleImageLoaded(index)}
                     />
                   </div>
                   
@@ -157,5 +181,7 @@ export default function DesktopProjects() {
         })}
       </div>
     </div>
+    {allImagesLoaded && <Eyes />}
+    </>
   );
 }

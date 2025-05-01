@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 import { useState } from 'react';
-import Eyes from "./components/Eyes";
 import DesktopProjects from './components/DesktopProjects';
 import ProjectsMobile from './components/MobileProjects';
 
@@ -47,13 +46,6 @@ export default function Main() {
       ) : (
         <div className="relative w-full lg:w-[80%] h-[70vh] flex items-center justify-center">
           <DesktopProjects />
-          <div className="absolute left-1/2" 
-            style={{
-              transform: 'translateX(-50%)',
-            }}
-          >
-            <Eyes />
-          </div>
         </div>
       )}
     </div>

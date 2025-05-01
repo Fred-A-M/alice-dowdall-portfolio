@@ -49,6 +49,11 @@ export default function Eyes() {
   }, []);
 
   return (
+    <div className="absolute left-1/2" 
+      style={{
+        transform: 'translateX(-50%)',
+      }}
+    >
     <div className="flex gap-6 justify-center items-baseline">
       
       <div
@@ -83,6 +88,7 @@ export default function Eyes() {
           />
         </div>
       </div>
+    </div>
     </div>
   );
 }
