@@ -36,10 +36,26 @@ const SCALES = [
 export default function ProjectsScattered() {
   const [mounted, setMounted] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
+  const [allImagesLoaded, setAllImagesLoaded] = useState(false);
   
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (Object.keys(loadedImages).length === projectsMobile.length && 
+        Object.values(loadedImages).every(loaded => loaded)) {
+      setAllImagesLoaded(true);
+    }
+  }, [loadedImages]);
+
+  const handleImageLoaded = (index: number) => {
+    setLoadedImages(prev => ({
+      ...prev,
+      [index]: true
+    }));
+  };
   
   if (!mounted) {
     return <div className="h-[700px]"></div>;
@@ -47,8 +63,13 @@ export default function ProjectsScattered() {
 
   return (
     <div className="relative w-full h-full pb-10">
+      {!allImagesLoaded && (
+        <div className="h-[calc(100vh-150px)] w-full flex items-center justify-center">
+          <div className="w-30 h-30 border-b-8 border-t-8 rounded-full animate-spin"></div>
+        </div>
+      )}
       {/* Remove the grid structure for more freedom */}
-      <div className="relative px-4 w-full h-full pb-10">
+      <div className={`relative px-4 w-full h-full pb-10 transition-opacity duration-500 ${allImagesLoaded ? 'opacity-100' : 'opacity-0'}`}>
         {projectsMobile.map((project, index) => {
           // Get position from our predefined array
           const position = POSITIONS[index % POSITIONS.length];
@@ -146,6 +167,7 @@ export default function ProjectsScattered() {
                       className="object-contain transition-all duration-300 group-hover:opacity-40"
                       priority={true}
                       loading="eager"
+                      onLoad={() => handleImageLoaded(index)}
                     />
                   </div>
                   

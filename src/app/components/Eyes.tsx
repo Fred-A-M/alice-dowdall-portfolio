@@ -58,8 +58,7 @@ export default function Eyes() {
       <div className="flex gap-6 justify-center items-baseline">
         <div
           ref={leftEyeRef}
-          className={`eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden shadow-2xl shadow-black ${eyeLoaded ? 'opacity-100' : 'opacity-0'}`}
-          style={{ transition: 'opacity 0.3s' }}
+          className={`eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden shadow-2xl shadow-black transition-opacity duration-500 ${eyeLoaded ? 'opacity-100' : 'opacity-0'}`}
         >
           <div className="pupil absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-18 h-18">
             <Image 
@@ -76,8 +75,7 @@ export default function Eyes() {
         </div>
         <div
           ref={rightEyeRef}
-          className={`eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden shadow-2xl shadow-black ${eyeLoaded ? 'opacity-100' : 'opacity-0'}`}
-          style={{ transition: 'opacity 0.3s' }}
+          className={`eye w-24 h-24 bg-white rounded-full border-4 border-black relative overflow-hidden shadow-2xl shadow-black transition-opacity duration-500 ${eyeLoaded ? 'opacity-100' : 'opacity-0'}`}
         >
           <div className="pupil absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-18 h-18">
             <Image 
