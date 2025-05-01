@@ -13,19 +13,26 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
       muted 
       playsInline 
       preload="none" 
-      poster={project.gallery[11].image}
+      poster={project.gallery[0].image}
     >
-      <source src={project.gallery[11].mp4} type="video/mp4" />
-      <source src={project.gallery[11].webm} type="video/webm" />
+      <source src={project.gallery[0].mp4} type="video/mp4" />
+      <source src={project.gallery[0].webm} type="video/webm" />
     </video>,
 
-    <Image 
-      key="2"
-      src={project.gallery[2].image}
-      alt={project.name}
-      width={1200}
-      height={1200}
-    />,
+    <video 
+      key="2" 
+      autoPlay 
+      loop 
+      muted 
+      playsInline 
+      preload="none" 
+      poster={project.gallery[2].image}
+      className="w-full"
+    >
+      <source src={project.gallery[2].mp4} type="video/mp4" />
+      <source src={project.gallery[2].webm} type="video/webm" />
+    </video>,
+
     <div key="3" className="grid grid-cols-2 w-full mx-auto">
       <div className="col-span-1 flex justify-end pb-20">
         <Image 
@@ -47,12 +54,18 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
 
     <div key="4" className="grid grid-cols-2 gap-20">
       <div className="col-span-1 flex justify-center items-center pt-20">
-        <Image 
-          src={project.gallery[3].image} 
-          alt={project.name} 
-          width={600}
-          height={600}
-        />
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline 
+        preload="none" 
+        poster={project.gallery[3].image}
+        className="w-full"
+      >
+        <source src={project.gallery[3].mp4} type="video/mp4" />
+        <source src={project.gallery[3].webm} type="video/webm" />
+      </video>,
       </div>
       <div className="col-span-1 flex justify-center items-center pb-20">
         <Image 
@@ -64,13 +77,18 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
       </div>
     </div>,
 
-    <Image 
-      key="5"
-      src={project.gallery[6].image}
-      alt={project.name}
-      width={1100}
-      height={1100}
-    />,
+    <video 
+      key="5" 
+      autoPlay 
+      loop 
+      muted 
+      playsInline 
+      preload="none" 
+      poster={project.gallery[6].image}
+    >
+      <source src={project.gallery[6].mp4} type="video/mp4" />
+      <source src={project.gallery[6].webm} type="video/webm" />
+    </video>,
 
     <div key="6" className="grid grid-cols-2 gap-20">
       <div className="col-span-1 flex justify-center items-center pb-20">

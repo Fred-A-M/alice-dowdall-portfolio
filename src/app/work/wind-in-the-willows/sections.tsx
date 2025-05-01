@@ -35,6 +35,14 @@ export const WindInTheWillowsSections = (project: Project): ReactNode[] => {
       height={1200}
     />,
 
+    <Image 
+      key="image3"
+      src={project.gallery[5].image} 
+      alt={project.name} 
+      width={1200}
+      height={1200}
+    />,
+
     <div key="gallery" className="grid grid-cols-4 gap-20 items-center mx-auto w-full">
       <div className="col-span-3 flex justify-start">  
         <Image

@@ -6,23 +6,18 @@ import Image from "next/image";
 // Create a function that takes the project and returns the sections
 export const WorldWithoutSoilSections = (project: Project): ReactNode[] => {
   return [
-    <Image 
-      src={project.gallery[0].image}
-      alt={project.name}
-      width={800}
-      height={800}
-      key="0"
-    />,
     <video 
-      key="video" 
+      key="0" 
+      autoPlay 
+      loop 
+      muted 
       playsInline 
       preload="none" 
-      controls
-      poster={project.gallery[4].image}
-      className="max-w-[1200px] w-full aspect-video"
+      poster={project.gallery[0].image}
+      className="w-[800px] h-[800px]"
     >
-      <source src={project.gallery[4].mp4} type="video/mp4" />
-      <source src={project.gallery[4].webm} type="video/webm" />
+      <source src={project.gallery[0].mp4} type="video/mp4" />
+      <source src={project.gallery[0].webm} type="video/webm" />
     </video>,
     <Image 
       src={project.gallery[1].image}
