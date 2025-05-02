@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import './StaticImage.css';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 interface StaticImageProps {
   src: string;
   alt: string;
@@ -32,6 +32,12 @@ export default function StaticImage({
 }: StaticImageProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
+  const scaledHeight = useMemo(() => {
+    if (!width || !height || !stylesWidth) return 300;
+    const aspectRatio = height / width;
+    return Math.round((stylesWidth ? stylesWidth : 250) * aspectRatio);
+  }, [width, height, stylesWidth]);
+
   return (
     <div 
       style={{
@@ -42,7 +48,7 @@ export default function StaticImage({
       className="hover:scale-120 hover:z-30"
     >
       {!imageLoaded && (
-        <div className={`flex items-center justify-center w-full h-[${height}px]`}>
+        <div className={`flex items-center justify-center w-full h-[${scaledHeight}px]`}>
           <div className="w-10 h-10 border-b-4 border-t-4 rounded-full animate-spin"></div>
         </div>
       )}
