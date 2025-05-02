@@ -19,7 +19,6 @@ interface ImageProps {
   height?: number;
   stylesWidth?: number;
   zIndex?: number;
-  isMobile?: boolean;
 }
 
 export default function FloatingImage({
@@ -106,7 +105,7 @@ export default function FloatingImage({
       onHoverEnd={() => setIsHovered(false)}
     >
       {!imageLoaded && (
-        <div className="flex items-center justify-center w-full h-full">
+        <div className={`flex items-center justify-center w-full h-[${height}px]`}>
           <div className="w-10 h-10 border-b-4 border-t-4 rounded-full animate-spin"></div>
         </div>
       )}

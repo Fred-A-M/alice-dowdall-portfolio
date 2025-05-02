@@ -120,7 +120,7 @@ export const GiffGaffSectionsMobile = (project: Project): ReactNode[] => {
       </div>
     </div>,
 
-    <div key="gallery" className="grid grid-cols-2 sm:w-[70%] w-full mx-auto">
+    <div key="gallery" className="grid grid-cols-3 sm:w-[70%] w-full mx-auto">
       <div className="flex col-span-1 justify-start items-center">
         <FloatingImage 
           src={project.gallery[2].image} 
@@ -131,19 +131,21 @@ export const GiffGaffSectionsMobile = (project: Project): ReactNode[] => {
           floatDelay={1.5}
           width={558}
           height={1107}
+          stylesWidth={170}
         />
       </div>
-      <div className="flex flex-col col-span-1 gap-4">
-        <div className="self-end">
+      <div className="flex flex-col col-span-2 gap-4">
+        <div className="self-end pr-5">
           <StaticImage 
             src={project.gallery[3].image} 
             alt={project.name} 
             rotation={2}
             width={604}
             height={425}
+            stylesWidth={150}
           />
         </div>
-        <div className="self-start">
+        <div className="self-start pl-10">
           <StaticImage 
             src={project.gallery[4].image} 
             alt={project.name} 

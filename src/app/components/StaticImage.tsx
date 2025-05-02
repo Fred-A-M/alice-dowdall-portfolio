@@ -42,7 +42,7 @@ export default function StaticImage({
       className="hover:scale-120 hover:z-30"
     >
       {!imageLoaded && (
-        <div className="flex items-center justify-center w-full h-full">
+        <div className={`flex items-center justify-center w-full h-[${height}px]`}>
           <div className="w-10 h-10 border-b-4 border-t-4 rounded-full animate-spin"></div>
         </div>
       )}

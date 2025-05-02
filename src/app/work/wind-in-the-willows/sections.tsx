@@ -136,6 +136,7 @@ export const WindInTheWillowsSectionsMobile = (project: Project): ReactNode[] =>
           floatDelay={0.5}
           width={796}
           height={1572}
+          stylesWidth={140}
         />
       </div>
     </div>
