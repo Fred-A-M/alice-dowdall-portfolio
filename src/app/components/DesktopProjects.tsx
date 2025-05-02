@@ -18,10 +18,18 @@ export default function DesktopProjects() {
   }, []);
   
   useEffect(() => {
+    // Check if all images loaded normally
     if (Object.keys(loadedImages).length === projects.length && 
         Object.values(loadedImages).every(loaded => loaded)) {
       setAllImagesLoaded(true);
     }
+    
+    // Safety timeout - show content after 5 seconds regardless
+    const timer = setTimeout(() => {
+      setAllImagesLoaded(true);
+    }, 7000);
+    
+    return () => clearTimeout(timer);
   }, [loadedImages]);
 
   const handleImageLoaded = (index: number) => {
@@ -165,6 +173,7 @@ export default function DesktopProjects() {
                       quality={95}
                       className="object-contain transition-all duration-300 group-hover:opacity-40 p-7 group-hover:p-0"
                       onLoad={() => handleImageLoaded(index)}
+                      onError={() => handleImageLoaded(index)}
                     />
                   </div>
                   

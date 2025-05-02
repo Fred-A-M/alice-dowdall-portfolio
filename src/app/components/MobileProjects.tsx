@@ -44,10 +44,18 @@ export default function ProjectsScattered() {
   }, []);
 
   useEffect(() => {
+    // Check if all images loaded normally
     if (Object.keys(loadedImages).length === projectsMobile.length && 
         Object.values(loadedImages).every(loaded => loaded)) {
       setAllImagesLoaded(true);
     }
+    
+    // Safety timeout - show content after 5 seconds regardless
+    const timer = setTimeout(() => {
+      setAllImagesLoaded(true);
+    }, 7000);
+    
+    return () => clearTimeout(timer);
   }, [loadedImages]);
 
   const handleImageLoaded = (index: number) => {
@@ -168,6 +176,7 @@ export default function ProjectsScattered() {
                       priority={true}
                       loading="eager"
                       onLoad={() => handleImageLoaded(index)}
+                      onError={() => handleImageLoaded(index)}
                     />
                   </div>
                   
