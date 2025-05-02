@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -36,13 +36,6 @@ export default function FloatingImage({
   zIndex = 20,
 }: ImageProps) {
   const [isHovered, setIsHovered] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  const scaledHeight = useMemo(() => {
-    if (!width || !height || !stylesWidth) return 300;
-    const aspectRatio = height / width;
-    return Math.round((stylesWidth ? stylesWidth : 250) * aspectRatio);
-  }, [width, height, stylesWidth]);
   
   return (
     <motion.div 
@@ -110,11 +103,6 @@ export default function FloatingImage({
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
-      {!imageLoaded && (
-        <div className={`flex items-center justify-center w-full h-[${scaledHeight}px]`}>
-          <div className="w-10 h-10 border-b-4 border-t-4 rounded-full animate-spin"></div>
-        </div>
-      )}
       <Image 
         src={src} 
         alt={alt} 
@@ -130,7 +118,6 @@ export default function FloatingImage({
         className="object-contain transition-all duration-300 group-hover:opacity-40 p-7 group-hover:p-0"
         priority={true}
         loading="eager"
-        onLoad={() => setImageLoaded(true)}
       />
     </motion.div>
   );
