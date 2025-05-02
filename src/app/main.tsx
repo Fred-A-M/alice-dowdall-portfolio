@@ -5,8 +5,6 @@ import { useState } from 'react';
 import DesktopProjects from './components/DesktopProjects';
 import ProjectsMobile from './components/MobileProjects';
 
-// import ProjectsMap from "./ProjectsMap";
-
 export default function Main() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
