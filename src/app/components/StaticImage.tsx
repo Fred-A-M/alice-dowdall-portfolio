@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import './StaticImage.css';
+import { useState } from 'react';
 interface StaticImageProps {
   src: string;
   alt: string;
@@ -29,6 +30,8 @@ export default function StaticImage({
   className = "",
   priority = false,
 }: StaticImageProps) {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <div 
       style={{
@@ -38,6 +41,11 @@ export default function StaticImage({
       }}
       className="hover:scale-120 hover:z-30"
     >
+      {!imageLoaded && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-10 h-10 border-b-4 border-t-4 rounded-full animate-spin"></div>
+        </div>
+      )}
       <Image 
         src={src} 
         alt={alt} 
@@ -50,6 +58,7 @@ export default function StaticImage({
         }}
         className={`${className} antiAliased`}
         priority={priority}
+        onLoad={() => setImageLoaded(true)}
       />
     </div>
   );

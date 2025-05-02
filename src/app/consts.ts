@@ -265,7 +265,7 @@ export const projectsMobile = [
     ],
     image: {image: "/projects/CPRBra/Main.png", width: 954, height: 954},
     gallery: [
-       {image: "/projects/CPRBra/1.gif", width: 216, height: 270, stylesWidth: 160},
+       {image: "/projects/CPRBra/1.gif", width: 216, height: 270, stylesWidth: 120},
        {image: "/projects/CPRBra/2.png"},
        {image: "/projects/CPRBra/3.gif"},
        {image: "/projects/CPRBra/4.gif"},
