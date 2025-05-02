@@ -53,7 +53,7 @@ export default function ProjectsScattered() {
     // Safety timeout - show content after 5 seconds regardless
     const timer = setTimeout(() => {
       setAllImagesLoaded(true);
-    }, 7000);
+    }, 10000);
     
     return () => clearTimeout(timer);
   }, [loadedImages]);

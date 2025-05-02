@@ -24,10 +24,10 @@ export default function DesktopProjects() {
       setAllImagesLoaded(true);
     }
     
-    // Safety timeout - show content after 5 seconds regardless
+    // Safety timeout - show content after 10 seconds regardless
     const timer = setTimeout(() => {
       setAllImagesLoaded(true);
-    }, 7000);
+    }, 10000);
     
     return () => clearTimeout(timer);
   }, [loadedImages]);
