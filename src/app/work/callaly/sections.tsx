@@ -11,24 +11,36 @@ export const CallalySections = (project: Project): ReactNode[] => {
       key="0"
       src={project.gallery[0].image}
       alt={project.name}
-      width={1200}
-      height={1200}
+      width={2000}
+      height={1406}
+      style={{
+        width: "1200px",
+        height: "auto",
+      }}
     />,
 
     <Image 
       key="1"
       src={project.gallery[1].image}
       alt={project.name}
-      width={1200}
-      height={1200}
+      width={2400}
+      height={1406}
+      style={{
+        width: "1200px",
+        height: "auto",
+      }}
     />,
 
     <Image 
       key="2"
       src={project.gallery[2].image}
       alt={project.name}
-      width={1200}
-      height={1200}
+      width={2400}
+      height={1406}
+      style={{
+        width: "1200px",
+        height: "auto",
+      }}
     />,
 
   ];
@@ -44,7 +56,8 @@ export const CallalySectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[1].image}
           alt={project.name}
           rotation={-5}
-          isMobile={true}
+          width={2500}
+          height={1406}
         />
       </div>
       <div className="flex justify-end items-end">
@@ -52,7 +65,8 @@ export const CallalySectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[2].image}
           alt={project.name}
           rotation={5}
-          isMobile={true}
+          width={2500}
+          height={1406}
         />
       </div>
     </div>,

@@ -38,16 +38,24 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
         <Image 
           src={project.gallery[1].image} 
           alt={project.name} 
-          width={400}
-          height={400}
+          width={785}
+          height={1466}
+          style={{
+            width: "400px",
+            height: "auto",
+          }}
         />
       </div>
       <div className="col-span-1 flex justify-start pt-20">
         <Image 
           src={project.gallery[5].image} 
           alt={project.name}  
-          width={400}
-          height={400}
+          width={785}
+          height={1466}
+          style={{
+            width: "400px",
+            height: "auto",
+          }}
         />
       </div>
     </div>,
@@ -71,8 +79,12 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
         <Image 
           src={project.gallery[4].image} 
           alt={project.name} 
-          width={600}
-          height={600}
+          width={2160}
+          height={2160}
+          style={{
+            width: "600px",
+            height: "auto",
+          }}
         />
       </div>
     </div>,
@@ -95,16 +107,24 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
         <Image 
           src={project.gallery[8].image} 
           alt={project.name} 
-          width={500}
-          height={500}
+          width={1000}
+          height={1277}
+          style={{
+            width: "500px",
+            height: "auto",
+          }}
         />
       </div>
       <div className="col-span-1 flex justify-center items-center pt-20">
         <Image 
           src={project.gallery[9].image} 
           alt={project.name} 
-          width={500}
-          height={500}
+          width={1000}
+          height={1199}
+          style={{
+            width: "500px",
+            height: "auto",
+          }}
         />
       </div>
     </div>,
@@ -113,8 +133,12 @@ export const MadeACprBraSections = (project: Project): ReactNode[] => {
       key="7"
       src={project.gallery[7].image} 
       alt={project.name} 
-      width={1200} 
-      height={1200}
+      width={2160} 
+      height={1215}
+      style={{
+        width: "1200px",
+        height: "auto",
+      }}
     />,
   
     ];
@@ -132,7 +156,8 @@ export const MadeACprBraSectionsMobile = (project: Project): ReactNode[] => {
           floatAmount={2} 
           floatDuration={3} 
           floatDelay={0.5}
-          isMobile={true}
+          width={785}
+          height={1466}
         />
       </div>
       <div className="col-span-2 flex justify-center items-center">
@@ -140,7 +165,8 @@ export const MadeACprBraSectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[2].image} 
           alt={project.name} 
           rotation={2} 
-          isMobile={true}
+          width={480}
+          height={270}
         />
       </div>
     </div>,
@@ -155,7 +181,9 @@ export const MadeACprBraSectionsMobile = (project: Project): ReactNode[] => {
           floatAmount={2} 
           floatDuration={3} 
           floatDelay={1.5}
-          width={125}
+          stylesWidth={150}
+          width={356}
+          height={356}
         />
       </div>
       <div className="col-span-2 flex justify-center items-center">
@@ -163,7 +191,8 @@ export const MadeACprBraSectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[4].image} 
           alt={project.name} 
           rotation={-2} 
-          isMobile={true}
+          width={2160}
+          height={2160}
         />
       </div>
     </div>,
@@ -178,7 +207,8 @@ export const MadeACprBraSectionsMobile = (project: Project): ReactNode[] => {
           floatAmount={2} 
           floatDuration={3} 
           floatDelay={2.5}
-          isMobile={true}
+          width={785}
+          height={1466}
         />
       </div>
       <div className="col-span-2 flex justify-center items-center">
@@ -186,7 +216,8 @@ export const MadeACprBraSectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[6].image} 
           alt={project.name} 
           rotation={2} 
-          isMobile={true}
+          width={405}
+          height={270}
         />
       </div>
     </div>,
@@ -195,9 +226,12 @@ export const MadeACprBraSectionsMobile = (project: Project): ReactNode[] => {
       <Image 
         src={project.gallery[7].image} 
         alt={project.name} 
-        width={500} 
-        height={300}
-        className="rounded-sm"
+        width={2160} 
+        height={1215}
+        style={{
+          width: "500px",
+          height: "auto",
+        }}
       />
     </div>,
     ];

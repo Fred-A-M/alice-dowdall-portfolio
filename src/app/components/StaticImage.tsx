@@ -12,19 +12,22 @@ interface StaticImageProps {
   isMobile?: boolean;
   width?: number;
   height?: number;
+  stylesWidth?: number;
   zIndex?: number;
   className?: string;
+  priority?: boolean;
 }
 
 export default function StaticImage({
   src,
   alt,
   rotation = 0,
-  isMobile = false,
   width = 0,
   height = 0,
+  stylesWidth = 0,
   zIndex = 20,
   className = "",
+  priority = false,
 }: StaticImageProps) {
   return (
     <div 
@@ -41,11 +44,12 @@ export default function StaticImage({
         width={width ? width : 800}
         height={height ? height : 800}
         style={{
-          width: width ? `${width}px` : (isMobile ? "250px" : "450px"),
+          width: stylesWidth ? `${stylesWidth}px` : "250px",
           height: "auto",
           objectFit: "contain",
         }}
         className={`${className} antiAliased`}
+        priority={priority}
       />
     </div>
   );

@@ -8,8 +8,14 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
       <Image 
         src={project.gallery[1].image}
         alt={project.name} 
-        width={1200}
-        height={1000}
+        width={2500}
+        height={1406}
+        style={{
+          width: "1200px",
+          height: "auto",
+        }}
+        priority={true}
+        loading="eager"
       />
     </div>,
 
@@ -17,8 +23,12 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
       <Image 
         src={project.gallery[2].image}
         alt={project.name}
-        width={1200}
-        height={1000}
+        width={2500}
+        height={1406}
+        style={{
+          width: "1200px",
+          height: "auto",
+        }}
       />
     </div>,
 
@@ -26,8 +36,12 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
       <Image 
         src={project.gallery[3].image}
         alt={project.name} 
-        width={1200}
-        height={1000}
+        width={1920}
+        height={1080}
+        style={{
+          width: "1200px",
+          height: "auto",
+        }}
       />
     </div>,
 
@@ -47,8 +61,12 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
       <Image 
         src={project.gallery[0].image}
         alt={project.name} 
-        width={700}
-        height={700}
+        width={1080}
+        height={1080}
+        style={{
+          width: "700px",
+          height: "auto",
+        }}
       />
     </div>,
   ];
@@ -61,7 +79,9 @@ export const HowToOiSectionsMobile = (project: Project): ReactNode[] => {
         src={project.gallery[1].image}
         alt={project.name} 
         rotation={-3}
-        width={350}
+        width={2500}
+        height={1406}
+        stylesWidth={350}
       />
     </div>,
 
@@ -70,7 +90,9 @@ export const HowToOiSectionsMobile = (project: Project): ReactNode[] => {
         src={project.gallery[2].image}
         alt={project.name}
         rotation={3}
-        width={350}
+        width={2500}
+        height={1406}
+        stylesWidth={350}
       />
     </div>,
 
@@ -79,7 +101,9 @@ export const HowToOiSectionsMobile = (project: Project): ReactNode[] => {
         src={project.gallery[3].image}
         alt={project.name} 
         rotation={-4}
-        width={350}
+        width={1920}
+        height={1080}
+        stylesWidth={350}
       />
     </div>,
 
@@ -88,7 +112,9 @@ export const HowToOiSectionsMobile = (project: Project): ReactNode[] => {
         src={project.gallery[4].image}
         alt={project.name} 
         rotation={2}
-        width={350}
+        width={576}
+        height={324}
+        stylesWidth={350}
       />
     </div>
   ];

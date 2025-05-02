@@ -17,6 +17,7 @@ interface ImageProps {
   floatDelay?: number;
   width?: number;
   height?: number;
+  stylesWidth?: number;
   zIndex?: number;
   isMobile?: boolean;
 }
@@ -30,9 +31,9 @@ export default function FloatingImage({
   floatAmount = 3,
   floatDuration = 3,
   floatDelay = 1,
-  isMobile = false,
   width = 0,
   height = 0,
+  stylesWidth = 0,
   zIndex = 20,
 }: ImageProps) {
   const [isHovered, setIsHovered] = useState(false);
@@ -106,12 +107,12 @@ export default function FloatingImage({
       <Image 
         src={src} 
         alt={alt} 
-        width={width ? width : 800}
-        height={height ? height : 800}
+        width={width ? width : 250}
+        height={height ? height : 300}
         style={{
-          maxWidth: width ? `${width}px` : (isMobile ? "250px" : "450px"),
-          maxHeight: height ? `${height}px` : (isMobile ? "300px" : "600px"),
-          width: "auto",
+          maxWidth: stylesWidth ? `${stylesWidth}px` : "250px" ,
+          width: stylesWidth ? `${stylesWidth}px` : "250px",
+          maxHeight: "300px",
           height: "auto",
           objectFit: "contain",
         }}

@@ -11,23 +11,37 @@ export const FartingBillboardSections = (project: Project): ReactNode[] => {
     <Image 
       src={project.gallery[1].image} 
       alt={project.name} 
-      width={1100} 
-      height={1100} 
+      width={1600} 
+      height={1066} 
       key="0"
+      priority
+      loading="eager"
+      style={{
+        width: '1100px',
+        height: 'auto',
+      }}
     />,
     <Image 
       src={project.gallery[0].image} 
       alt={project.name} 
-      width={700} 
-      height={700} 
+      width={945} 
+      height={1436} 
       key="1"
+      style={{
+        width: '700px',
+        height: 'auto',
+      }}
     />,
    <Image 
       src={project.gallery[2].image} 
       alt={project.name} 
-      width={400} 
-      height={400} 
+      width={796} 
+      height={1570} 
       key="2"
+      style={{
+        width: '400px',
+        height: 'auto',
+      }}
     />,
   ];
 };
@@ -38,9 +52,14 @@ export const FartingBillboardSectionsMobile = (project: Project): ReactNode[] =>
       <Image 
         src={project.gallery[1].image} 
         alt={project.name} 
-        width={500} 
-        height={300} 
+        width={1600} 
+        height={1066} 
         className="rounded-sm"
+        style={{
+          width: '500px',
+          height: 'auto',
+        }}
+        priority={true}
       />  
     </div>,
 
@@ -54,7 +73,8 @@ export const FartingBillboardSectionsMobile = (project: Project): ReactNode[] =>
           floatAmount={2}
           floatDuration={3}
           floatDelay={0.5}
-          isMobile={true}
+          width={796} 
+          height={1570}
         />
       </div>
       <div className="flex justify-start items-center">
@@ -62,7 +82,8 @@ export const FartingBillboardSectionsMobile = (project: Project): ReactNode[] =>
           src={project.gallery[3].image}
           alt={project.name}
           rotation={6}
-          isMobile={true}
+          width={340}
+          height={190}
         />
       </div>
     </div>

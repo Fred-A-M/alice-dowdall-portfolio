@@ -22,22 +22,34 @@ export const WorldWithoutSoilSections = (project: Project): ReactNode[] => {
     <Image 
       src={project.gallery[1].image}
       alt={project.name}
-      width={1100}
-      height={1100}
+      width={1500}
+      height={1000}
+      style={{
+        width: "1100px",
+        height: "auto",
+      }}
       key="1"
     />,
     <Image 
       src={project.gallery[2].image}
       alt={project.name}
-      width={1100}
-      height={1100}
+      width={2500}
+      height={1667}
+      style={{
+        width: "1100px",
+        height: "auto",
+      }}
       key="2"
     />,
     <Image 
       src={project.gallery[3].image}
       alt={project.name}
-      width={1100}
-      height={1100}
+      width={2500} 
+      height={1667} 
+      style={{
+        width: "1100px",
+        height: "auto",
+      }}
       key="3"
     />,
   ];
@@ -51,7 +63,8 @@ export const WorldWithoutSoilSectionsMobile = (project: Project): ReactNode[] =>
           src={project.gallery[1].image}
           alt={project.name}
           rotation={-6}
-          isMobile={true}
+          width={1500}
+          height={1000}
         />
       </div>
       <div className="flex justify-end items-end">
@@ -59,7 +72,8 @@ export const WorldWithoutSoilSectionsMobile = (project: Project): ReactNode[] =>
           src={project.gallery[2].image}
           alt={project.name}
           rotation={6}
-          isMobile={true}
+          width={2500}
+          height={1667}
         />
       </div>
     </div>,
@@ -68,8 +82,12 @@ export const WorldWithoutSoilSectionsMobile = (project: Project): ReactNode[] =>
       <Image 
         src={project.gallery[3].image} 
         alt={project.name} 
-        width={450} 
-        height={300} 
+        width={2500} 
+        height={1667} 
+        style={{
+          width: "450px",
+          height: "auto",
+        }}
       />  
     </div>
   ];

@@ -10,28 +10,40 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
     <VideoEmbed key="video" video={project.video as string} />,
 
     <Image 
-      src={project.image} 
+      src={project.image.image} 
       alt={project.name}
-      width={1000}
-      height={1000}
+      width={project.image.width}
+      height={project.image.height}
+      style={{
+        width: "1000px",
+        height: "auto",
+      }}
       key="0"
     />,
 
-    <div key="gallery" className="grid grid-cols-4 mx-auto w-full gap-20 lg:w-[80%]">
-      <div className="flex w-full justify-center col-span-3">
+    <div key="gallery" className="grid grid-cols-10 mx-auto w-full">
+      <div className="flex w-full justify-start col-span-8">
         <Image 
           src={project.gallery[1].image} 
           alt={project.name}
-          width={800}
-          height={800}
+          width={1800}
+          height={1179}
+          style={{
+            width: "800px",
+            height: "auto",
+          }}
         />
       </div>
-      <div className="flex w-full justify-center items-center col-span-1">
+      <div className="flex w-full justify-end items-center col-span-2">
         <Image 
           src={project.gallery[2].image} 
           alt={project.name} 
-          width={600}
-          height={600}
+          width={683}
+          height={1170}
+          style={{
+            width: "300px",
+            height: "auto",
+          }}
         />      
       </div>
     </div>,
@@ -41,16 +53,24 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
         <Image 
           src={project.gallery[3].image}
           alt={project.name}
-          width={650}
-          height={650}
+          width={1702}
+          height={956}
+          style={{
+            width: "650px",
+            height: "auto",
+          }}
         />
       </div>
       <div className="flex justify-center pt-30">
         <Image 
           src={project.gallery[4].image}
           alt={project.name}
-          width={650}
-          height={650}
+          width={1920}
+          height={1080}
+          style={{
+            width: "650px",
+            height: "auto",
+          }}
         />
       </div>
     </div>,
@@ -67,7 +87,9 @@ export const BiteBackSectionsMobile = (project: Project): ReactNode[] => {
         <StaticImage 
           src={project.gallery[1].image} 
           alt={project.name} 
-          width={270}
+          width={1800}
+          height={1179}
+          stylesWidth={270}
         />
       </div>
       <div className="flex w-full justify-center items-center col-span-1">
@@ -78,7 +100,9 @@ export const BiteBackSectionsMobile = (project: Project): ReactNode[] => {
           rotateAmount={4} 
           floatAmount={1} 
           floatDuration={3} 
-          width={100}
+          width={683}
+          height={1170}
+          stylesWidth={160}
         />      
       </div>
     </div>,
@@ -89,7 +113,8 @@ export const BiteBackSectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[3].image}
           alt={project.name}
           rotation={-5}
-          isMobile={true}
+          width={1702}
+          height={956}
         />
       </div>
       <div className="flex justify-end items-end">
@@ -97,7 +122,8 @@ export const BiteBackSectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[4].image}
           alt={project.name}
           rotation={5}
-          isMobile={true}
+          width={1920}
+          height={1080}
         />
       </div>
     </div>,

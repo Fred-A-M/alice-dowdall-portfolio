@@ -11,8 +11,14 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
       <Image 
         src={project.gallery[0].image}
         alt={project.name}
-        width={900}
-        height={900}
+        width={884}
+        height={926}
+        style={{
+          width: "800px",
+          height: "auto",
+        }}
+        priority={true}
+        loading="eager"
       />
     </div>,
 
@@ -25,8 +31,9 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
           floatAmount={2}
           floatDuration={3}
           floatDelay={0.5}
-          width={200}
-          height={200}
+          width={2084}
+          height={2084}
+          stylesWidth={200}
         />
     </div>
       
@@ -42,8 +49,9 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
           floatAmount={2}
           floatDuration={3}
           floatDelay={1}
-          width={180}
-          height={180}
+          width={278}
+          height={360}
+          stylesWidth={150}
         />
       </div>
     </div>,
@@ -51,8 +59,12 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
     <Image
       src={project.gallery[3].image}
       alt={project.name}
-      width={1200}
-      height={1200}
+      width={2500}
+      height={1406}
+      style={{
+        width: "1200px",
+        height: "auto",
+      }}
       key="1"
     />,
     <div key="5" className="grid grid-cols-4 gap-4">
@@ -63,14 +75,21 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
           rotateAmount={4}
           floatAmount={2}
           floatDuration={3}
+          width={258}
+          height={385}
+          stylesWidth={150}
         />
       </div>
       <div className="col-span-2 flex justify-center items-center">
         <Image
           src={project.gallery[7].image}
           alt={project.name}
-          width={500}
-          height={500}
+          width={1260}
+          height={1424}
+          style={{
+            width: "500px",
+            height: "auto",
+          }}
         />
       </div>
       <div className="flex justify-center items-end gap-4 col-span-1">
@@ -80,16 +99,21 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
           rotateAmount={4}
           floatAmount={2}
           floatDuration={3}
-          width={300}
-          height={300}
+          width={1708}
+          height={1556}
+          stylesWidth={210}
         />
       </div>
     </div>,
     <Image
       src={project.gallery[6].image}
       alt={project.name}
-      width={1200}
-      height={1200}
+      width={2500}
+      height={1406}
+      style={{
+        width: "1200px",
+        height: "auto",
+      }}
       key="4"
     />,
   ];
@@ -110,7 +134,8 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
                 src={project.gallery[3].image} 
                 alt={project.name} 
                 rotation={2}
-                isMobile={true}
+                width={2500}
+                height={1406}
               />
             </div>
             <div className="col-span-2 flex justify-start items-center">
@@ -122,7 +147,9 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
                 floatAmount={2}
                 floatDuration={3}
                 floatDelay={0.5}
-                width={110}
+                width={258}
+                height={385}
+                stylesWidth={110}
               />
             </div>
           </div>
@@ -135,7 +162,9 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
                 floatAmount={2}
                 floatDuration={3}
                 floatDelay={1}
-                width={160}
+                width={1708}
+                height={1556}
+                stylesWidth={150}
               />
             </div>
             <div className="col-span-4 flex justify-end">
@@ -143,7 +172,8 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
                 src={project.gallery[6].image} 
                 alt={project.name} 
                 rotation={-2}
-                isMobile={true}
+                width={2500}
+                height={1406}
               />
             </div>
           </div>
@@ -160,7 +190,9 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
           floatAmount={2}
           floatDuration={3}
           floatDelay={1.5}
-          width={140}
+          width={2084}
+          height={2084}
+          stylesWidth={140}
           zIndex={30}
         />
       </div>
@@ -168,7 +200,9 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
         <StaticImage 
           src={project.gallery[7].image} 
           alt={project.name} 
-          width={240}
+          width={1260}
+          height={1424}
+          stylesWidth={240}
         />
       </div>
       <div className="col-span-1 flex justify-center items-end">
@@ -179,7 +213,9 @@ export const SmallTalkSectionsMobile = (project: Project): ReactNode[] => {
           floatAmount={2}
           floatDuration={3}
           floatDelay={1}
-          width={110}
+          width={278}
+          height={360}
+          stylesWidth={110}
         />
       </div>
     </div>,

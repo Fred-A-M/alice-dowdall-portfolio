@@ -149,10 +149,10 @@ export default function DesktopProjects() {
                 <div className="relative overflow-hidden group">
                   <div className="relative">
                     <Image 
-                      src={project.image} 
+                      src={project.image.image} 
                       alt={project.name} 
-                      width={300}
-                      height={0}
+                      width={project.image.width}
+                      height={project.image.height}
                       style={{ 
                         height: 'auto',
                         maxHeight: '250px',

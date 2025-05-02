@@ -26,6 +26,8 @@ export default function ProjectHeader({ project, isMobile }: ProjectHeaderProps)
           alt={project.name}
           width={project.gallery[0].width || undefined}
           height={project.gallery[0].height || undefined}
+          stylesWidth={project.gallery[0].stylesWidth || undefined}
+          priority={true}
         />
       </div>
     </div>

@@ -12,24 +12,36 @@ export const WaterAidSections = (project: Project): ReactNode[] => {
       <Image 
         src={project.gallery[1].image}
         alt={project.name} 
-        width={1100}
-        height={1000}
+        width={1920}
+        height={1080}
+        style={{
+          width: "1100px",
+          height: "auto",
+        }}
       />
     </div>,
     <div key="2">
       <Image 
         src={project.gallery[2].image}
         alt={project.name} 
-        width={1000}
-        height={1000}
+        width={1610}
+        height={1080}
+        style={{
+          width: "1000px",
+          height: "auto",
+        }}
       />
     </div>,
     <div key="3">
       <Image 
         src={project.gallery[3].image}
         alt={project.name} 
-        width={1100}
-        height={1000}
+        width={1920}
+        height={1080}
+        style={{
+          width: "1100px",
+          height: "auto",
+        }}
       />
     </div>,
 
@@ -47,7 +59,8 @@ export const WaterAidSectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[1].image} 
           alt={project.name} 
           rotation={-6}
-          isMobile={true}
+          width={1920}
+          height={1080}
         />
       </div>
       <div className="flex justify-end items-center"> 
@@ -55,7 +68,8 @@ export const WaterAidSectionsMobile = (project: Project): ReactNode[] => {
           src={project.gallery[3].image} 
           alt={project.name}
           rotation={6}
-          isMobile={true}
+          width={1920}
+          height={1080}
         />
       </div>
     </div>,
@@ -64,9 +78,12 @@ export const WaterAidSectionsMobile = (project: Project): ReactNode[] => {
       <Image 
         src={project.gallery[2].image} 
         alt={project.name} 
-        width={500}
-        height={500}
-        className="rounded-sm"
+        width={1610}
+        height={1080}
+        style={{
+          width: "500px",
+          height: "auto",
+        }}
       />
     </div>
   ];

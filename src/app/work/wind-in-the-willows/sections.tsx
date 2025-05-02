@@ -14,33 +14,48 @@ export const WindInTheWillowsSections = (project: Project): ReactNode[] => {
       key="image0"
       src={project.gallery[0].image} 
       alt={project.name} 
-      width={600}
-      height={600}
+      width={1280}
+      height={1810}
+      style={{
+        width: "600px",
+        height: "auto",
+      }}
     />,
-
  
     <Image 
       key="image1"
       src={project.gallery[1].image} 
       alt={project.name} 
-      width={1200}
-      height={1200}
+      width={1500}
+      height={791}
+      style={{
+        width: "1200px",
+        height: "auto",
+      }}
     />,
 
     <Image 
       key="image2"
       src={project.gallery[2].image} 
       alt={project.name} 
-      width={1200}
-      height={1200}
+      width={1920}
+      height={1080}
+      style={{
+        width: "1200px",
+        height: "auto",
+      }}
     />,
 
     <Image 
       key="image3"
       src={project.gallery[5].image} 
       alt={project.name} 
-      width={1200}
-      height={1200}
+      width={1250}
+      height={659}
+      style={{
+        width: "1200px",
+        height: "auto",
+      }}
     />,
 
     <div key="gallery" className="grid grid-cols-4 gap-20 items-center mx-auto w-full">
@@ -48,16 +63,24 @@ export const WindInTheWillowsSections = (project: Project): ReactNode[] => {
         <Image
           src={project.gallery[3].image} 
           alt={project.name} 
-          width={1100}
-          height={1100}
+          width={1800}
+          height={874}
+          style={{
+            width: "1100px",
+            height: "auto",
+          }}
         />
       </div>
       <div className="col-span-1 flex justify-start">
         <Image 
           src={project.gallery[4].image} 
           alt={project.name} 
-          width={300}
-          height={300}
+          width={796}
+          height={1572}
+          style={{
+            width: "300px",
+            height: "auto",
+          }}
         />
       </div>
     </div>
@@ -75,8 +98,9 @@ export const WindInTheWillowsSectionsMobile = (project: Project): ReactNode[] =>
           src={project.gallery[1].image} 
           alt={project.name} 
           rotation={6}
-          width={300}
-          height={300}
+          width={1500}
+          height={791}  
+          stylesWidth={300}
         />
       </div>
 
@@ -85,8 +109,9 @@ export const WindInTheWillowsSectionsMobile = (project: Project): ReactNode[] =>
           src={project.gallery[2].image} 
           alt={project.name} 
           rotation={-6}
-          width={300}
-          height={300}
+          width={1920}
+          height={1080}  
+          stylesWidth={300}
         />
       </div>
     </div>,
@@ -96,7 +121,9 @@ export const WindInTheWillowsSectionsMobile = (project: Project): ReactNode[] =>
         <StaticImage 
           src={project.gallery[3].image} 
           alt={project.name} 
-          width={275}
+          width={1800}
+          height={874}
+          stylesWidth={275}
         />
       </div>
       <div className="col-span-1 flex justify-end">
@@ -107,7 +134,8 @@ export const WindInTheWillowsSectionsMobile = (project: Project): ReactNode[] =>
           floatAmount={2}
           floatDuration={3}
           floatDelay={0.5}
-          isMobile={true}
+          width={796}
+          height={1572}
         />
       </div>
     </div>
