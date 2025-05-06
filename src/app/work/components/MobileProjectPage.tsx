@@ -1,7 +1,7 @@
 "use client";
 
 import { Project } from "@/app/consts";
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import ProjectFooter from './ProjectFooter';
 import ProjectHeader from './ProjectHeader';
 
@@ -11,7 +11,9 @@ interface ProjectPageProps {
 }
 
 export default function ProjectPage({ project, sections }: ProjectPageProps) {
-  
+  useEffect(() => {
+    window.scrollTo(0, 0); // Reset scroll to top when the page loads
+  }, []);
 
   if (!project) {
     return <div>Project not found</div>;
@@ -64,22 +66,23 @@ export default function ProjectPage({ project, sections }: ProjectPageProps) {
       <ProjectHeader project={project as Project} isMobile={true} />
       
         {/* Interleaved content */}
-        {interleavedContent.map((item, index) => {
-          if (item.type === 'description') {
-            return (
-              <div key={`desc-${index}`} className="w-full">
-                <p className="text-md">{item.content}</p>
-              </div>
-            );
-          } else {
-            return (
-              <div key={`section-${item.index}`} className="w-full">
-                {item.content}
-              </div>
-            );
-          }
-        })}
-     
+        <div className="flex flex-col gap-5">
+          {interleavedContent.map((item, index) => {
+            if (item.type === 'description') {
+              return (
+                <div key={`desc-${index}`} className="w-full">
+                  <p className="text-md">{item.content}</p>
+                </div>
+              );
+            } else {
+              return (
+                <div key={`section-${item.index}`} className="w-full">
+                  {item.content}
+                </div>
+              );
+            }
+          })}
+        </div>
       <ProjectFooter project={project as Project} isMobile={true} />
     </div>
     
