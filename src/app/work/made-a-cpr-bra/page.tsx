@@ -23,7 +23,11 @@ export default function MadeACprBra() {
   }, []);
 
   if (!mounted) {
-    return <div className="h-[700px]"></div>;
+    return null;
+  }
+
+  if (isMobile === null) {
+    return null;
   }
 
   const project = isMobile ? projectsMobile.find(project => project.name === "The CPR Bra") 
