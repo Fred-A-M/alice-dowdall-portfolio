@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: "Alice Dowdall",
   description: "Senior Advertising Creative",
   metadataBase: new URL('https://www.alicedowdall.com'),
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    viewportFit: 'cover',
+  },
   openGraph: {
     title: 'Alice Dowdall',
     description: 'Senior Advertising Creative',

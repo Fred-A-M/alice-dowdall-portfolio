@@ -64,10 +64,10 @@ export default function ProjectPage({ project, sections }: ProjectPageProps) {
       <ProjectHeader project={project as Project} isMobile={true} />
       
         {/* Interleaved content */}
-        {interleavedContent.map((item, ) => {
+        {interleavedContent.map((item, index) => {
           if (item.type === 'description') {
             return (
-              <div key={`desc-${item.index}`} className="w-full">
+              <div key={`desc-${index}`} className="w-full">
                 <p className="text-md">{item.content}</p>
               </div>
             );
