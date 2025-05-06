@@ -1,17 +1,18 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "./components/NavBar";
 import Scroll from './Scroll';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+};
 
 export const metadata: Metadata = {
   title: "Alice Dowdall",
   description: "Senior Advertising Creative",
   metadataBase: new URL('https://www.alicedowdall.com'),
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    viewportFit: 'cover',
-  },
   openGraph: {
     title: 'Alice Dowdall',
     description: 'Senior Advertising Creative',
@@ -49,7 +50,7 @@ export default function RootLayout({
       </head>
       <Scroll />
       <body
-        className={`radio-canada-big antialiased h-screen`}
+        className={`radio-canada-big antialiased min-h-screen`}
         style={{ 
           background: 'var(--gradient)',
           backgroundAttachment: 'fixed',
