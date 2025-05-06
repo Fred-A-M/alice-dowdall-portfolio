@@ -50,7 +50,7 @@ export default function RootLayout({
       </head>
       <Scroll />
       <body
-        className={`radio-canada-big antialiased min-h-screen`}
+        className={`radio-canada-big flex flex-col antialiased min-h-screen pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] overflow-x-hidden`}
         style={{ 
           background: 'var(--gradient)',
           backgroundAttachment: 'fixed',
@@ -59,7 +59,7 @@ export default function RootLayout({
       >
         {/* <CustomCursor /> */}
         <Navbar />
-        <main className="px-5 sm:px-10 pt-24">
+        <main className="px-5 sm:px-10 pt-24 flex-1">
           {children}
         </main>
       </body>
