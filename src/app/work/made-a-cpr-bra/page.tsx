@@ -19,7 +19,7 @@ export default function MadeACprBra() {
   }, []);
 
   useEffect(() => {
-    setMounted(true);
+    setMounted(true)
   }, []);
 
   if (!mounted) {
