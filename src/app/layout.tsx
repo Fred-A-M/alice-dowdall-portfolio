@@ -47,8 +47,8 @@ export default function RootLayout({
           type="font/ttf"
           crossOrigin="anonymous"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </head>
-      <Scroll />
       <body
         className={`radio-canada-big flex flex-col antialiased min-h-screen pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] overflow-x-hidden`}
         style={{ 
@@ -57,6 +57,7 @@ export default function RootLayout({
           backgroundSize: 'cover',
         }}
       >
+        <Scroll />
         {/* <CustomCursor /> */}
         <Navbar />
         <main className="px-5 sm:px-10 pt-24 flex-1">
