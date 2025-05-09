@@ -27,7 +27,7 @@ export default function ProjectHeaderDesktop({ project }: ProjectHeaderProps) {
   const y = useTransform(
     scrollY, 
     [0, window.innerHeight], 
-    ["0vh", "18vh"]
+    ["0vh", "15vh"]
   );
 
   return (
