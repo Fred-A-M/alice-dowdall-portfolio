@@ -27,8 +27,8 @@ export default function GiffGaff() {
     return <div className="h-[700px]"></div>;
   }
 
-  const project = isMobile ? projectsMobile.find(project => project.name === "Have a Proper Chat") 
-    : projects.find(project => project.name === "Have a Proper Chat");
+  const project = isMobile ? projectsMobile.find(project => project.name === "Have a Proper\u00A0Chat") 
+    : projects.find(project => project.name === "Have a Proper\u00A0Chat");
 
   return (
     <>

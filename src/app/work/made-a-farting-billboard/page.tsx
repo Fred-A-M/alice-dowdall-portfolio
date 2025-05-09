@@ -27,8 +27,8 @@ export default function FartingBillboard() {
     return <div className="h-[700px]"></div>;
   }
 
-  const project = isMobile ? projectsMobile.find(project => project.name === "Farting Billboard") 
-  : projects.find(project => project.name === "Farting Billboard");
+  const project = isMobile ? projectsMobile.find(project => project.name === "Farting\u00A0Billboard") 
+  : projects.find(project => project.name === "Farting\u00A0Billboard");
 
   return (
     <>

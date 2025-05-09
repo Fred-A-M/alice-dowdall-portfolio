@@ -26,8 +26,8 @@ export default function SmallTalk() {
   if (!mounted) {
     return <div className="h-[700px]"></div>;
   }
-  const project = isMobile ? projectsMobile.find(project => project.name === "Small Talk") 
-  : projects.find(project => project.name === "Small Talk");
+  const project = isMobile ? projectsMobile.find(project => project.name === "Small\u00A0Talk") 
+  : projects.find(project => project.name === "Small\u00A0Talk");
   
   return (
     <>

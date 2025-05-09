@@ -27,8 +27,8 @@ export default function HowToOi() {
     return <div className="h-[700px]"></div>;
   }
 
-  const project = isMobile ? projectsMobile.find(project => project.name === "Oi! Observe and Intervene") 
-    : projects.find(project => project.name === "Oi! Observe and Intervene");
+  const project = isMobile ? projectsMobile.find(project => project.name === "Oi! Observe and\u00A0Intervene") 
+    : projects.find(project => project.name === "Oi! Observe and\u00A0Intervene");
   
   return (
     <>

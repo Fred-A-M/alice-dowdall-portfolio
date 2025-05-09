@@ -27,8 +27,8 @@ export default function WorldWithoutSoil() {
     return <div className="h-[700px]"></div>;
   }
 
-  const project = isMobile ? projectsMobile.find(project => project.name === "Picture a World Without Soil") 
-  : projects.find(project => project.name === "Picture a World Without Soil");
+  const project = isMobile ? projectsMobile.find(project => project.name === "Picture a World Without\u00A0Soil") 
+  : projects.find(project => project.name === "Picture a World Without\u00A0Soil");
 
   return (
     <>

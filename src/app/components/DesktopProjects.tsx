@@ -53,8 +53,8 @@ export default function DesktopProjects() {
     <>
     <div className="relative w-full h-full">
       {!allImagesLoaded && (
-        <div className="absolute inset-0 flex items-center justify-center z-50">
-          <div className="w-30 h-30 border-b-8 border-t-8 rounded-full animate-spin"></div>
+        <div className="h-[calc(100vh-150px)] w-full flex items-center justify-center">
+          <div className="w-30 h-30 text-background bg-foreground antique-olive animate-spin text-7xl p-8 flex items-center justify-center">AD</div>
         </div>
       )}
       

@@ -1,6 +1,6 @@
 export const projects = [
   {
-    name: "Oi! Observe and Intervene",
+    name: "Oi! Observe and\u00A0Intervene",
     client: "UN Women UK",
     tagline: "Taught people how to Oi!",
     description: [
@@ -20,7 +20,7 @@ export const projects = [
     link: "/work/how-to-oi",
   },
   {
-    name: "There's No Rainbow Without Water",
+    name: "There's No Rainbow Without\u00A0Water",
     client: "WaterAid",
     tagline: "Brought hope during COVID",
     description: [
@@ -40,7 +40,7 @@ export const projects = [
     link: "/work/water-aid",
   },
   {
-    name: "Picture a World Without Soil", 
+    name: "Picture a World Without\u00A0Soil", 
     client: "Heinz",
     tagline: "Pictured a world without soil",
     description: [
@@ -59,7 +59,7 @@ export const projects = [
     link: "/work/world-without-soil",
   },
   {
-    name: "It's Not Your Fault You Can't Resist",
+    name: "It's Not Your Fault You Can't\u00A0Resist",
     client: "BiteBack2030",
     tagline: "Exposed fast food brands",
     description: [
@@ -80,7 +80,7 @@ export const projects = [
     link: "/work/bite-back-2030",
   },
   {
-    name: "Small Talk",
+    name: "Small\u00A0Talk",
     client: "Frazzled",
     tagline: "Turned small talk into real talk",
     description: [
@@ -102,7 +102,7 @@ export const projects = [
     link: "/work/small-talk",
   },
   {
-    name: "The CPR Bra",
+    name: "The CPR\u00A0Bra",
     client: "St John Ambulance",
     tagline: "Made a CPR Bra",
     description: [
@@ -127,7 +127,7 @@ export const projects = [
     link: "/work/made-a-cpr-bra",
   },
   {
-    name: "The Wind in the Willows",
+    name: "The Wind in the\u00A0Willows",
     client: "The Wildlife Trust",
     tagline: "Reimagined an old classic",
     description: [
@@ -148,7 +148,7 @@ export const projects = [
     link: "/work/wind-in-the-willows",
   },
   {
-    name: "Unboxing: 1930",
+    name: "Unboxing:\u00A01930",
     client: "Callaly",
     tagline: "Made people think twice about tampons",
     description: [
@@ -165,7 +165,7 @@ export const projects = [
     link: "/work/callaly",
   },
   {
-    name: "Have a Proper Chat",
+    name: "Have a Proper\u00A0Chat",
     client: "giffgaff",
     tagline: "Made people less lonely",
     description: [
@@ -186,7 +186,7 @@ export const projects = [
     link: "/work/giffgaff",
   },
   {
-    name: "Farting Billboard",
+    name: "Farting\u00A0Billboard",
     client: "The Gut Stuff",
     tagline: "Made a farting billboard",
     description: [
@@ -253,7 +253,7 @@ export const profile = {
 
 export const projectsMobile = [
   {
-    name: "The CPR Bra",
+    name: "The CPR\u00A0Bra",
     client: "St John Ambulance",
     tagline: "Made a CPR Bra",
     description: [
@@ -278,7 +278,7 @@ export const projectsMobile = [
     link: "/work/made-a-cpr-bra",
   },
   {
-    name: "Picture a World Without Soil", 
+    name: "Picture a World Without\u00A0Soil", 
     client: "Heinz",
     tagline: "Pictured a world without soil",
     description: [
@@ -297,7 +297,7 @@ export const projectsMobile = [
     link: "/work/world-without-soil",
   },
   {
-    name: "Small Talk",
+    name: "Small\u00A0Talk",
     client: "Frazzled",
     tagline: "Turned small talk into real talk",
     description: [
@@ -319,7 +319,7 @@ export const projectsMobile = [
     link: "/work/small-talk",
   },
   {
-    name: "There's No Rainbow Without Water",
+    name: "There's No Rainbow Without\u00A0Water",
     client: "WaterAid",
     tagline: "Brought hope during COVID",
     description: [
@@ -340,7 +340,7 @@ export const projectsMobile = [
     link: "/work/water-aid",
   },
   {
-    name: "Have a Proper Chat",
+    name: "Have a Proper\u00A0Chat",
     client: "giffgaff",
     tagline: "Made people less lonely",
     description: [
@@ -361,7 +361,7 @@ export const projectsMobile = [
     link: "/work/giffgaff",
   },
   {
-    name: "Oi! Observe and Intervene",
+    name: "Oi! Observe and\u00A0Intervene",
     client: "UN Women UK",
     tagline: "Taught people how to Oi!",
     description: [
@@ -381,7 +381,7 @@ export const projectsMobile = [
     link: "/work/how-to-oi",
   },
   {
-    name: "It's Not Your Fault You Can't Resist",
+    name: "It's Not Your Fault You Can't\u00A0Resist",
     client: "BiteBack2030",
     tagline: "Exposed fast food brands",
     description: [
@@ -402,7 +402,7 @@ export const projectsMobile = [
     link: "/work/bite-back-2030",
   },
   {
-    name: "The Wind in the Willows",
+    name: "The Wind in the\u00A0Willows",
     client: "The Wildlife Trust",
     tagline: "Reimagined an old classic",
     description: [
@@ -423,7 +423,7 @@ export const projectsMobile = [
     link: "/work/wind-in-the-willows",
   },
   {
-    name: "Unboxing: 1930",
+    name: "Unboxing:\u00A01930",
     client: "Callaly",
     tagline: "Made people think twice about tampons",
     description: [
@@ -440,7 +440,7 @@ export const projectsMobile = [
     link: "/work/callaly",
   },
   {
-    name: "Farting Billboard",
+    name: "Farting\u00A0Billboard",
     client: "The Gut Stuff",
     tagline: "Made a farting billboard",
     description: [

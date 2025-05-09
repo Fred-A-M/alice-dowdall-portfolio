@@ -32,7 +32,7 @@ export const SmallTalkSections = (project: Project): ReactNode[] => {
           floatDelay={0.5}
           width={2084}
           height={2084}
-          stylesWidth={200}
+          stylesWidth={180}
         />
       </div>
       

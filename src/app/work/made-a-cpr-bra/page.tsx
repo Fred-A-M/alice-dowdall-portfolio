@@ -30,8 +30,8 @@ export default function MadeACprBra() {
     return null;
   }
 
-  const project = isMobile ? projectsMobile.find(project => project.name === "The CPR Bra") 
-  : projects.find(project => project.name === "The CPR Bra");
+  const project = isMobile ? projectsMobile.find(project => project.name === "The CPR\u00A0Bra") 
+  : projects.find(project => project.name === "The CPR\u00A0Bra");
 
   return (
     <>

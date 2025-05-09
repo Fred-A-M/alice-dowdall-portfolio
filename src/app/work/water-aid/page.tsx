@@ -27,8 +27,8 @@ export default function WaterAid() {
     return <div className="h-[700px]"></div>;
   }
 
-  const project = isMobile ? projectsMobile.find(project => project.name === "There's No Rainbow Without Water") 
-  : projects.find(project => project.name === "There's No Rainbow Without Water");
+  const project = isMobile ? projectsMobile.find(project => project.name === "There's No Rainbow Without\u00A0Water") 
+  : projects.find(project => project.name === "There's No Rainbow Without\u00A0Water");
 
   return (
     <>

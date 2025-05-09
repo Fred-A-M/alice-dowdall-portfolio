@@ -27,8 +27,8 @@ export default function WindInTheWillows() {
     return <div className="h-[700px]"></div>;
   }
 
-  const project = isMobile ? projectsMobile.find(project => project.name === "The Wind in the Willows") 
-  : projects.find(project => project.name === "The Wind in the Willows");
+  const project = isMobile ? projectsMobile.find(project => project.name === "The Wind in the\u00A0Willows") 
+  : projects.find(project => project.name === "The Wind in the\u00A0Willows");
 
   return (
     <>

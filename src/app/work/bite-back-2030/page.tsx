@@ -27,8 +27,8 @@ export default function BiteBack2030() {
     return <div className="h-[700px]"></div>;
   }
   
-  const project = isMobile ? projectsMobile.find(project => project.name === "It's Not Your Fault You Can't Resist") 
-    : projects.find(project => project.name === "It's Not Your Fault You Can't Resist");
+  const project = isMobile ? projectsMobile.find(project => project.name === "It's Not Your Fault You Can't\u00A0Resist") 
+    : projects.find(project => project.name === "It's Not Your Fault You Can't\u00A0Resist");
   
   return (
     <>

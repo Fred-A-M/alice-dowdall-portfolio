@@ -27,8 +27,8 @@ export default function Callaly() {
     return <div className="h-[700px]"></div>;
   }
 
-  const project = isMobile ? projectsMobile.find(project => project.name === "Unboxing: 1930") 
-    : projects.find(project => project.name === "Unboxing: 1930");
+  const project = isMobile ? projectsMobile.find(project => project.name === "Unboxing:\u00A01930") 
+    : projects.find(project => project.name === "Unboxing:\u00A01930");
 
   return (
     <>
