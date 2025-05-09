@@ -6,7 +6,7 @@ interface ProjectHeaderProps {
   project: Project;
 }
 
-export default function ProjectHeaderDesktop({ project }: ProjectHeaderProps) {
+export default function ProjectHeaderMobile({ project }: ProjectHeaderProps) {
   const { scrollY } = useScroll();
   
   // Transform for the description - moves out of view as user scrolls
@@ -26,14 +26,14 @@ export default function ProjectHeaderDesktop({ project }: ProjectHeaderProps) {
   // Transform for the title container - moves to center
   const y = useTransform(
     scrollY, 
-    [0, window.innerHeight], 
-    ["0vh", "18vh"]
+    [0, window.innerHeight * 0.5], 
+    ["0vh", "30vh"]
   );
 
   return (
-    <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-[50%] w-[90%] z-[-1]" >
+    <div className="fixed left-1/2 top-28 -translate-x-1/2 lg:w-[50%] w-[90%] z-[-1]" >
       <div 
-        className="flex flex-col gap-2 justify-center items-center text-center w-full text-4xl"
+        className="flex flex-col justify-center items-center text-center w-full text-2xl"
       >
         <motion.div 
           style={{ y }}
@@ -42,7 +42,7 @@ export default function ProjectHeaderDesktop({ project }: ProjectHeaderProps) {
           <h2>{project.client}</h2>
         </motion.div>
         <motion.div 
-          className="mt-2 text-xl"
+          className="mt-4 text-lg"
           style={{ 
             y: descriptionY,
             opacity: descriptionOpacity

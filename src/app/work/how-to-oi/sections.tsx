@@ -1,49 +1,46 @@
 import { Project } from "@/app/consts";
-import StaticImage from '@/app/components/StaticImage';
 import { ReactNode } from "react";
 import Image from "next/image";
 export const HowToOiSections = (project: Project): ReactNode[] => {
   return [
-    <div key="large-image">
-      <Image 
-        src={project.gallery[1].image}
-        alt={project.name} 
-        width={2500}
-        height={1406}
-        style={{
-          width: "1200px",
-          height: "auto",
-        }}
-        priority={true}
-        loading="eager"
-      />
-    </div>,
+    
+    <Image
+      key="1"
+      src={project.gallery[1].image}
+      alt={project.name} 
+      width={2500}
+      height={1406}
+      style={{
+        width: "1200px",
+        height: "auto",
+      }}
+      priority={true}
+      loading="eager"
+    />,
 
-    <div key="large-image2">
-      <Image 
-        src={project.gallery[2].image}
-        alt={project.name}
-        width={2500}
-        height={1406}
-        style={{
-          width: "1200px",
-          height: "auto",
-        }}
-      />
-    </div>,
-
-    <div key="large-image3">
-      <Image 
-        src={project.gallery[3].image}
-        alt={project.name} 
-        width={1920}
-        height={1080}
-        style={{
-          width: "1200px",
-          height: "auto",
-        }}
-      />
-    </div>,
+    <Image 
+      key="large-image2"
+      src={project.gallery[2].image}
+      alt={project.name}
+      width={2500}
+      height={1406}
+      style={{
+        width: "1200px",
+        height: "auto",
+      }}
+    />,
+   
+    <Image 
+      key="large-image3"
+      src={project.gallery[3].image}
+      alt={project.name} 
+      width={1920}
+      height={1080}
+      style={{
+        width: "1200px",
+        height: "auto",
+      }}
+    />,
 
     <video 
       key="video" 
@@ -74,49 +71,71 @@ export const HowToOiSections = (project: Project): ReactNode[] => {
 
 export const HowToOiSectionsMobile = (project: Project): ReactNode[] => {
   return [
-    <div key="large-image" className="flex justify-center items-center w-full">
-      <StaticImage 
-        src={project.gallery[1].image}
-        alt={project.name} 
-        rotation={-3}
-        width={2500}
-        height={1406}
-        stylesWidth={350}
-      />
-    </div>,
+   
+    <Image 
+      key="1"
+      src={project.gallery[1].image}
+      alt={project.name} 
+      width={2500}
+      height={1406}
+      style={{
+        width: "650px",
+        height: "auto",
+      }}
+      priority={true}
+      loading="eager"
+    />,
 
-    <div key="large-image2" className="flex justify-center items-center w-full">
-      <StaticImage 
-        src={project.gallery[2].image}
-        alt={project.name}
-        rotation={3}
-        width={2500}
-        height={1406}
-        stylesWidth={350}
-      />
-    </div>,
+    <Image 
+      key="large-image2"
+      src={project.gallery[2].image}
+      alt={project.name}
+      width={2500}
+      height={1406}
+      style={{
+        width: "650px",
+        height: "auto",
+      }}
+    />,
 
-    <div key="large-image3" className="flex justify-center items-center w-full">
-      <StaticImage 
-        src={project.gallery[3].image}
-        alt={project.name} 
-        rotation={-4}
-        width={1920}
-        height={1080}
-        stylesWidth={350}
-      />
-    </div>,
+    <Image 
+      key="large-image3"
+      src={project.gallery[3].image}
+      alt={project.name} 
+      width={1920}
+      height={1080}
+      style={{
+        width: "650px",
+        height: "auto",
+      }}
+    />,
 
-    <div key="large-image4" className="flex justify-center items-center w-full">
-      <StaticImage 
-        src={project.gallery[4].image}
-        alt={project.name} 
-        rotation={2}
-        width={576}
-        height={324}
-        stylesWidth={350}
-      />
-    </div>
+    <Image 
+      key="large-image4"
+      src={project.gallery[4].image}
+      alt={project.name} 
+      width={576}
+      height={324}
+      style={{
+        width: "650px",
+        height: "auto",
+      }}
+      unoptimized={true}
+    />,
+
+    <Image 
+      key="large-image5"
+      src={project.gallery[0].image}
+      alt={project.name} 
+      width={1080}
+      height={1080}
+      style={{
+        width: "300px",
+        height: "auto",
+      }}
+      unoptimized={true}
+    />,
+   
   ];
 };
 

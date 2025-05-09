@@ -1,5 +1,4 @@
 import { Project } from "@/app/consts";
-import StaticImage from '@/app/components/StaticImage';
 import { ReactNode } from "react";
 import Image from "next/image";
 
@@ -57,39 +56,54 @@ export const WorldWithoutSoilSections = (project: Project): ReactNode[] => {
 
 export const WorldWithoutSoilSectionsMobile = (project: Project): ReactNode[] => {
   return [
-    <div key="gallery2" className="grid grid-cols-1 mx-auto sm:w-[80%] w-full">
-      <div className="flex justify-start items-start">
-        <StaticImage 
-          src={project.gallery[1].image}
-          alt={project.name}
-          rotation={-6}
-          width={1500}
-          height={1000}
-        />
-      </div>
-      <div className="flex justify-end items-end">
-        <StaticImage 
-          src={project.gallery[2].image}
-          alt={project.name}
-          rotation={6}
-          width={2500}
-          height={1667}
-        />
-      </div>
-    </div>,
-
-    <div key="large-image" className="flex justify-center items-center w-full">
-      <Image 
-        src={project.gallery[3].image} 
-        alt={project.name} 
-        width={2500} 
-        height={1667} 
-        style={{
-          width: "450px",
-          height: "auto",
-        }}
-      />  
-    </div>
+    <Image 
+      key="0"
+      src={project.gallery[0].image}
+      alt={project.name}
+      width={356}
+      height={356}
+      style={{
+        width: "300px",
+        height: "auto",
+      }}
+      priority={true}
+      loading="eager"
+      unoptimized={true}
+    />,
+    
+    <Image 
+      src={project.gallery[1].image}
+      alt={project.name}
+      width={1500}
+      height={1000}
+      style={{
+        width: "650px",
+        height: "auto",
+      }}
+      key="1"
+    />,
+    <Image 
+      src={project.gallery[2].image}
+      alt={project.name}
+      width={2500}
+      height={1667}
+      style={{
+        width: "650px",
+        height: "auto",
+      }}
+      key="2"
+    />,
+    <Image 
+      src={project.gallery[3].image}
+      alt={project.name}
+      width={2500} 
+      height={1667} 
+      style={{
+        width: "650px",
+        height: "auto",
+      }}
+      key="3"
+    />,
   ];
 };
 
