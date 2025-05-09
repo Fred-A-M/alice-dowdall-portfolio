@@ -42,7 +42,7 @@ export default function ProjectHeaderMobile({ project }: ProjectHeaderProps) {
           <h2>{project.client}</h2>
         </motion.div>
         <motion.div 
-          className="mt-4 text-lg gap-1 flex flex-col"
+          className="mt-4 text-base gap-1 flex flex-col"
           style={{ 
             y: descriptionY,
             opacity: descriptionOpacity

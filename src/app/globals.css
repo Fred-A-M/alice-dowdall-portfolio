@@ -14,11 +14,11 @@
   src: url('/fonts/Antique_Olive_Bold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 
 .antique-olive {
-  font-family: "Antique Olive", cursive;
+  font-family: "Antique Olive", "Trebuchet MS", "Segoe UI Bold", "Franklin Gothic", "Arial Bold", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;

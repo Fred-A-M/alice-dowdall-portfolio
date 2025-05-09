@@ -20,7 +20,7 @@ export default function MobileProjectPage({ project, sections }: ProjectPageProp
     <div className="flex flex-col w-full justify-center gap-5 mb-5">
       <ProjectHeaderMobile project={project as Project} />
       
-      <div className="pt-[80vh] flex flex-col gap-40 justify-center items-center max-w-[1200px] mx-auto">
+      <div className="pt-[70vh] flex flex-col gap-40 justify-center items-center max-w-[1200px] mx-auto">
         {sections && sections.map((section, index) => (
           <div key={index} className="w-full flex justify-center">
             {section}

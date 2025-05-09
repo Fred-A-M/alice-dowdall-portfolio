@@ -54,7 +54,7 @@ export default function DesktopProjects() {
     <div className="relative w-full h-full">
       {!allImagesLoaded && (
         <div className="h-[calc(100vh-150px)] w-full flex items-center justify-center">
-          <div className="w-30 h-30 text-background bg-foreground antique-olive animate-spin text-7xl p-8 flex items-center justify-center">AD</div>
+          <div className="w-30 h-30 text-background bg-foreground antique-olive animate-spin duration-[3000ms] text-7xl p-8 flex items-center justify-center">AD</div>
         </div>
       )}
       
