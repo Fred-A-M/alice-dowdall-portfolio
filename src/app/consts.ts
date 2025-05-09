@@ -44,7 +44,7 @@ export const projects = [
     client: "Heinz",
     tagline: "Pictured a world without soil",
     description: [
-      "40% of the world’s farming soil is degraded. Terrifying, considering 95% of the food we eat relies on soil (including Heinz\u00A0ketchup!)",
+      "40% of the world’s farming soil is degraded. Terrifying, considering 95% of the food we eat relies on soil (including Heinz\u00A0ketchup!).",
       "It’s hard to get people to care about soil. So we helped them picture a world without\u00A0it.",
       "We took an iconic Van Gogh painting and repainted to reflect the present, and the future. The immersive exhibition was held for 3 days the Thyssen Gallery in\u00A0Madrid.",
       "112M PR Impressions. Over 2,000 visitors. Coverage from 90+ media outlets. The campaign was even recognised for a Spanish sustainability\u00A0award. ",
@@ -282,7 +282,7 @@ export const projectsMobile = [
     client: "Heinz",
     tagline: "Pictured a world without soil",
     description: [
-      "40% of the world’s farming soil is degraded. Terrifying, considering 95% of the food we eat relies on soil (including Heinz\u00A0ketchup!)",
+      "40% of the world’s farming soil is degraded. Terrifying, considering 95% of the food we eat relies on soil (including Heinz\u00A0ketchup!).",
       "It’s hard to get people to care about soil. So we helped them picture a world without\u00A0it.",
       "We took an iconic Van Gogh painting and repainted to reflect the present, and the future. The immersive exhibition was held for 3 days the Thyssen Gallery in\u00A0Madrid.",
       "112M PR Impressions. Over 2,000 visitors. Coverage from 90+ media outlets. The campaign was even recognised for a Spanish sustainability\u00A0award. ",
