@@ -44,9 +44,9 @@ export default function DesktopProjects() {
   }
 
   const zIndexProjects = [
-    "The CPR Bra", 
-    "There's No Rainbow Without Water", 
-    "Have a Proper Chat"
+    "The CPR\u00A0Bra", 
+    "There's No Rainbow Without\u00A0Water", 
+    "Have a Proper\u00A0Chat"
   ];
 
   return (

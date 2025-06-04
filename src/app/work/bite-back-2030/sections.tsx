@@ -46,32 +46,31 @@ export const BiteBackSections = (project: Project): ReactNode[] => {
       </div>
     </div>,
 
-    <div key="gallery2" className="grid grid-cols-2 lg:gap-20 gap-10 mx-auto w-full">
-      <div className="flex justify-center pb-30">
-        <Image 
-          src={project.gallery[3].image}
-          alt={project.name}
-          width={1702}
-          height={956}
-          style={{
-            width: "650px",
-            height: "auto",
-          }}
-        />
-      </div>
-      <div className="flex justify-center pt-30">
-        <Image 
-          src={project.gallery[4].image}
-          alt={project.name}
-          width={1920}
-          height={1080}
-          style={{
-            width: "650px",
-            height: "auto",
-          }}
-        />
-      </div>
-    </div>,
+
+    <Image 
+      key="3"
+      src={project.gallery[3].image}
+      alt={project.name}
+      width={1702}
+      height={956}
+      style={{
+        width: "900px",
+        height: "auto",
+      }}
+    />,
+  
+
+    <Image 
+      key="4"
+      src={project.gallery[4].image}
+      alt={project.name}
+      width={1920}
+      height={1080}
+      style={{
+        width: "1200px",
+        height: "auto",
+      }}
+    />,
 
   ];
 };
