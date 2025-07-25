@@ -246,8 +246,12 @@ export const profile = {
     {name: "Revolt London", dates: "2022-Present", link: "https://revoltlondon.com/"},
   ],
   workedWith: [
-    {brands: "Amazon Prime Video, ABinBev, Budweiser, EE, giffgaff, Google, Heinz, MARS Inc, Robinsons, Spotify, Visa."},
-    {charities: "Alzheimer’s Society, Childline, Oxfam, RSBP, Wateraid, The Wildlife Trust, St John Ambulance, UN Women UK."}
+    {brands: "Amazon Prime Video, ABinBev, Budweiser, EE, giffgaff, Google, Heinz, MARS Inc, Robinsons, Spotify,\u00A0Visa."},
+    {charities: "Alzheimer’s Society, Childline, Oxfam, RSBP, Wateraid, The Wildlife Trust, St John Ambulance, UN\u00A0Women\u00A0UK."}
+  ],
+  won: [
+    {frazzled: "Clio Health (Writing) - Bronze, Creative Circle (Writing) - Bronze"},
+    {CPRBra: "SABRE  - Best Integrated Campaign, Purpose Awards - Best Health Cause Campaign, Creative Circle (Break through on a budget) -\u00A0Silver"},
   ]
 }
 

@@ -105,7 +105,7 @@ export default function Contact() {
         animate={{ opacity: isTypingComplete ? 1 : 0 }}
         transition={{ duration: 0.7 }}
       >
-        <div className="grid md:grid-cols-6 grid-cols-2 gap-4 mt-10">
+        <div className="grid md:grid-cols-8 grid-cols-2 gap-4 mt-10">
           <div className="md:col-span-2 col-span-1 text-md">
             <div className="font-bold ">LinkedIn</div>
             <Link href="https://www.linkedin.com/in/alice-dowdall-342237101/">
@@ -113,9 +113,9 @@ export default function Contact() {
             </Link>
           </div>
 
-          <div className="md:col-span-4 col-span-1">
+          <div className="md:col-span-6 col-span-1">
             <div className="font-bold ">Email</div>
-              <p className="">alicedowdall@gmail.com</p>
+            <p className="">alicedowdall@gmail.com</p>
           </div>
 
           <div className="md:col-span-2 col-span-1 flex flex-col">
@@ -133,7 +133,7 @@ export default function Contact() {
           </div>
 
           
-          <div className="md:col-span-4 col-span-1 flex flex-col">
+          <div className="md:col-span-3 col-span-1 flex flex-col">
             <div className="font-bold sm:text-2xl text-lg">{"Worked with:"}</div>
             <div className="flex flex-col gap-2">
               <div>
@@ -146,6 +146,24 @@ export default function Contact() {
                 <p>
                   <span className="font-bold">Charities: </span> 
                   {profile.workedWith[1].charities}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:col-span-3 col-span-2 flex flex-col">
+            <div className="font-bold sm:text-2xl text-lg">{"Won:"}</div>
+            <div className="flex flex-col gap-2">
+              <div>
+                <p>
+                  <span className="font-bold">Frazzled: </span> 
+                  {profile.won[0].frazzled}
+                </p>
+              </div>
+              <div>
+                <p>
+                  <span className="font-bold">CPRBra: </span> 
+                  {profile.won[1].CPRBra}
                 </p>
               </div>
             </div>
