@@ -251,7 +251,7 @@ export const profile = {
   ],
   won: [
     {frazzled: "Clio Health (Writing) - Bronze, Creative Circle (Writing) - Bronze"},
-    {CPRBra: "SABRE  - Best Integrated Campaign, Purpose Awards - Best Health Cause Campaign, Creative Circle (Break through on a budget) -\u00A0Silver"},
+    {CPRBra: "SABRE  - Best Integrated Campaign, Purpose Awards - Best Health Cause Campaign, Creative Circle (Break through on a budget) - Silver"},
   ]
 }
 
