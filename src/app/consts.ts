@@ -63,9 +63,8 @@ export const projects = [
     client: "BiteBack2030",
     tagline: "Exposed fast food brands",
     description: [
-      "BiteBack2030 are a youth-led movement backed by Jamie Oliver. They wanted to launch the brand and raise awareness of its mission to challenge a food system that’s been set up to fool\u00A0us.",
-      "This social experiment used exactly the same techniques as the advertising industry to manipulate teens food\u00A0choices.",
-      "We made a fake brand and plastered it everywhere. From posters, to radio ads. We even got famous Love Island influencers to post about it. Every teen in the experiment picked Triple Dipped\u00A0Chicken.",
+      "BiteBack2030 is a youth-led movement backed by Jamie Oliver. They wanted teens to understand how much influence the fast food industry is having on their\u00A0brains.",
+      "This social experiment used exactly the same techniques as the industry does to manipulate their choices. Every single one of them picked our fake\u00A0brand.",
       "The campaign received worldwide coverage from the Washington Post, to the\u00A0BBC.",
     ],
     image: {image: "/projects/BiteBack2030/Main.png", width: 1056, height: 732},
@@ -85,7 +84,7 @@ export const projects = [
     tagline: "Turned small talk into real talk",
     description: [
       "Conversations, particularly in workplaces always follow the same format. This film for Ruby Wax’s mental health charity is a funny depiction of office small talk, and encourages people to swap this boring talk for real\u00A0talk.",
-      "The campaign video launched on World Mental Health Day, and got Campaign’s Ad of the\u00A0Day.",
+      "The campaign launched on World Mental Health Day and got Campaign’s Ad of the Day. Won at Clio Health and Creative Circle for\u00A0writing.",
     ],
     image: {image: "/projects/SmallTalk/Main.jpg", width: 1920, height: 1080},
     gallery: [
@@ -109,6 +108,7 @@ export const projects = [
       "Boobs shouldn’t be the difference between life and death. But St John Ambulance revealed that 1/3 people are afraid to give CPR to women because they are worried about inappropriate\u00A0touching.",
       "We stepped in with the CPR Bra. The world’s first educational bra to bust the touch\u00A0taboo.",
       "The campaign was launched on Restart a Heart day with Lioness legend Millie Bright and others. It was covered by BBC Breakfast, The Guardian, Forbes, The Mirror, The Daily Mail, Campaign, PR Week, Famous Campaigns and\u00a0more.",
+      "Won at Creative Circle for Breakthrough on a Budget, The SABRE’s for Best Integrated Campaign and the Purpose Awards for Best Health\u00A0Campaign.",
     ],
     image: {image: "/projects/CPRBra/Main.png", width: 954, height: 954},
     gallery: [
@@ -247,11 +247,11 @@ export const profile = {
   ],
   workedWith: [
     {brands: "Amazon Prime Video, ABinBev, Budweiser, EE, giffgaff, Google, Heinz, MARS Inc, Robinsons, Spotify,\u00A0Visa."},
-    {charities: "Alzheimer’s Society, Childline, Oxfam, RSBP, Wateraid, The Wildlife Trust, St John Ambulance, UN\u00A0Women\u00A0UK."}
+    {charities: "Alzheimer’s Society, Childline, Oxfam, RSPB, Wateraid, The Wildlife Trust, St John Ambulance, UN\u00A0Women\u00A0UK."}
   ],
   won: [
-    {frazzled: "Clio Health (Writing) - Bronze, Creative Circle (Writing) - Bronze"},
-    {CPRBra: "SABRE  - Best Integrated Campaign, Purpose Awards - Best Health Cause Campaign, Creative Circle (Break through on a budget) - Silver"},
+    {frazzled: "Clio Health Writing - Bronze, Creative Circle Writing - Bronze"},
+    {CPRBra: "SABRE  - Best Integrated Campaign, Purpose Awards - Best Health Campaign, Creative Circle PR - Silver"},
   ]
 }
 
@@ -389,9 +389,8 @@ export const projectsMobile = [
     client: "BiteBack2030",
     tagline: "Exposed fast food brands",
     description: [
-      "BiteBack2030 are a youth-led movement backed by Jamie Oliver. They wanted to launch the brand and raise awareness of its mission to challenge a food system that’s been set up to fool\u00A0us.",
-      "This social experiment used exactly the same techniques as the advertising industry to manipulate teens food\u00A0choices.",
-      "We made a fake brand and plastered it everywhere. From posters, to radio ads. We even got famous Love Island influencers to post about it. Every teen in the experiment picked Triple Dipped\u00A0Chicken.",
+      "BiteBack2030 is a youth-led movement backed by Jamie Oliver. They wanted teens to understand how much influence the fast food industry is having on their\u00A0brains.",
+      "This social experiment used exactly the same techniques as the industry does to manipulate their choices. Every single one of them picked our fake\u00A0brand.",
       "The campaign received worldwide coverage from the Washington Post, to the\u00A0BBC.",
     ],
     image: {image: "/projects/BiteBack2030/Main.png", width: 1056, height: 732},
