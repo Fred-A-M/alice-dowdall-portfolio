@@ -264,6 +264,7 @@ export const projectsMobile = [
       "Boobs shouldn’t be the difference between life and death. But St John Ambulance revealed that 1/3 people are afraid to give CPR to women because they are worried about inappropriate\u00A0touching.",
       "We stepped in with the CPR Bra. The world’s first educational bra to bust the touch\u00A0taboo.",
       "The campaign was launched on Restart a Heart day with Lioness legend Millie Bright and others. It was covered by BBC Breakfast, The Guardian, Forbes, The Mirror, The Daily Mail, Campaign, PR Week, Famous Campaigns and\u00a0more.",
+      "Won at Creative Circle for Breakthrough on a Budget, The SABRE’s for Best Integrated Campaign and the Purpose Awards for Best Health\u00A0Campaign.",
     ],
     image: {image: "/projects/CPRBra/Main.png", width: 954, height: 954},
     gallery: [
@@ -306,7 +307,7 @@ export const projectsMobile = [
     tagline: "Turned small talk into real talk",
     description: [
       "Conversations, particularly in workplaces always follow the same format. This film for Ruby Wax’s mental health charity is a funny depiction of office small talk, and encourages people to swap this boring talk for real\u00A0talk.",
-      "The campaign video launched on World Mental Health Day, and got Campaign’s Ad of the\u00A0Day.",
+      "The campaign launched on World Mental Health Day and got Campaign’s Ad of the Day. Won at Clio Health and Creative Circle for\u00A0writing.",
     ],
     image: {image: "/projects/SmallTalk/Main.jpg", width: 1920, height: 1080},
     gallery: [
