@@ -231,9 +231,9 @@ export interface Project {
 export const profile = {
   image: "/Alice.jpg",
   background: [
-    "HEY👋 I’m Alice - a Manchester born, London based Senior Creative with 8+ years experience\u00A0in\u00A0advertising.",
+    "HEY👋 I’m Alice - a Manchester born, Melbourne based Senior Creative with 8+ years experience\u00A0in\u00A0advertising.",
     "In this time I’ve made bras that bust taboos, billboards with bad bowels and lots\u00A0lots\u00A0more.",
-    "I’m currently working at Revolt London - making a whole load of real\u00A0world\u00A0impact.",
+    "I’m currently working at Thinkerbell Melbourne - making a whole load of real\u00A0world\u00A0impact.",
   ],
   contact: [
     "alice@revolt.agency",
@@ -243,7 +243,8 @@ export const profile = {
   worked: [
     {name: "Don’t Panic London", dates: "2017-2021", link: "https://www.dontpaniclondon.com/"},
     {name: "Saatchi & Saatchi London", dates: "2021-2022", link: "https://saatchi.co.uk/"},
-    {name: "Revolt London", dates: "2022-Present", link: "https://revoltlondon.com/"},
+    {name: "Revolt London", dates: "2022-2025", link: "https://revoltlondon.com/"},
+    {name: "Thinkerbell Melbourne", dates: "2025-Present", link: "https://thinkerbell.com/"},
   ],
   workedWith: [
     {brands: "Amazon Prime Video, ABinBev, Budweiser, EE, giffgaff, Google, Heinz, MARS Inc, Robinsons, Spotify,\u00A0Visa."},

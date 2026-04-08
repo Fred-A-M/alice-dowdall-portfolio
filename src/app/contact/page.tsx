@@ -45,13 +45,13 @@ export default function Contact() {
   }
 
   return (
-    <div className="relative w-full pb-10 md:pt-10">
+    <div className="relative w-full pb-10 md:pt-10 text-lg">
       <div className="grid md:grid-cols-6 grid-cols-1 md:gap-4 gap-8">
 
         <div className="flex gap-6 md:col-span-4 col-span-1">
           <div className="flex-1">
-            <div className="font-bold md:text-2xl text-lg">Bit about me</div>
-            <div className="flex flex-col gap-2 md:text-2xl sm:text-xl text-lg ">
+            <div className="font-bold">Bit about me</div>
+            <div className="flex flex-col gap-2">
               {!isTypingComplete && isClient ? profile.background.map((line, index) => {
                 // Calculate delay based on all previous paragraphs
                 let totalDelay = 0;
@@ -106,20 +106,20 @@ export default function Contact() {
         transition={{ duration: 0.7 }}
       >
         <div className="grid md:grid-cols-8 grid-cols-2 gap-4 mt-10">
-          <div className="md:col-span-2 col-span-1 text-md">
-            <div className="font-bold ">LinkedIn</div>
-            <Link href="https://www.linkedin.com/in/alice-dowdall-342237101/">
-              <p className="cursor-pointer underline sm:no-underline sm:hover:underline">Alice Dowdall</p>
+          <div className="md:col-span-2 col-span-1">
+            <Link href="https://www.linkedin.com/in/alice-dowdall-342237101/" target="_blank" className="cursor-pointer font-bold underline sm:no-underline sm:hover:underline">
+              LinkedIn
             </Link>
           </div>
 
           <div className="md:col-span-6 col-span-1">
-            <div className="font-bold ">Email</div>
-            <p className="">alicedowdall@gmail.com</p>
+            <Link href="mailto:alicedowdall@gmail.com" className="cursor-pointer font-bold underline sm:no-underline sm:hover:underline">
+              Email
+            </Link>
           </div>
 
           <div className="md:col-span-2 col-span-1 flex flex-col">
-            <div className="font-bold sm:text-2xl text-lg">{"Worked:"}</div>
+            <div className="font-bold">{"Worked:"}</div>
             <div className="flex flex-col gap-2">
               {profile.worked.map((work, index) => (
                 <div key={index}>
@@ -134,7 +134,7 @@ export default function Contact() {
 
           
           <div className="md:col-span-3 col-span-1 flex flex-col">
-            <div className="font-bold sm:text-2xl text-lg">{"Worked with:"}</div>
+            <div className="font-bold">{"Worked with:"}</div>
             <div className="flex flex-col gap-2">
               <div>
                 <p>
@@ -152,7 +152,7 @@ export default function Contact() {
           </div>
 
           <div className="md:col-span-3 col-span-2 flex flex-col">
-            <div className="font-bold sm:text-2xl text-lg">{"Won:"}</div>
+            <div className="font-bold">{"Won:"}</div>
             <div className="flex flex-col gap-2">
               <div>
                 <p>
