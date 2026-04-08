@@ -233,7 +233,7 @@ export const profile = {
   background: [
     "HEY👋 I’m Alice - a Manchester born, Melbourne based Senior Creative with 8+ years experience\u00A0in\u00A0advertising.",
     "In this time I’ve made bras that bust taboos, billboards with bad bowels and lots\u00A0lots\u00A0more.",
-    "I’m currently working at Thinkerbell Melbourne - making a whole load of real\u00A0world\u00A0impact.",
+    "Currently working at Thinkerbell Melbourne.",
   ],
   contact: [
     "alice@revolt.agency",
